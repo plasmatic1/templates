@@ -1,6 +1,5 @@
 #pragma once
-#include <bits/stdc++.h>
-using namespace std;
+#include "../template.hpp"
 
 struct DSU {
     vector<int> dsu;

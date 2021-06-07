@@ -1,6 +1,5 @@
 #pragma once
-#include <bits/stdc++.h>
-using namespace std;
+#include "../template.hpp"
 
 // Template is 1-indexed (by default).  Can be made 0-indexed by modifying Comp
 // Default: Point increment and prefix sum query

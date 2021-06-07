@@ -1,3 +1,4 @@
+
 // Thanks wesley thanks wesley thanks wesley
 // RMQ + Increment query
 struct Comp {
