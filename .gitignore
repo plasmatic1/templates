@@ -2,3 +2,5 @@
 cmake-build-debug/
 .verify-helper/cache
 .verify-helper/markdown
+a.exe
+a.out

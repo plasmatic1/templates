@@ -1,5 +1,5 @@
 #pragma once
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 using namespace std;
 
 // Defines
