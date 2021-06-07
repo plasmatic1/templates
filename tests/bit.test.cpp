@@ -1,3 +1,4 @@
+#define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 #include "../template.hpp"
 #include "test_utils.hpp"
 #include "../ds/bit.hpp"
