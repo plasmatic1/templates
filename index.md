@@ -10,8 +10,8 @@ data:
       path: ds/dsu.hpp
       title: ds/dsu.hpp
     - icon: ':warning:'
-      path: ds/lazy_segment_tree.cpp
-      title: ds/lazy_segment_tree.cpp
+      path: ds/lazy_segment_tree.hpp
+      title: ds/lazy_segment_tree.hpp
     - icon: ':warning:'
       path: ds/li_chao.cpp
       title: ds/li_chao.cpp

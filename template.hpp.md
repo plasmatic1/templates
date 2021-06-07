@@ -8,6 +8,9 @@ data:
   - icon: ':warning:'
     path: ds/dsu.hpp
     title: ds/dsu.hpp
+  - icon: ':warning:'
+    path: ds/lazy_segment_tree.hpp
+    title: ds/lazy_segment_tree.hpp
   - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
@@ -178,6 +181,7 @@ data:
   isVerificationFile: false
   path: template.hpp
   requiredBy:
+  - ds/lazy_segment_tree.hpp
   - ds/bit.hpp
   - ds/dsu.hpp
   - tests/test_utils.hpp
