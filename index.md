@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: ds/bit.hpp
       title: ds/bit.hpp
     - icon: ':warning:'
@@ -70,7 +70,7 @@ data:
     - icon: ':warning:'
       path: template.cpp
       title: template.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template.hpp
       title: template.hpp
   - name: graph
@@ -127,12 +127,6 @@ data:
   - name: old
     pages:
     - icon: ':warning:'
-      path: old/acc1p1brute.py
-      title: old/acc1p1brute.py
-    - icon: ':warning:'
-      path: old/acc1p1gen.py
-      title: old/acc1p1gen.py
-    - icon: ':warning:'
       path: old/template_additons.cpp
       title: old/template_additons.cpp
     - icon: ':warning:'
@@ -157,7 +151,7 @@ data:
       title: string/suffix_automaton.cpp
   - name: tests
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/test_utils.hpp
       title: tests/test_utils.hpp
   - name: tree
@@ -177,7 +171,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aplusb.test.cpp
       title: tests/aplusb.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/bit.test.cpp
       title: tests/bit.test.cpp
 layout: toppage

@@ -1,38 +1,40 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: ds/bit.hpp
     title: ds/bit.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template.hpp
     title: template.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    links: []
-  bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
-    \ std;\n\n// Defines\n#define fs first\n#define sn second\n#define pb push_back\n\
-    #define eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define\
-    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\nusing ll = long long;\
-    \ using ull = unsigned long long; using ld = long double;\nusing pii = pair<int,\
-    \ int>; using pll = pair<long long, long long>;\n#ifdef __GNUG__\n// PBDS order\
-    \ statistic tree\n#include <ext/pb_ds/assoc_container.hpp> // Common file\n#include\
-    \ <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntemplate <typename\
-    \ T, class comp = less<T>> using os_tree = tree<T, null_type, comp, rb_tree_tag,\
-    \ tree_order_statistics_node_update>;\ntemplate <typename K, typename V, class\
-    \ comp = less<K>> using treemap = tree<K, V, comp, rb_tree_tag, tree_order_statistics_node_update>;\n\
-    // HashSet\n#include <ext/pb_ds/assoc_container.hpp>\ntemplate <typename T, class\
-    \ Hash> using hashset = gp_hash_table<T, null_type, Hash>;\ntemplate <typename\
-    \ K, typename V, class Hash> using hashmap = gp_hash_table<K, V, Hash>;\nconst\
-    \ ll RANDOM = chrono::high_resolution_clock::now().time_since_epoch().count();\n\
+    PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
+    links:
+    - https://judge.yosupo.jp/problem/point_add_range_sum
+  bundledCode: "#line 1 \"tests/bit.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\
+    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
+    // Defines\n#define fs first\n#define sn second\n#define pb push_back\n#define\
+    \ eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define all(x)\
+    \ (x).begin(), (x).end()\n// Basic type definitions\nusing ll = long long; using\
+    \ ull = unsigned long long; using ld = long double;\nusing pii = pair<int, int>;\
+    \ using pll = pair<long long, long long>;\n#ifdef __GNUG__\n// PBDS order statistic\
+    \ tree\n#include <ext/pb_ds/assoc_container.hpp> // Common file\n#include <ext/pb_ds/tree_policy.hpp>\n\
+    using namespace __gnu_pbds;\ntemplate <typename T, class comp = less<T>> using\
+    \ os_tree = tree<T, null_type, comp, rb_tree_tag, tree_order_statistics_node_update>;\n\
+    template <typename K, typename V, class comp = less<K>> using treemap = tree<K,\
+    \ V, comp, rb_tree_tag, tree_order_statistics_node_update>;\n// HashSet\n#include\
+    \ <ext/pb_ds/assoc_container.hpp>\ntemplate <typename T, class Hash> using hashset\
+    \ = gp_hash_table<T, null_type, Hash>;\ntemplate <typename K, typename V, class\
+    \ Hash> using hashmap = gp_hash_table<K, V, Hash>;\nconst ll RANDOM = chrono::high_resolution_clock::now().time_since_epoch().count();\n\
     struct chash { ll operator()(ll x) const { return x ^ RANDOM; } };\n#endif\n//\
     \ More utilities\nint SZ(string &v) { return v.length(); }\ntemplate <typename\
     \ C> int SZ(C &v) { return v.size(); }\ntemplate <typename C> void UNIQUE(vector<C>\
@@ -60,7 +62,7 @@ data:
     \            C.applyUpdate(bit[x], v);\n    }\n    Data query(int x) {\n     \
     \   x = C.transformInd(x, N);\n        Data res = C.vdef;\n        for (; x; x\
     \ -= x & -x)\n            C.applyUpdate(res, bit[x]);\n        return res;\n \
-    \   }\n};\n#line 4 \"tests/bit.test.cpp\"\n\nstruct CompLL {\n    using Data =\
+    \   }\n};\n#line 5 \"tests/bit.test.cpp\"\n\nstruct CompLL {\n    using Data =\
     \ ll;\n    const Data vdef = 0;\n    void applyUpdate(Data &to, Data &v) { to\
     \ += v; }\n    int transformInd(int idx, int N) { return idx; }\n};\n\nint main()\
     \ {\n    fast_io();\n    int N = readi(), Q = readi();\n    BIT<CompLL> bit; bit.init(N);\n\
@@ -69,7 +71,8 @@ data:
     \   switch (t) {\n            case 0:\n                bit.update(a+1, b);\n \
     \               break;\n            case 1:\n                print(bit.query(b)\
     \ - bit.query(a));\n        }\n    }\n}\n"
-  code: "#include \"../template.hpp\"\n#include \"test_utils.hpp\"\n#include \"../ds/bit.hpp\"\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
+    #include \"../template.hpp\"\n#include \"test_utils.hpp\"\n#include \"../ds/bit.hpp\"\
     \n\nstruct CompLL {\n    using Data = ll;\n    const Data vdef = 0;\n    void\
     \ applyUpdate(Data &to, Data &v) { to += v; }\n    int transformInd(int idx, int\
     \ N) { return idx; }\n};\n\nint main() {\n    fast_io();\n    int N = readi(),\
@@ -85,8 +88,8 @@ data:
   isVerificationFile: true
   path: tests/bit.test.cpp
   requiredBy: []
-  timestamp: '2021-06-07 02:10:30-04:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-07 02:17:14-04:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/bit.test.cpp
 layout: document

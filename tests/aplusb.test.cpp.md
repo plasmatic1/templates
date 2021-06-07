@@ -12,16 +12,16 @@ data:
     links:
     - https://judge.yosupo.jp/problem/aplusb
   bundledCode: "#line 1 \"tests/aplusb.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int a, b;\n\
-    \    cin>>a>>b;\n    cout<<a+b<<'\\n';\n}\n"
+    \n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    long long a,\
+    \ b;\n    cin>>a>>b;\n    cout<<a+b<<'\\n';\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\nint main(){\n    int a, b;\n    cin>>a>>b;\n    cout<<a+b<<'\\\
+    using namespace std;\nint main(){\n    long long a, b;\n    cin>>a>>b;\n    cout<<a+b<<'\\\
     n';\n}"
   dependsOn: []
   isVerificationFile: true
   path: tests/aplusb.test.cpp
   requiredBy: []
-  timestamp: '2021-06-07 00:32:10-04:00'
+  timestamp: '2021-06-07 02:17:14-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/aplusb.test.cpp
