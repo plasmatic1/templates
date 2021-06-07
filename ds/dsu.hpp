@@ -1,3 +1,7 @@
+#pragma once
+#include <bits/stdc++.h>
+using namespace std;
+
 struct DSU {
     vector<int> dsu;
     void init(int N) {

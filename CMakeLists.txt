@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(templates
         ds/bit.hpp
-        ds/dsu.cpp
+        ds/dsu.hpp
         ds/lazy_segment_tree.cpp
         ds/li_chao.cpp
         ds/segment_tree.cpp
