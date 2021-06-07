@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: ds/bit.hpp
       title: ds/bit.hpp
     - icon: ':warning:'
@@ -70,7 +70,7 @@ data:
     - icon: ':warning:'
       path: template.cpp
       title: template.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: template.hpp
       title: template.hpp
   - name: graph
@@ -155,6 +155,11 @@ data:
     - icon: ':warning:'
       path: string/suffix_automaton.cpp
       title: string/suffix_automaton.cpp
+  - name: tests
+    pages:
+    - icon: ':x:'
+      path: tests/test_utils.hpp
+      title: tests/test_utils.hpp
   - name: tree
     pages:
     - icon: ':warning:'
@@ -172,5 +177,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aplusb.test.cpp
       title: tests/aplusb.test.cpp
+    - icon: ':x:'
+      path: tests/bit.test.cpp
+      title: tests/bit.test.cpp
 layout: toppage
 ---

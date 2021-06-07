@@ -5,10 +5,13 @@ data:
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: tests/bit.test.cpp
+    title: tests/bit.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -32,29 +35,39 @@ data:
     \ &v) { sort(v.begin(), v.end()); v.resize(unique(v.begin(), v.end()) - v.begin());\
     \ }\ntemplate <typename T, typename U> void maxa(T &a, U b) { a = max(a, b); }\n\
     template <typename T, typename U> void mina(T &a, U b) { a = min(a, b); }\nconst\
-    \ ll INF = 0x3f3f3f3f, LLINF = 0x3f3f3f3f3f3f3f3f;\n#line 3 \"ds/dsu.hpp\"\n\n\
-    struct DSU {\n    vector<int> dsu;\n    void init(int N) {\n        dsu.resize(N\
-    \ + 1);\n        iota(dsu.begin(), dsu.end(), 0);\n    }\n    int rt(int x) {\
-    \ return dsu[x] == x ? x : dsu[x] = rt(dsu[x]); }\n    void merge(int x, int y)\
-    \ { // x -> y\n        dsu[rt(x)] = rt(y); }\n    bool same(int x, int y) { return\
-    \ rt(x) == rt(y); }\n};\n"
-  code: "#pragma once\n#include \"../template.hpp\"\n\nstruct DSU {\n    vector<int>\
-    \ dsu;\n    void init(int N) {\n        dsu.resize(N + 1);\n        iota(dsu.begin(),\
-    \ dsu.end(), 0);\n    }\n    int rt(int x) { return dsu[x] == x ? x : dsu[x] =\
-    \ rt(dsu[x]); }\n    void merge(int x, int y) { // x -> y\n        dsu[rt(x)]\
-    \ = rt(y); }\n    bool same(int x, int y) { return rt(x) == rt(y); }\n};\n"
+    \ ll INF = 0x3f3f3f3f, LLINF = 0x3f3f3f3f3f3f3f3f;\n#line 3 \"tests/test_utils.hpp\"\
+    \n\nint readi() {\n    int x; cin >> x;\n    return x;\n}\n\nll readl() {\n  \
+    \  ll x; cin >> x;\n    return x;\n}\n\ntemplate <typename T> vector<T> readv(int\
+    \ n) {\n    vector<T> res(n);\n    for (auto &x : res) cin >> x;\n    return res;\n\
+    }\n\ntemplate <typename T> vector<pair<int, T>> enumerate(vector<T> v, int start\
+    \ = 0) {\n    vector<pair<int, T>> res;\n    for (auto &x : v)\n        res.emplace_back(start++,\
+    \ x);\n    return res;\n}\n\ntemplate <typename T> void print(T v) {\n    cout\
+    \ << v << '\\n';\n}\n\ntemplate <typename T, typename... Rest> void print(T v,\
+    \ Rest... vs) {\n    cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io()\
+    \ {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n}\n"
+  code: "#pragma once\n#include \"../template.hpp\"\n\nint readi() {\n    int x; cin\
+    \ >> x;\n    return x;\n}\n\nll readl() {\n    ll x; cin >> x;\n    return x;\n\
+    }\n\ntemplate <typename T> vector<T> readv(int n) {\n    vector<T> res(n);\n \
+    \   for (auto &x : res) cin >> x;\n    return res;\n}\n\ntemplate <typename T>\
+    \ vector<pair<int, T>> enumerate(vector<T> v, int start = 0) {\n    vector<pair<int,\
+    \ T>> res;\n    for (auto &x : v)\n        res.emplace_back(start++, x);\n   \
+    \ return res;\n}\n\ntemplate <typename T> void print(T v) {\n    cout << v <<\
+    \ '\\n';\n}\n\ntemplate <typename T, typename... Rest> void print(T v, Rest...\
+    \ vs) {\n    cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io() {\n   \
+    \ ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n}"
   dependsOn:
   - template.hpp
   isVerificationFile: false
-  path: ds/dsu.hpp
+  path: tests/test_utils.hpp
   requiredBy: []
   timestamp: '2021-06-07 02:10:30-04:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
-documentation_of: ds/dsu.hpp
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - tests/bit.test.cpp
+documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:
-- /library/ds/dsu.hpp
-- /library/ds/dsu.hpp.html
-title: ds/dsu.hpp
+- /library/tests/test_utils.hpp
+- /library/tests/test_utils.hpp.html
+title: tests/test_utils.hpp
 ---
