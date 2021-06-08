@@ -1,4 +1,9 @@
 {
 "tests/aplusb.test.cpp": "2021-06-07 02:17:14 -0400",
-"tests/bit.test.cpp": "2021-06-07 02:17:14 -0400"
+"tests/ds/bit.test.cpp": "2021-06-07 23:09:50 -0400",
+"tests/ds/dsu.test.cpp": "2021-06-07 23:09:50 -0400",
+"tests/ds/li_chao_tree.test.cpp": "2021-06-07 23:09:50 -0400",
+"tests/ds/segment_tree.test.cpp": "2021-06-07 23:09:50 -0400",
+"tests/ds/segment_tree_lazy.test.cpp": "2021-06-07 23:09:50 -0400",
+"tests/ds/sparse_table.test.cpp": "2021-06-07 23:09:50 -0400"
 }
