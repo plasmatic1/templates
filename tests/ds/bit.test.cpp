@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
-#include "../template.hpp"
-#include "test_utils.hpp"
-#include "../ds/bit.hpp"
+#include "../../template.hpp"
+#include "../test_utils.hpp"
+#include "../../ds/bit.hpp"
 
 struct CompLL {
     using Data = ll;

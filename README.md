@@ -1,12 +1,15 @@
 # Templates
 
 [![Actions Status](https://github.com/plasmatic1/templates/workflows/verify/badge.svg)](https://github.com/plasmatic1/templates/actions)
-[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://plasmatic1.github.io/templates/)
+[![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://plasmatic1.github.io/templates/)
 
-Restructuring of my Data Structure/Algorithm Templates
+Restructuring of my Data Structure/Algorithm Templates, rewritten with [verification-helper](https://github.com/online-judge-tools/verification-helper) to test for correctness.
 
-I have to update quite a few of them too (: and plan to use 
+As these templates are being given tests, I will also make improvements as some of them are quite old and have issues.  Documentation for each template is also planned.
 
-Templates under `external/` are not mine and just exist for convenience
+Templates under `external/` are not mine and will not include tests.  It is possible in the future that I will be re-implementing those algorithms and thus adding tests to them.
 
-Templates are tested on [Library Checker](https://judge.yosupo.jp/).
+## Some Things to Add
+
+- Segtree with permanent flag instead of lazy propagation (a bit faster possibly)
+- Iterative segtree

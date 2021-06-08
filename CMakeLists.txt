@@ -6,10 +6,10 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(templates
         ds/bit.hpp
         ds/dsu.hpp
-        ds/lazy_segment_tree.hpp
-        ds/li_chao.cpp
-        ds/segment_tree.cpp
-        ds/sparse_table.cpp
+        ds/segment_tree_lazy.hpp
+        ds/li_chao_tree.hpp
+        ds/segment_tree.hpp
+        ds/sparse_table.hpp
         ds/treap.cpp
         external/E_fft.cpp
         external/E_reverse_it.cpp
@@ -49,4 +49,11 @@ add_executable(templates
         multiple_cases.cpp
         random.cpp
         rank_compression.cpp
-        template.cpp)
+        template.cpp
+
+        tests/ds/bit.test.cpp
+        tests/ds/dsu.test.cpp
+        tests/ds/li_chao_tree.test.cpp
+        tests/ds/segment_tree.test.cpp
+        tests/ds/segment_tree_lazy.test.cpp
+        tests/ds/sparse_table.test.cpp)

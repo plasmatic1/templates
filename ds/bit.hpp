@@ -2,7 +2,8 @@
 #include "../template.hpp"
 
 // Template is 1-indexed (by default).  Can be made 0-indexed by modifying Comp
-// Default: Point increment and prefix sum query
+// Example: update = point increment, range sum
+// In the function applyUpdate, updates are applied from `v` to `to`
 struct Comp {
     using Data = int;
     const Data vdef = 0;

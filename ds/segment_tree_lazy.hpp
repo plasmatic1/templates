@@ -1,15 +1,15 @@
 #pragma once
 #include "../template.hpp"
 
-// Thanks wesley thanks wesley thanks wesley
-// RMQ + Increment query
+// Example comparator: Range min + Range increment
+// In the functions mergeLazy and applyLazy, objects are merged from `v` to `to`.  In the function merge, data is merged from left to right
 struct Comp {
     using Data = int;
     using Lazy = int;
     const Data vdef = INF;
     const Lazy ldef = 0;
     Data merge(Data l, Data r) const { return min(l, r); }
-    Lazy mergeLazy(Lazy l, Lazy r) const { return l + r; }
+    Lazy mergeLazy(Lazy to, Lazy v) const { return to + v; }
     void applyLazy(Data &to, Lazy &v, int l, int r) { to += v; }
 };
 #define MID int mid = (l + r) / 2, lhs = i + 1, rhs = i + (mid - l + 1) * 2;
@@ -51,6 +51,14 @@ template <class Comp> struct LazySegmentTree {
         MID;
         return seg[i] = C.merge(_update(ql, qr, v, lhs, l, mid), _update(ql, qr, v, rhs, mid + 1, r));
     }
+    Data _setPoint(int q, Data v, int i, int l, int r) {
+        push(i, l, r);
+        if (q > r || q < l) return seg[i];
+        if (l >= q && r <= q) return seg[i] = v;
+        MID;
+        return seg[i] = C.merge(_setPoint(q, v, lhs, l, mid), _setPoint(q, v, rhs, mid + 1, r));
+    }
     Data query(int ql, int qr) { return _query(ql, qr, 1, 1, N); }
     void update(int ql, int qr, Lazy v) { _update(ql, qr, v, 1, 1, N); }
+    void setPoint(int q, Data v) { _setPoint(q, v, 1, 1, N); }
 };

@@ -1,8 +1,13 @@
-// Comparator for range MAX q
+#pragma once
+#include "../template.hpp"
+
 // Sparse table is 1-indexed
+// Comparator for range MIN query
+// When calling init, st should point to the start (0-indexed).  (i.e. if you stored data in A[1], A[2], ..., you should call init with (A+1, A+N+1)
+// However, queries are 1-indexed and inclusive
 struct Comp {
     using Data = int;
-    Data merge(Data a, Data b) { return max(a, b); }
+    Data merge(Data a, Data b) { return min(a, b); }
 };
 template <class Comp> struct SparseTable {
     using Data = typename Comp::Data; Comp C;

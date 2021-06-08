@@ -10,5 +10,5 @@ struct DSU {
     int rt(int x) { return dsu[x] == x ? x : dsu[x] = rt(dsu[x]); }
     void merge(int x, int y) { // x -> y
         dsu[rt(x)] = rt(y); }
-    bool same(int x, int y) { return rt(x) == rt(y); }
+    bool con(int x, int y) { return rt(x) == rt(y); }
 };

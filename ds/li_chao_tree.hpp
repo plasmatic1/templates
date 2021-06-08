@@ -3,9 +3,8 @@ template <typename T> struct Line {
     Line(T m0, T b0) : m(m0), b(b0) {}
     T eval(T x) { return x * m + b; }
 };
-using line = Line<ll>; // Define!!!
-const ll MINX = -1e6, MAXX = 1e6; // Define!!!
-struct LiChao { // Just *-1 if you want to do max lol
+template <typename T, ll MINX = (ll)-1e6, ll MAXX = (ll)1e6> struct LiChaoTree { // Just *-1 if you want to do max lol
+    using line = Line<T>;
     struct Node {
         Node *l = nullptr, *r = nullptr;
         line val{0, LLINF};
@@ -25,7 +24,6 @@ struct LiChao { // Just *-1 if you want to do max lol
         if (lDom != mDom) _insert(ln, n->l, l, mid);
         else _insert(ln, n->r, mid + 1, r);
     }
-    void insert(line ln) { _insert(ln, rt, MINX, MAXX); }
     ll _query(ll x, Node *n, ll l, ll r) {
         if (!n) return LLINF;
         ll res = n->val.eval(x), mid = (l + r) / 2;
@@ -35,7 +33,6 @@ struct LiChao { // Just *-1 if you want to do max lol
         }
         return res;
     }
+    void insert(line ln) { _insert(ln, rt, MINX, MAXX); }
     ll query(ll x) { return _query(x, rt, MINX, MAXX); }
 };
-
-

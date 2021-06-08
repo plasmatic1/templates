@@ -1,5 +1,9 @@
+#pragma once
+#include "../template.hpp"
+
 // Template is 1-indexed
-// RMQ + Set query
+// Default Comp: RMQ + Set query
+// Functions merge and applyUpdate should be implemented left to right
 struct Comp {
     using Data = int;
     using Update = int;
