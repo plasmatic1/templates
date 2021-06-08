@@ -5,19 +5,40 @@ data:
   - icon: ':heavy_check_mark:'
     path: ds/bit.hpp
     title: ds/bit.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: ds/dsu.hpp
     title: ds/dsu.hpp
-  - icon: ':warning:'
-    path: ds/lazy_segment_tree.hpp
-    title: ds/lazy_segment_tree.hpp
+  - icon: ':heavy_check_mark:'
+    path: ds/segment_tree.hpp
+    title: ds/segment_tree.hpp
+  - icon: ':heavy_check_mark:'
+    path: ds/segment_tree_lazy.hpp
+    title: ds/segment_tree_lazy.hpp
+  - icon: ':heavy_check_mark:'
+    path: ds/sparse_table.hpp
+    title: ds/sparse_table.hpp
   - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/bit.test.cpp
-    title: tests/bit.test.cpp
+    path: tests/ds/bit.test.cpp
+    title: tests/ds/bit.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/dsu.test.cpp
+    title: tests/ds/dsu.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/li_chao_tree.test.cpp
+    title: tests/ds/li_chao_tree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/segment_tree.test.cpp
+    title: tests/ds/segment_tree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/segment_tree_lazy.test.cpp
+    title: tests/ds/segment_tree_lazy.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/sparse_table.test.cpp
+    title: tests/ds/sparse_table.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -181,14 +202,21 @@ data:
   isVerificationFile: false
   path: template.hpp
   requiredBy:
-  - ds/lazy_segment_tree.hpp
+  - ds/segment_tree_lazy.hpp
   - ds/bit.hpp
+  - ds/sparse_table.hpp
   - ds/dsu.hpp
+  - ds/segment_tree.hpp
   - tests/test_utils.hpp
   timestamp: '2021-06-07 02:10:30-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/bit.test.cpp
+  - tests/ds/bit.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
+  - tests/ds/segment_tree.test.cpp
+  - tests/ds/sparse_table.test.cpp
+  - tests/ds/dsu.test.cpp
+  - tests/ds/li_chao_tree.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:

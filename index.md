@@ -6,21 +6,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: ds/bit.hpp
       title: ds/bit.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: ds/dsu.hpp
       title: ds/dsu.hpp
-    - icon: ':warning:'
-      path: ds/lazy_segment_tree.hpp
-      title: ds/lazy_segment_tree.hpp
-    - icon: ':warning:'
-      path: ds/li_chao.cpp
-      title: ds/li_chao.cpp
-    - icon: ':warning:'
-      path: ds/segment_tree.cpp
-      title: ds/segment_tree.cpp
-    - icon: ':warning:'
-      path: ds/sparse_table.cpp
-      title: ds/sparse_table.cpp
+    - icon: ':heavy_check_mark:'
+      path: ds/li_chao_tree.hpp
+      title: ds/li_chao_tree.hpp
+    - icon: ':heavy_check_mark:'
+      path: ds/segment_tree.hpp
+      title: ds/segment_tree.hpp
+    - icon: ':heavy_check_mark:'
+      path: ds/segment_tree_lazy.hpp
+      title: ds/segment_tree_lazy.hpp
+    - icon: ':heavy_check_mark:'
+      path: ds/sparse_table.hpp
+      title: ds/sparse_table.hpp
     - icon: ':warning:'
       path: ds/treap.cpp
       title: ds/treap.cpp
@@ -171,8 +171,25 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aplusb.test.cpp
       title: tests/aplusb.test.cpp
+  - name: tests/ds
+    pages:
     - icon: ':heavy_check_mark:'
-      path: tests/bit.test.cpp
-      title: tests/bit.test.cpp
+      path: tests/ds/bit.test.cpp
+      title: tests/ds/bit.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/ds/dsu.test.cpp
+      title: tests/ds/dsu.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/ds/li_chao_tree.test.cpp
+      title: tests/ds/li_chao_tree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/ds/segment_tree.test.cpp
+      title: tests/ds/segment_tree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/ds/segment_tree_lazy.test.cpp
+      title: tests/ds/segment_tree_lazy.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/ds/sparse_table.test.cpp
+      title: tests/ds/sparse_table.test.cpp
 layout: toppage
 ---

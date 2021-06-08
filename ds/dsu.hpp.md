@@ -5,10 +5,13 @@ data:
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/dsu.test.cpp
+    title: tests/ds/dsu.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -36,21 +39,22 @@ data:
     struct DSU {\n    vector<int> dsu;\n    void init(int N) {\n        dsu.resize(N\
     \ + 1);\n        iota(dsu.begin(), dsu.end(), 0);\n    }\n    int rt(int x) {\
     \ return dsu[x] == x ? x : dsu[x] = rt(dsu[x]); }\n    void merge(int x, int y)\
-    \ { // x -> y\n        dsu[rt(x)] = rt(y); }\n    bool same(int x, int y) { return\
+    \ { // x -> y\n        dsu[rt(x)] = rt(y); }\n    bool con(int x, int y) { return\
     \ rt(x) == rt(y); }\n};\n"
   code: "#pragma once\n#include \"../template.hpp\"\n\nstruct DSU {\n    vector<int>\
     \ dsu;\n    void init(int N) {\n        dsu.resize(N + 1);\n        iota(dsu.begin(),\
     \ dsu.end(), 0);\n    }\n    int rt(int x) { return dsu[x] == x ? x : dsu[x] =\
     \ rt(dsu[x]); }\n    void merge(int x, int y) { // x -> y\n        dsu[rt(x)]\
-    \ = rt(y); }\n    bool same(int x, int y) { return rt(x) == rt(y); }\n};\n"
+    \ = rt(y); }\n    bool con(int x, int y) { return rt(x) == rt(y); }\n};\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: ds/dsu.hpp
   requiredBy: []
-  timestamp: '2021-06-07 02:10:30-04:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2021-06-07 23:09:50-04:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/ds/dsu.test.cpp
 documentation_of: ds/dsu.hpp
 layout: document
 redirect_from:

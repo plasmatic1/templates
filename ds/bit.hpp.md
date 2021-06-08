@@ -7,8 +7,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/bit.test.cpp
-    title: tests/bit.test.cpp
+    path: tests/ds/bit.test.cpp
+    title: tests/ds/bit.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -37,20 +37,22 @@ data:
     template <typename T, typename U> void mina(T &a, U b) { a = min(a, b); }\nconst\
     \ ll INF = 0x3f3f3f3f, LLINF = 0x3f3f3f3f3f3f3f3f;\n#line 3 \"ds/bit.hpp\"\n\n\
     // Template is 1-indexed (by default).  Can be made 0-indexed by modifying Comp\n\
-    // Default: Point increment and prefix sum query\nstruct Comp {\n    using Data\
-    \ = int;\n    const Data vdef = 0;\n    void applyUpdate(Data &to, Data &v) {\
-    \ to += v; }\n    int transformInd(int idx, int N) { return idx; }\n};\ntemplate\
-    \ <typename Comp> struct BIT {\n    using Data = typename Comp::Data; Comp C;\n\
-    \    int N; vector<Data> bit;\n    void init(int n0) {\n        N = n0;\n    \
-    \    bit.assign(N + 1, C.vdef);\n    }\n    void update(int x, Data v) {\n   \
-    \     x = C.transformInd(x, N);\n        for (; x <= N; x += x & -x)\n       \
-    \     C.applyUpdate(bit[x], v);\n    }\n    Data query(int x) {\n        x = C.transformInd(x,\
-    \ N);\n        Data res = C.vdef;\n        for (; x; x -= x & -x)\n          \
-    \  C.applyUpdate(res, bit[x]);\n        return res;\n    }\n};\n"
+    // Example: update = point increment, range sum\n// In the function applyUpdate,\
+    \ updates are applied from `v` to `to`\nstruct Comp {\n    using Data = int;\n\
+    \    const Data vdef = 0;\n    void applyUpdate(Data &to, Data &v) { to += v;\
+    \ }\n    int transformInd(int idx, int N) { return idx; }\n};\ntemplate <typename\
+    \ Comp> struct BIT {\n    using Data = typename Comp::Data; Comp C;\n    int N;\
+    \ vector<Data> bit;\n    void init(int n0) {\n        N = n0;\n        bit.assign(N\
+    \ + 1, C.vdef);\n    }\n    void update(int x, Data v) {\n        x = C.transformInd(x,\
+    \ N);\n        for (; x <= N; x += x & -x)\n            C.applyUpdate(bit[x],\
+    \ v);\n    }\n    Data query(int x) {\n        x = C.transformInd(x, N);\n   \
+    \     Data res = C.vdef;\n        for (; x; x -= x & -x)\n            C.applyUpdate(res,\
+    \ bit[x]);\n        return res;\n    }\n};\n"
   code: "#pragma once\n#include \"../template.hpp\"\n\n// Template is 1-indexed (by\
-    \ default).  Can be made 0-indexed by modifying Comp\n// Default: Point increment\
-    \ and prefix sum query\nstruct Comp {\n    using Data = int;\n    const Data vdef\
-    \ = 0;\n    void applyUpdate(Data &to, Data &v) { to += v; }\n    int transformInd(int\
+    \ default).  Can be made 0-indexed by modifying Comp\n// Example: update = point\
+    \ increment, range sum\n// In the function applyUpdate, updates are applied from\
+    \ `v` to `to`\nstruct Comp {\n    using Data = int;\n    const Data vdef = 0;\n\
+    \    void applyUpdate(Data &to, Data &v) { to += v; }\n    int transformInd(int\
     \ idx, int N) { return idx; }\n};\ntemplate <typename Comp> struct BIT {\n   \
     \ using Data = typename Comp::Data; Comp C;\n    int N; vector<Data> bit;\n  \
     \  void init(int n0) {\n        N = n0;\n        bit.assign(N + 1, C.vdef);\n\
@@ -64,10 +66,10 @@ data:
   isVerificationFile: false
   path: ds/bit.hpp
   requiredBy: []
-  timestamp: '2021-06-07 02:10:30-04:00'
+  timestamp: '2021-06-07 23:09:50-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/bit.test.cpp
+  - tests/ds/bit.test.cpp
 documentation_of: ds/bit.hpp
 layout: document
 redirect_from:

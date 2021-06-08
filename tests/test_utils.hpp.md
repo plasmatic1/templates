@@ -7,8 +7,23 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/bit.test.cpp
-    title: tests/bit.test.cpp
+    path: tests/ds/bit.test.cpp
+    title: tests/ds/bit.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/dsu.test.cpp
+    title: tests/ds/dsu.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/li_chao_tree.test.cpp
+    title: tests/ds/li_chao_tree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/segment_tree.test.cpp
+    title: tests/ds/segment_tree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/segment_tree_lazy.test.cpp
+    title: tests/ds/segment_tree_lazy.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/sparse_table.test.cpp
+    title: tests/ds/sparse_table.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -36,34 +51,44 @@ data:
     \ }\ntemplate <typename T, typename U> void maxa(T &a, U b) { a = max(a, b); }\n\
     template <typename T, typename U> void mina(T &a, U b) { a = min(a, b); }\nconst\
     \ ll INF = 0x3f3f3f3f, LLINF = 0x3f3f3f3f3f3f3f3f;\n#line 3 \"tests/test_utils.hpp\"\
-    \n\nint readi() {\n    int x; cin >> x;\n    return x;\n}\n\nll readl() {\n  \
-    \  ll x; cin >> x;\n    return x;\n}\n\ntemplate <typename T> vector<T> readv(int\
-    \ n) {\n    vector<T> res(n);\n    for (auto &x : res) cin >> x;\n    return res;\n\
-    }\n\ntemplate <typename T> vector<pair<int, T>> enumerate(vector<T> v, int start\
-    \ = 0) {\n    vector<pair<int, T>> res;\n    for (auto &x : v)\n        res.emplace_back(start++,\
-    \ x);\n    return res;\n}\n\ntemplate <typename T> void print(T v) {\n    cout\
-    \ << v << '\\n';\n}\n\ntemplate <typename T, typename... Rest> void print(T v,\
-    \ Rest... vs) {\n    cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io()\
-    \ {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n}\n"
-  code: "#pragma once\n#include \"../template.hpp\"\n\nint readi() {\n    int x; cin\
-    \ >> x;\n    return x;\n}\n\nll readl() {\n    ll x; cin >> x;\n    return x;\n\
-    }\n\ntemplate <typename T> vector<T> readv(int n) {\n    vector<T> res(n);\n \
-    \   for (auto &x : res) cin >> x;\n    return res;\n}\n\ntemplate <typename T>\
-    \ vector<pair<int, T>> enumerate(vector<T> v, int start = 0) {\n    vector<pair<int,\
+    \n\n// I/O\ntemplate <typename T> void print(T v) {\n    cout << v << '\\n';\n\
+    }\n\ntemplate <typename T, typename... Rest> void print(T v, Rest... vs) {\n \
+    \   cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io() {\n    ios_base::sync_with_stdio(false);\n\
+    \    cin.tie(NULL);\n}\n\n// Reading operators\ntemplate <typename T, typename\
+    \ U> istream& operator>>(istream& in, pair<T, U> &o) {\n    return in >> o.first\
+    \ >> o.second;\n}\n\n// Read helpers\nint readi() {\n    int x; cin >> x;\n  \
+    \  return x;\n}\n\nll readl() {\n    ll x; cin >> x;\n    return x;\n}\n\ntemplate\
+    \ <typename T> vector<T> readv(int n) {\n    vector<T> res(n);\n    for (auto\
+    \ &x : res) cin >> x;\n    return res;\n}\n\n// Functional stuff\ntemplate <typename\
+    \ T> vector<pair<int, T>> enumerate(vector<T> v, int start = 0) {\n    vector<pair<int,\
     \ T>> res;\n    for (auto &x : v)\n        res.emplace_back(start++, x);\n   \
-    \ return res;\n}\n\ntemplate <typename T> void print(T v) {\n    cout << v <<\
-    \ '\\n';\n}\n\ntemplate <typename T, typename... Rest> void print(T v, Rest...\
-    \ vs) {\n    cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io() {\n   \
-    \ ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n}"
+    \ return res;\n}\n\n"
+  code: "#pragma once\n#include \"../template.hpp\"\n\n// I/O\ntemplate <typename\
+    \ T> void print(T v) {\n    cout << v << '\\n';\n}\n\ntemplate <typename T, typename...\
+    \ Rest> void print(T v, Rest... vs) {\n    cout << v << ' ';\n    print(vs...);\n\
+    }\n\nvoid fast_io() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n\
+    }\n\n// Reading operators\ntemplate <typename T, typename U> istream& operator>>(istream&\
+    \ in, pair<T, U> &o) {\n    return in >> o.first >> o.second;\n}\n\n// Read helpers\n\
+    int readi() {\n    int x; cin >> x;\n    return x;\n}\n\nll readl() {\n    ll\
+    \ x; cin >> x;\n    return x;\n}\n\ntemplate <typename T> vector<T> readv(int\
+    \ n) {\n    vector<T> res(n);\n    for (auto &x : res) cin >> x;\n    return res;\n\
+    }\n\n// Functional stuff\ntemplate <typename T> vector<pair<int, T>> enumerate(vector<T>\
+    \ v, int start = 0) {\n    vector<pair<int, T>> res;\n    for (auto &x : v)\n\
+    \        res.emplace_back(start++, x);\n    return res;\n}\n\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: tests/test_utils.hpp
   requiredBy: []
-  timestamp: '2021-06-07 02:10:30-04:00'
+  timestamp: '2021-06-07 23:09:50-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/bit.test.cpp
+  - tests/ds/bit.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
+  - tests/ds/segment_tree.test.cpp
+  - tests/ds/sparse_table.test.cpp
+  - tests/ds/dsu.test.cpp
+  - tests/ds/li_chao_tree.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:

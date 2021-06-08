@@ -20,7 +20,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
     links:
     - https://judge.yosupo.jp/problem/point_add_range_sum
-  bundledCode: "#line 1 \"tests/bit.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\
+  bundledCode: "#line 1 \"tests/ds/bit.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\
     \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
     // Defines\n#define fs first\n#define sn second\n#define pb push_back\n#define\
     \ eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define all(x)\
@@ -42,18 +42,21 @@ data:
     \ }\ntemplate <typename T, typename U> void maxa(T &a, U b) { a = max(a, b); }\n\
     template <typename T, typename U> void mina(T &a, U b) { a = min(a, b); }\nconst\
     \ ll INF = 0x3f3f3f3f, LLINF = 0x3f3f3f3f3f3f3f3f;\n#line 3 \"tests/test_utils.hpp\"\
-    \n\nint readi() {\n    int x; cin >> x;\n    return x;\n}\n\nll readl() {\n  \
-    \  ll x; cin >> x;\n    return x;\n}\n\ntemplate <typename T> vector<T> readv(int\
-    \ n) {\n    vector<T> res(n);\n    for (auto &x : res) cin >> x;\n    return res;\n\
-    }\n\ntemplate <typename T> vector<pair<int, T>> enumerate(vector<T> v, int start\
-    \ = 0) {\n    vector<pair<int, T>> res;\n    for (auto &x : v)\n        res.emplace_back(start++,\
-    \ x);\n    return res;\n}\n\ntemplate <typename T> void print(T v) {\n    cout\
-    \ << v << '\\n';\n}\n\ntemplate <typename T, typename... Rest> void print(T v,\
-    \ Rest... vs) {\n    cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io()\
-    \ {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n}\n#line 3 \"\
-    ds/bit.hpp\"\n\n// Template is 1-indexed (by default).  Can be made 0-indexed\
-    \ by modifying Comp\n// Default: Point increment and prefix sum query\nstruct\
-    \ Comp {\n    using Data = int;\n    const Data vdef = 0;\n    void applyUpdate(Data\
+    \n\n// I/O\ntemplate <typename T> void print(T v) {\n    cout << v << '\\n';\n\
+    }\n\ntemplate <typename T, typename... Rest> void print(T v, Rest... vs) {\n \
+    \   cout << v << ' ';\n    print(vs...);\n}\n\nvoid fast_io() {\n    ios_base::sync_with_stdio(false);\n\
+    \    cin.tie(NULL);\n}\n\n// Reading operators\ntemplate <typename T, typename\
+    \ U> istream& operator>>(istream& in, pair<T, U> &o) {\n    return in >> o.first\
+    \ >> o.second;\n}\n\n// Read helpers\nint readi() {\n    int x; cin >> x;\n  \
+    \  return x;\n}\n\nll readl() {\n    ll x; cin >> x;\n    return x;\n}\n\ntemplate\
+    \ <typename T> vector<T> readv(int n) {\n    vector<T> res(n);\n    for (auto\
+    \ &x : res) cin >> x;\n    return res;\n}\n\n// Functional stuff\ntemplate <typename\
+    \ T> vector<pair<int, T>> enumerate(vector<T> v, int start = 0) {\n    vector<pair<int,\
+    \ T>> res;\n    for (auto &x : v)\n        res.emplace_back(start++, x);\n   \
+    \ return res;\n}\n\n#line 3 \"ds/bit.hpp\"\n\n// Template is 1-indexed (by default).\
+    \  Can be made 0-indexed by modifying Comp\n// Example: update = point increment,\
+    \ range sum\n// In the function applyUpdate, updates are applied from `v` to `to`\n\
+    struct Comp {\n    using Data = int;\n    const Data vdef = 0;\n    void applyUpdate(Data\
     \ &to, Data &v) { to += v; }\n    int transformInd(int idx, int N) { return idx;\
     \ }\n};\ntemplate <typename Comp> struct BIT {\n    using Data = typename Comp::Data;\
     \ Comp C;\n    int N; vector<Data> bit;\n    void init(int n0) {\n        N =\
@@ -62,8 +65,8 @@ data:
     \            C.applyUpdate(bit[x], v);\n    }\n    Data query(int x) {\n     \
     \   x = C.transformInd(x, N);\n        Data res = C.vdef;\n        for (; x; x\
     \ -= x & -x)\n            C.applyUpdate(res, bit[x]);\n        return res;\n \
-    \   }\n};\n#line 5 \"tests/bit.test.cpp\"\n\nstruct CompLL {\n    using Data =\
-    \ ll;\n    const Data vdef = 0;\n    void applyUpdate(Data &to, Data &v) { to\
+    \   }\n};\n#line 5 \"tests/ds/bit.test.cpp\"\n\nstruct CompLL {\n    using Data\
+    \ = ll;\n    const Data vdef = 0;\n    void applyUpdate(Data &to, Data &v) { to\
     \ += v; }\n    int transformInd(int idx, int N) { return idx; }\n};\n\nint main()\
     \ {\n    fast_io();\n    int N = readi(), Q = readi();\n    BIT<CompLL> bit; bit.init(N);\n\
     \    for (auto [i, x] : enumerate(readv<int>(N), 1))\n        bit.update(i, x);\n\
@@ -72,7 +75,7 @@ data:
     \               break;\n            case 1:\n                print(bit.query(b)\
     \ - bit.query(a));\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    #include \"../template.hpp\"\n#include \"test_utils.hpp\"\n#include \"../ds/bit.hpp\"\
+    #include \"../../template.hpp\"\n#include \"../test_utils.hpp\"\n#include \"../../ds/bit.hpp\"\
     \n\nstruct CompLL {\n    using Data = ll;\n    const Data vdef = 0;\n    void\
     \ applyUpdate(Data &to, Data &v) { to += v; }\n    int transformInd(int idx, int\
     \ N) { return idx; }\n};\n\nint main() {\n    fast_io();\n    int N = readi(),\
@@ -86,15 +89,15 @@ data:
   - tests/test_utils.hpp
   - ds/bit.hpp
   isVerificationFile: true
-  path: tests/bit.test.cpp
+  path: tests/ds/bit.test.cpp
   requiredBy: []
-  timestamp: '2021-06-07 02:17:14-04:00'
+  timestamp: '2021-06-07 23:09:50-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/bit.test.cpp
+documentation_of: tests/ds/bit.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/bit.test.cpp
-- /verify/tests/bit.test.cpp.html
-title: tests/bit.test.cpp
+- /verify/tests/ds/bit.test.cpp
+- /verify/tests/ds/bit.test.cpp.html
+title: tests/ds/bit.test.cpp
 ---
