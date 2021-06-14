@@ -5,5 +5,6 @@
 "tests/ds/li_chao_tree.test.cpp": "2021-06-07 23:09:50 -0400",
 "tests/ds/segment_tree.test.cpp": "2021-06-07 23:09:50 -0400",
 "tests/ds/segment_tree_lazy.test.cpp": "2021-06-07 23:09:50 -0400",
-"tests/ds/sparse_table.test.cpp": "2021-06-07 23:09:50 -0400"
+"tests/ds/sparse_table.test.cpp": "2021-06-07 23:09:50 -0400",
+"tests/graph/2sat.test.cpp": "2021-06-14 14:35:08 -0400"
 }
