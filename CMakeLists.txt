@@ -19,7 +19,7 @@ add_executable(templates
         external/flow.cpp
         external/mint.cpp
         external/UNFINISHED_ntt_big_mod.cpp
-        graph/2sat.cpp
+        graph/2sat.hpp
         graph/bcc.cpp
         graph/scc.cpp
         judge/fhc.cpp
@@ -56,4 +56,5 @@ add_executable(templates
         tests/ds/li_chao_tree.test.cpp
         tests/ds/segment_tree.test.cpp
         tests/ds/segment_tree_lazy.test.cpp
-        tests/ds/sparse_table.test.cpp)
+        tests/ds/sparse_table.test.cpp
+        tests/graph/2sat.test.cpp)

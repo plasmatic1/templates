@@ -1,6 +1,9 @@
+#pragma once
+#include "../template.hpp"
+
 struct TwoSat {
     int N, cord, ccomp;
-    vector<int> ord, low, instk, res, stk, comp;
+    vector<int> ord, low, instk, stk, comp;
     vector<vector<int>> g;
     void init(int N0) {
         N = N0; cord = ccomp = 0;
@@ -9,7 +12,6 @@ struct TwoSat {
         low.assign(N*2+1, 0);
         instk.assign(N*2+1, 0);
         comp.assign(N*2+1, 0);
-        res.assign(N+1, 0);
         stk.clear();
     }
     void addEdge(int a, int b) {
@@ -41,17 +43,16 @@ struct TwoSat {
             } while (u != c);
         }
     }
-    void solve() {
+    vector<int> solve() {
         for (auto i = 1; i <= 2*N; i++)
             if (!ord[i])
                 tarjan(i);
-        for (auto i = 1; i <= N; i++) {
-            if (comp[i] == comp[i+N]) {
-                res.assign(N+1, -1);
-                return;
-            }
-        }
+        for (auto i = 1; i <= N; i++)
+            if (comp[i] == comp[i+N])
+                return vector<int>(N+1, -1);
+        vector<int> res(N+1);
         for (auto i = 1; i <= N; i++)
             res[i] = comp[i] < comp[i+N]; // 1 > 0
+        return res;
     }
 };
