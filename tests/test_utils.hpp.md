@@ -24,6 +24,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/ds/sparse_table.test.cpp
     title: tests/ds/sparse_table.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/2sat.test.cpp
+    title: tests/graph/2sat.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -89,6 +92,7 @@ data:
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/ds/li_chao_tree.test.cpp
+  - tests/graph/2sat.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:

@@ -18,6 +18,9 @@ data:
     path: ds/sparse_table.hpp
     title: ds/sparse_table.hpp
   - icon: ':heavy_check_mark:'
+    path: graph/2sat.hpp
+    title: graph/2sat.hpp
+  - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedVerifiedWith:
@@ -39,6 +42,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/ds/sparse_table.test.cpp
     title: tests/ds/sparse_table.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/2sat.test.cpp
+    title: tests/graph/2sat.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -208,6 +214,7 @@ data:
   - ds/dsu.hpp
   - ds/segment_tree.hpp
   - tests/test_utils.hpp
+  - graph/2sat.hpp
   timestamp: '2021-06-07 02:10:30-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
@@ -217,6 +224,7 @@ data:
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/ds/li_chao_tree.test.cpp
+  - tests/graph/2sat.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:

@@ -75,9 +75,9 @@ data:
       title: template.hpp
   - name: graph
     pages:
-    - icon: ':warning:'
-      path: graph/2sat.cpp
-      title: graph/2sat.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/2sat.hpp
+      title: graph/2sat.hpp
     - icon: ':warning:'
       path: graph/bcc.cpp
       title: graph/bcc.cpp
@@ -191,5 +191,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/ds/sparse_table.test.cpp
       title: tests/ds/sparse_table.test.cpp
+  - name: tests/graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/2sat.test.cpp
+      title: tests/graph/2sat.test.cpp
 layout: toppage
 ---
