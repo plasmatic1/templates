@@ -10,6 +10,7 @@ using namespace std;
 #define mtp make_tuple
 #define all(x) (x).begin(), (x).end()
 // Basic type definitions
+template <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some templates
 using ll = long long; using ull = unsigned long long; using ld = long double;
 using pii = pair<int, int>; using pll = pair<long long, long long>;
 #ifdef __GNUG__

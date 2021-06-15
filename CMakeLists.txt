@@ -19,8 +19,9 @@ add_executable(templates
         external/flow.cpp
         external/mint.cpp
         external/UNFINISHED_ntt_big_mod.cpp
+        graph/edge_types.hpp
         graph/2sat.hpp
-        graph/bcc.cpp
+        graph/tarjan_undirected.hpp
         graph/scc.cpp
         judge/fhc.cpp
         judge/google.cpp
@@ -57,4 +58,8 @@ add_executable(templates
         tests/ds/segment_tree.test.cpp
         tests/ds/segment_tree_lazy.test.cpp
         tests/ds/sparse_table.test.cpp
-        tests/graph/2sat.test.cpp)
+
+        tests/graph/2sat.test.cpp
+        tests/graph/articulation_points.test.cpp
+        tests/graph/bcc.test.cpp
+        tests/graph/bridges.test.cpp)
