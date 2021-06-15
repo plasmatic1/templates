@@ -7,7 +7,11 @@
 "tests/ds/segment_tree_lazy.test.cpp": "2021-06-14 21:42:48 -0400",
 "tests/ds/sparse_table.test.cpp": "2021-06-14 21:42:48 -0400",
 "tests/graph/2sat.test.cpp": "2021-06-14 21:42:48 -0400",
-"tests/graph/articulation_points.test.cpp": "2021-06-14 21:42:48 -0400",
-"tests/graph/bcc.test.cpp": "2021-06-14 21:42:48 -0400",
-"tests/graph/bridges.test.cpp": "2021-06-14 21:42:48 -0400"
+"tests/graph/articulation_points.test.cpp": "2021-06-14 22:30:55 -0400",
+"tests/graph/bfs.test.cpp": "2021-06-14 22:30:55 -0400",
+"tests/graph/biconnected_components.test.cpp": "2021-06-14 22:30:55 -0400",
+"tests/graph/bridges.test.cpp": "2021-06-14 22:30:55 -0400",
+"tests/graph/dijkstra.test.cpp": "2021-06-14 22:30:55 -0400",
+"tests/graph/scc.test.cpp": "2021-06-14 22:30:55 -0400",
+"tests/graph/spfa.test.cpp": "2021-06-14 22:30:55 -0400"
 }
