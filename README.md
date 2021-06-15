@@ -13,3 +13,4 @@ Templates under `external/` are not mine and will not include tests.  It is poss
 
 - Segtree with permanent flag instead of lazy propagation (a bit faster possibly)
 - Iterative segtree
+- Floyd Warshall/Bellman Ford? (I don't think these are really necessary since they're super super simple)

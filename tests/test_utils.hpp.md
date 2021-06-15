@@ -31,11 +31,23 @@ data:
     path: tests/graph/articulation_points.test.cpp
     title: tests/graph/articulation_points.test.cpp
   - icon: ':heavy_check_mark:'
-    path: tests/graph/bcc.test.cpp
-    title: tests/graph/bcc.test.cpp
+    path: tests/graph/bfs.test.cpp
+    title: tests/graph/bfs.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/biconnected_components.test.cpp
+    title: tests/graph/biconnected_components.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/graph/bridges.test.cpp
     title: tests/graph/bridges.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/dijkstra.test.cpp
+    title: tests/graph/dijkstra.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/scc.test.cpp
+    title: tests/graph/scc.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/spfa.test.cpp
+    title: tests/graph/spfa.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -103,8 +115,12 @@ data:
   - tests/ds/dsu.test.cpp
   - tests/ds/li_chao_tree.test.cpp
   - tests/graph/articulation_points.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/biconnected_components.test.cpp
   - tests/graph/bridges.test.cpp
-  - tests/graph/bcc.test.cpp
+  - tests/graph/scc.test.cpp
   - tests/graph/2sat.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document

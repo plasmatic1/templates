@@ -10,8 +10,8 @@ data:
     path: tests/graph/articulation_points.test.cpp
     title: tests/graph/articulation_points.test.cpp
   - icon: ':heavy_check_mark:'
-    path: tests/graph/bcc.test.cpp
-    title: tests/graph/bcc.test.cpp
+    path: tests/graph/biconnected_components.test.cpp
+    title: tests/graph/biconnected_components.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/graph/bridges.test.cpp
     title: tests/graph/bridges.test.cpp
@@ -51,13 +51,13 @@ data:
     \        cord = 0;\n        ord.assign(N+1, 0); low.assign(N+1, 0);\n        stk.clear();\n\
     \        if (MODE & BICONNECTED_COMPONENTS) components.clear();\n        if (MODE\
     \ & ARTICULATION_POINTS) articulation_points.clear();\n        if (MODE & BRIDGES)\
-    \ bridges.clear();\n\n        function<void(int, int)> dfs = [&] (int c, int pi)\
-    \ {\n            bool artic = false;\n            int cc = 0;\n\n            ord[c]\
-    \ = low[c] = ++cord;\n            for (auto _to : g[c]) {\n                int\
-    \ to = E.v(_to), toi = E.i(_to);\n                if (toi != pi) {\n         \
-    \           if (!ord[to]) {\n                        if (MODE & BICONNECTED_COMPONENTS)\
+    \ bridges.clear();\n\n        function<void(int, int)> tarjan = [&] (int c, int\
+    \ pi) {\n            bool artic = false;\n            int cc = 0;\n\n        \
+    \    ord[c] = low[c] = ++cord;\n            for (auto _to : g[c]) {\n        \
+    \        int to = E.v(_to), toi = E.i(_to);\n                if (toi != pi) {\n\
+    \                    if (!ord[to]) {\n                        if (MODE & BICONNECTED_COMPONENTS)\
     \ stk.emplace_back(c, to);\n                        if (MODE & ARTICULATION_POINTS)\
-    \ cc++;\n                        dfs(to, toi);\n                        low[c]\
+    \ cc++;\n                        tarjan(to, toi);\n                        low[c]\
     \ = min(low[c], low[to]);\n\n                        // we got an articulation\
     \ point bois :sunglasses:\n                        if (low[to] >= ord[c]) {\n\
     \                            if (MODE & ARTICULATION_POINTS) artic = true;\n \
@@ -77,7 +77,7 @@ data:
     \           }\n\n            if (MODE & ARTICULATION_POINTS)\n               \
     \ if ((pi != -1 && artic) || (pi == -1 && cc > 1))\n                    articulation_points.push_back(c);\n\
     \        };\n        for (int i = 1; i <= N; i++)\n            if (!ord[i])\n\
-    \                dfs(i, -1);\n    }\n\n    void bind(opt_ref<vector<int>> ord0,\
+    \                tarjan(i, -1);\n    }\n\n    void bind(opt_ref<vector<int>> ord0,\
     \ opt_ref<vector<int>> low0) {\n        if (ord0) ord.swap(*ord0);\n        if\
     \ (low0) low.swap(*low0);\n    }\n};\n"
   code: "#pragma once\n#include \"../template.hpp\"\n\nconst int BICONNECTED_COMPONENTS\
@@ -89,17 +89,17 @@ data:
     \ 0); low.assign(N+1, 0);\n        stk.clear();\n        if (MODE & BICONNECTED_COMPONENTS)\
     \ components.clear();\n        if (MODE & ARTICULATION_POINTS) articulation_points.clear();\n\
     \        if (MODE & BRIDGES) bridges.clear();\n\n        function<void(int, int)>\
-    \ dfs = [&] (int c, int pi) {\n            bool artic = false;\n            int\
-    \ cc = 0;\n\n            ord[c] = low[c] = ++cord;\n            for (auto _to\
-    \ : g[c]) {\n                int to = E.v(_to), toi = E.i(_to);\n            \
-    \    if (toi != pi) {\n                    if (!ord[to]) {\n                 \
-    \       if (MODE & BICONNECTED_COMPONENTS) stk.emplace_back(c, to);\n        \
-    \                if (MODE & ARTICULATION_POINTS) cc++;\n                     \
-    \   dfs(to, toi);\n                        low[c] = min(low[c], low[to]);\n\n\
-    \                        // we got an articulation point bois :sunglasses:\n \
-    \                       if (low[to] >= ord[c]) {\n                           \
-    \ if (MODE & ARTICULATION_POINTS) artic = true;\n                            if\
-    \ (MODE & BICONNECTED_COMPONENTS) {\n                                components.push_back(vector<pii>());\n\
+    \ tarjan = [&] (int c, int pi) {\n            bool artic = false;\n          \
+    \  int cc = 0;\n\n            ord[c] = low[c] = ++cord;\n            for (auto\
+    \ _to : g[c]) {\n                int to = E.v(_to), toi = E.i(_to);\n        \
+    \        if (toi != pi) {\n                    if (!ord[to]) {\n             \
+    \           if (MODE & BICONNECTED_COMPONENTS) stk.emplace_back(c, to);\n    \
+    \                    if (MODE & ARTICULATION_POINTS) cc++;\n                 \
+    \       tarjan(to, toi);\n                        low[c] = min(low[c], low[to]);\n\
+    \n                        // we got an articulation point bois :sunglasses:\n\
+    \                        if (low[to] >= ord[c]) {\n                          \
+    \  if (MODE & ARTICULATION_POINTS) artic = true;\n                           \
+    \ if (MODE & BICONNECTED_COMPONENTS) {\n                                components.push_back(vector<pii>());\n\
     \                                int u, v;\n                                do\
     \ {\n                                    auto _e = stk.back();\n             \
     \                       stk.pop_back();\n                                    tie(u,\
@@ -114,20 +114,21 @@ data:
     \        }\n            }\n\n            if (MODE & ARTICULATION_POINTS)\n   \
     \             if ((pi != -1 && artic) || (pi == -1 && cc > 1))\n             \
     \       articulation_points.push_back(c);\n        };\n        for (int i = 1;\
-    \ i <= N; i++)\n            if (!ord[i])\n                dfs(i, -1);\n    }\n\
-    \n    void bind(opt_ref<vector<int>> ord0, opt_ref<vector<int>> low0) {\n    \
-    \    if (ord0) ord.swap(*ord0);\n        if (low0) low.swap(*low0);\n    }\n};\n"
+    \ i <= N; i++)\n            if (!ord[i])\n                tarjan(i, -1);\n   \
+    \ }\n\n    void bind(opt_ref<vector<int>> ord0, opt_ref<vector<int>> low0) {\n\
+    \        if (ord0) ord.swap(*ord0);\n        if (low0) low.swap(*low0);\n    }\n\
+    };\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: graph/tarjan_undirected.hpp
   requiredBy: []
-  timestamp: '2021-06-14 21:42:48-04:00'
+  timestamp: '2021-06-14 22:30:55-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/articulation_points.test.cpp
+  - tests/graph/biconnected_components.test.cpp
   - tests/graph/bridges.test.cpp
-  - tests/graph/bcc.test.cpp
 documentation_of: graph/tarjan_undirected.hpp
 layout: document
 redirect_from:

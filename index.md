@@ -79,11 +79,23 @@ data:
       path: graph/2sat.hpp
       title: graph/2sat.hpp
     - icon: ':heavy_check_mark:'
+      path: graph/bfs.hpp
+      title: graph/bfs.hpp
+    - icon: ':warning:'
+      path: graph/bfs_0_1.hpp
+      title: graph/bfs_0_1.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/dijkstra.hpp
+      title: graph/dijkstra.hpp
+    - icon: ':heavy_check_mark:'
       path: graph/edge_types.hpp
       title: graph/edge_types.hpp
-    - icon: ':warning:'
-      path: graph/scc.cpp
-      title: graph/scc.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/scc.hpp
+      title: graph/scc.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/spfa.hpp
+      title: graph/spfa.hpp
     - icon: ':heavy_check_mark:'
       path: graph/tarjan_undirected.hpp
       title: graph/tarjan_undirected.hpp
@@ -203,10 +215,22 @@ data:
       path: tests/graph/articulation_points.test.cpp
       title: tests/graph/articulation_points.test.cpp
     - icon: ':heavy_check_mark:'
-      path: tests/graph/bcc.test.cpp
-      title: tests/graph/bcc.test.cpp
+      path: tests/graph/bfs.test.cpp
+      title: tests/graph/bfs.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/biconnected_components.test.cpp
+      title: tests/graph/biconnected_components.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/graph/bridges.test.cpp
       title: tests/graph/bridges.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/dijkstra.test.cpp
+      title: tests/graph/dijkstra.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/scc.test.cpp
+      title: tests/graph/scc.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/spfa.test.cpp
+      title: tests/graph/spfa.test.cpp
 layout: toppage
 ---

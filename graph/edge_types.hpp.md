@@ -10,11 +10,23 @@ data:
     path: tests/graph/articulation_points.test.cpp
     title: tests/graph/articulation_points.test.cpp
   - icon: ':heavy_check_mark:'
-    path: tests/graph/bcc.test.cpp
-    title: tests/graph/bcc.test.cpp
+    path: tests/graph/bfs.test.cpp
+    title: tests/graph/bfs.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/biconnected_components.test.cpp
+    title: tests/graph/biconnected_components.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/graph/bridges.test.cpp
     title: tests/graph/bridges.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/dijkstra.test.cpp
+    title: tests/graph/dijkstra.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/scc.test.cpp
+    title: tests/graph/scc.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/spfa.test.cpp
+    title: tests/graph/spfa.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,43 +59,48 @@ data:
     \ }\n    int w(EdgeType e) { return 1; }\n    int i(EdgeType e) { throw domain_error(\"\
     no information on edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v)\
     \ { return v; }\n};\ntemplate <typename T> struct WeightedEdge {\n    using EdgeType\
-    \ = pair<int, T>;\n    int v(EdgeType e) { return e.first; }\n    T w(EdgeType\
-    \ e) { return e.second; }\n    int i(EdgeType e) { throw domain_error(\"no information\
-    \ on edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v) { return {v,\
-    \ w(e)}; }\n};\nstruct IndexedEdge {\n    using EdgeType = pair<int, int>;\n \
-    \   int v(EdgeType e) { return e.first; }\n    int w(EdgeType e) { return 1; }\n\
-    \    int i(EdgeType e) { return e.second; }\n    EdgeType swapNode(EdgeType e,\
-    \ int v) { return {v, i(e)}; }\n};\ntemplate <typename T> struct WeightedIndexedEdge\
-    \ {\n    using EdgeType = tuple<int, T, int>;\n    int v(EdgeType e) { return\
-    \ get<0>(e); }\n    T w(EdgeType e) { return get<1>(e); }\n    int i(EdgeType\
-    \ e) { return get<2>(e); }\n    EdgeType swapNode(EdgeType e, int v) { return\
-    \ {v, w(e), i(e)}; }\n};\n"
+    \ = pair<int, T>; using WeightType = T;\n    int v(EdgeType e) { return e.first;\
+    \ }\n    T w(EdgeType e) { return e.second; }\n    int i(EdgeType e) { throw domain_error(\"\
+    no information on edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v)\
+    \ { return {v, w(e)}; }\n};\nstruct IndexedEdge {\n    using EdgeType = pair<int,\
+    \ int>;\n    int v(EdgeType e) { return e.first; }\n    int w(EdgeType e) { return\
+    \ 1; }\n    int i(EdgeType e) { return e.second; }\n    EdgeType swapNode(EdgeType\
+    \ e, int v) { return {v, i(e)}; }\n};\ntemplate <typename T> struct WeightedIndexedEdge\
+    \ {\n    using EdgeType = tuple<int, T, int>; using WeightType = T;\n    int v(EdgeType\
+    \ e) { return get<0>(e); }\n    T w(EdgeType e) { return get<1>(e); }\n    int\
+    \ i(EdgeType e) { return get<2>(e); }\n    EdgeType swapNode(EdgeType e, int v)\
+    \ { return {v, w(e), i(e)}; }\n};\n"
   code: "#pragma once\n#include \"../template.hpp\"\n\nstruct Edge {\n    using EdgeType\
     \ = int;\n    int v(EdgeType e) { return e; }\n    int w(EdgeType e) { return\
     \ 1; }\n    int i(EdgeType e) { throw domain_error(\"no information on edge indices\"\
     ); }\n    EdgeType swapNode(EdgeType e, int v) { return v; }\n};\ntemplate <typename\
-    \ T> struct WeightedEdge {\n    using EdgeType = pair<int, T>;\n    int v(EdgeType\
-    \ e) { return e.first; }\n    T w(EdgeType e) { return e.second; }\n    int i(EdgeType\
-    \ e) { throw domain_error(\"no information on edge indices\"); }\n    EdgeType\
-    \ swapNode(EdgeType e, int v) { return {v, w(e)}; }\n};\nstruct IndexedEdge {\n\
-    \    using EdgeType = pair<int, int>;\n    int v(EdgeType e) { return e.first;\
-    \ }\n    int w(EdgeType e) { return 1; }\n    int i(EdgeType e) { return e.second;\
-    \ }\n    EdgeType swapNode(EdgeType e, int v) { return {v, i(e)}; }\n};\ntemplate\
-    \ <typename T> struct WeightedIndexedEdge {\n    using EdgeType = tuple<int, T,\
-    \ int>;\n    int v(EdgeType e) { return get<0>(e); }\n    T w(EdgeType e) { return\
-    \ get<1>(e); }\n    int i(EdgeType e) { return get<2>(e); }\n    EdgeType swapNode(EdgeType\
-    \ e, int v) { return {v, w(e), i(e)}; }\n};\n"
+    \ T> struct WeightedEdge {\n    using EdgeType = pair<int, T>; using WeightType\
+    \ = T;\n    int v(EdgeType e) { return e.first; }\n    T w(EdgeType e) { return\
+    \ e.second; }\n    int i(EdgeType e) { throw domain_error(\"no information on\
+    \ edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v) { return {v, w(e)};\
+    \ }\n};\nstruct IndexedEdge {\n    using EdgeType = pair<int, int>;\n    int v(EdgeType\
+    \ e) { return e.first; }\n    int w(EdgeType e) { return 1; }\n    int i(EdgeType\
+    \ e) { return e.second; }\n    EdgeType swapNode(EdgeType e, int v) { return {v,\
+    \ i(e)}; }\n};\ntemplate <typename T> struct WeightedIndexedEdge {\n    using\
+    \ EdgeType = tuple<int, T, int>; using WeightType = T;\n    int v(EdgeType e)\
+    \ { return get<0>(e); }\n    T w(EdgeType e) { return get<1>(e); }\n    int i(EdgeType\
+    \ e) { return get<2>(e); }\n    EdgeType swapNode(EdgeType e, int v) { return\
+    \ {v, w(e), i(e)}; }\n};\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: graph/edge_types.hpp
   requiredBy: []
-  timestamp: '2021-06-14 21:42:48-04:00'
+  timestamp: '2021-06-14 22:30:55-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/articulation_points.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/biconnected_components.test.cpp
   - tests/graph/bridges.test.cpp
-  - tests/graph/bcc.test.cpp
+  - tests/graph/scc.test.cpp
 documentation_of: graph/edge_types.hpp
 layout: document
 redirect_from:

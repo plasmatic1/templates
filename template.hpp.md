@@ -21,8 +21,23 @@ data:
     path: graph/2sat.hpp
     title: graph/2sat.hpp
   - icon: ':heavy_check_mark:'
+    path: graph/bfs.hpp
+    title: graph/bfs.hpp
+  - icon: ':warning:'
+    path: graph/bfs_0_1.hpp
+    title: graph/bfs_0_1.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/dijkstra.hpp
+    title: graph/dijkstra.hpp
+  - icon: ':heavy_check_mark:'
     path: graph/edge_types.hpp
     title: graph/edge_types.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/scc.hpp
+    title: graph/scc.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/spfa.hpp
+    title: graph/spfa.hpp
   - icon: ':heavy_check_mark:'
     path: graph/tarjan_undirected.hpp
     title: graph/tarjan_undirected.hpp
@@ -55,11 +70,23 @@ data:
     path: tests/graph/articulation_points.test.cpp
     title: tests/graph/articulation_points.test.cpp
   - icon: ':heavy_check_mark:'
-    path: tests/graph/bcc.test.cpp
-    title: tests/graph/bcc.test.cpp
+    path: tests/graph/bfs.test.cpp
+    title: tests/graph/bfs.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/biconnected_components.test.cpp
+    title: tests/graph/biconnected_components.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/graph/bridges.test.cpp
     title: tests/graph/bridges.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/dijkstra.test.cpp
+    title: tests/graph/dijkstra.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/scc.test.cpp
+    title: tests/graph/scc.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/spfa.test.cpp
+    title: tests/graph/spfa.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -235,7 +262,12 @@ data:
   - ds/dsu.hpp
   - ds/segment_tree.hpp
   - tests/test_utils.hpp
+  - graph/bfs_0_1.hpp
   - graph/tarjan_undirected.hpp
+  - graph/dijkstra.hpp
+  - graph/spfa.hpp
+  - graph/bfs.hpp
+  - graph/scc.hpp
   - graph/2sat.hpp
   - graph/edge_types.hpp
   timestamp: '2021-06-14 21:42:48-04:00'
@@ -248,8 +280,12 @@ data:
   - tests/ds/dsu.test.cpp
   - tests/ds/li_chao_tree.test.cpp
   - tests/graph/articulation_points.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/biconnected_components.test.cpp
   - tests/graph/bridges.test.cpp
-  - tests/graph/bcc.test.cpp
+  - tests/graph/scc.test.cpp
   - tests/graph/2sat.test.cpp
 documentation_of: template.hpp
 layout: document
