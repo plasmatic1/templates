@@ -27,6 +27,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/2sat.test.cpp
     title: tests/graph/2sat.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/articulation_points.test.cpp
+    title: tests/graph/articulation_points.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/bcc.test.cpp
+    title: tests/graph/bcc.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/bridges.test.cpp
+    title: tests/graph/bridges.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -35,14 +44,15 @@ data:
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n\n// Defines\n#define fs first\n#define sn second\n#define pb push_back\n\
     #define eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define\
-    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\nusing ll = long long;\
-    \ using ull = unsigned long long; using ld = long double;\nusing pii = pair<int,\
-    \ int>; using pll = pair<long long, long long>;\n#ifdef __GNUG__\n// PBDS order\
-    \ statistic tree\n#include <ext/pb_ds/assoc_container.hpp> // Common file\n#include\
-    \ <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntemplate <typename\
-    \ T, class comp = less<T>> using os_tree = tree<T, null_type, comp, rb_tree_tag,\
-    \ tree_order_statistics_node_update>;\ntemplate <typename K, typename V, class\
-    \ comp = less<K>> using treemap = tree<K, V, comp, rb_tree_tag, tree_order_statistics_node_update>;\n\
+    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\ntemplate <typename\
+    \ T> using opt_ref = optional<reference_wrapper<T>>; // for some templates\nusing\
+    \ ll = long long; using ull = unsigned long long; using ld = long double;\nusing\
+    \ pii = pair<int, int>; using pll = pair<long long, long long>;\n#ifdef __GNUG__\n\
+    // PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp> // Common\
+    \ file\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntemplate\
+    \ <typename T, class comp = less<T>> using os_tree = tree<T, null_type, comp,\
+    \ rb_tree_tag, tree_order_statistics_node_update>;\ntemplate <typename K, typename\
+    \ V, class comp = less<K>> using treemap = tree<K, V, comp, rb_tree_tag, tree_order_statistics_node_update>;\n\
     // HashSet\n#include <ext/pb_ds/assoc_container.hpp>\ntemplate <typename T, class\
     \ Hash> using hashset = gp_hash_table<T, null_type, Hash>;\ntemplate <typename\
     \ K, typename V, class Hash> using hashmap = gp_hash_table<K, V, Hash>;\nconst\
@@ -83,7 +93,7 @@ data:
   isVerificationFile: false
   path: tests/test_utils.hpp
   requiredBy: []
-  timestamp: '2021-06-07 23:09:50-04:00'
+  timestamp: '2021-06-14 21:42:48-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/ds/bit.test.cpp
@@ -92,6 +102,9 @@ data:
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/ds/li_chao_tree.test.cpp
+  - tests/graph/articulation_points.test.cpp
+  - tests/graph/bridges.test.cpp
+  - tests/graph/bcc.test.cpp
   - tests/graph/2sat.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document

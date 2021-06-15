@@ -21,6 +21,12 @@ data:
     path: graph/2sat.hpp
     title: graph/2sat.hpp
   - icon: ':heavy_check_mark:'
+    path: graph/edge_types.hpp
+    title: graph/edge_types.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/tarjan_undirected.hpp
+    title: graph/tarjan_undirected.hpp
+  - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedVerifiedWith:
@@ -45,6 +51,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/2sat.test.cpp
     title: tests/graph/2sat.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/articulation_points.test.cpp
+    title: tests/graph/articulation_points.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/bcc.test.cpp
+    title: tests/graph/bcc.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/bridges.test.cpp
+    title: tests/graph/bridges.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -74,6 +89,9 @@ data:
     #define all(x) (x).begin(), (x).end()
 
     // Basic type definitions
+
+    template <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some
+    templates
 
     using ll = long long; using ull = unsigned long long; using ld = long double;
 
@@ -152,6 +170,9 @@ data:
 
     // Basic type definitions
 
+    template <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some
+    templates
+
     using ll = long long; using ull = unsigned long long; using ld = long double;
 
     using pii = pair<int, int>; using pll = pair<long long, long long>;
@@ -214,8 +235,10 @@ data:
   - ds/dsu.hpp
   - ds/segment_tree.hpp
   - tests/test_utils.hpp
+  - graph/tarjan_undirected.hpp
   - graph/2sat.hpp
-  timestamp: '2021-06-07 02:10:30-04:00'
+  - graph/edge_types.hpp
+  timestamp: '2021-06-14 21:42:48-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/ds/bit.test.cpp
@@ -224,6 +247,9 @@ data:
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/ds/li_chao_tree.test.cpp
+  - tests/graph/articulation_points.test.cpp
+  - tests/graph/bridges.test.cpp
+  - tests/graph/bcc.test.cpp
   - tests/graph/2sat.test.cpp
 documentation_of: template.hpp
 layout: document

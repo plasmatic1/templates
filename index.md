@@ -78,12 +78,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/2sat.hpp
       title: graph/2sat.hpp
-    - icon: ':warning:'
-      path: graph/bcc.cpp
-      title: graph/bcc.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/edge_types.hpp
+      title: graph/edge_types.hpp
     - icon: ':warning:'
       path: graph/scc.cpp
       title: graph/scc.cpp
+    - icon: ':heavy_check_mark:'
+      path: graph/tarjan_undirected.hpp
+      title: graph/tarjan_undirected.hpp
   - name: judge
     pages:
     - icon: ':warning:'
@@ -196,5 +199,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/2sat.test.cpp
       title: tests/graph/2sat.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/articulation_points.test.cpp
+      title: tests/graph/articulation_points.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/bcc.test.cpp
+      title: tests/graph/bcc.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/bridges.test.cpp
+      title: tests/graph/bridges.test.cpp
 layout: toppage
 ---

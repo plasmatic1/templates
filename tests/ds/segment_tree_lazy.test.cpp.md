@@ -25,7 +25,8 @@ data:
     \n#include <bits/stdc++.h>\nusing namespace std;\n\n// Defines\n#define fs first\n\
     #define sn second\n#define pb push_back\n#define eb emplace_back\n#define mpr\
     \ make_pair\n#define mtp make_tuple\n#define all(x) (x).begin(), (x).end()\n//\
-    \ Basic type definitions\nusing ll = long long; using ull = unsigned long long;\
+    \ Basic type definitions\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
+    \ // for some templates\nusing ll = long long; using ull = unsigned long long;\
     \ using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long long,\
     \ long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
     \ // Common file\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\n\
@@ -123,7 +124,7 @@ data:
   isVerificationFile: true
   path: tests/ds/segment_tree_lazy.test.cpp
   requiredBy: []
-  timestamp: '2021-06-07 23:09:50-04:00'
+  timestamp: '2021-06-14 21:42:48-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/ds/segment_tree_lazy.test.cpp

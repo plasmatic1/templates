@@ -11,14 +11,15 @@ data:
   bundledCode: "#line 1 \"template.cpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n\n// Defines\n#define fs first\n#define sn second\n#define pb push_back\n\
     #define eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define\
-    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\nusing ll = long long;\
-    \ using ull = unsigned long long; using ld = long double;\nusing pii = pair<int,\
-    \ int>; using pll = pair<long long, long long>;\n#ifdef __GNUG__\n// PBDS order\
-    \ statistic tree\n#include <ext/pb_ds/assoc_container.hpp> // Common file\n#include\
-    \ <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntemplate <typename\
-    \ T, class comp = less<T>> using os_tree = tree<T, null_type, comp, rb_tree_tag,\
-    \ tree_order_statistics_node_update>;\ntemplate <typename K, typename V, class\
-    \ comp = less<K>> using treemap = tree<K, V, comp, rb_tree_tag, tree_order_statistics_node_update>;\n\
+    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\ntemplate <typename\
+    \ T> using opt_ref = optional<reference_wrapper<T>>; // for some templates\nusing\
+    \ ll = long long; using ull = unsigned long long; using ld = long double;\nusing\
+    \ pii = pair<int, int>; using pll = pair<long long, long long>;\n#ifdef __GNUG__\n\
+    // PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp> // Common\
+    \ file\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntemplate\
+    \ <typename T, class comp = less<T>> using os_tree = tree<T, null_type, comp,\
+    \ rb_tree_tag, tree_order_statistics_node_update>;\ntemplate <typename K, typename\
+    \ V, class comp = less<K>> using treemap = tree<K, V, comp, rb_tree_tag, tree_order_statistics_node_update>;\n\
     // HashSet\n#include <ext/pb_ds/assoc_container.hpp>\ntemplate <typename T, class\
     \ Hash> using hashset = gp_hash_table<T, null_type, Hash>;\ntemplate <typename\
     \ K, typename V, class Hash> using hashmap = gp_hash_table<K, V, Hash>;\nconst\
@@ -34,7 +35,8 @@ data:
   code: "#include <bits/stdc++.h>\nusing namespace std;\n\n// Defines\n#define fs\
     \ first\n#define sn second\n#define pb push_back\n#define eb emplace_back\n#define\
     \ mpr make_pair\n#define mtp make_tuple\n#define all(x) (x).begin(), (x).end()\n\
-    // Basic type definitions\nusing ll = long long; using ull = unsigned long long;\
+    // Basic type definitions\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
+    \ // for some templates\nusing ll = long long; using ull = unsigned long long;\
     \ using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long long,\
     \ long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
     \ // Common file\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\n\
@@ -57,7 +59,7 @@ data:
   isVerificationFile: false
   path: template.cpp
   requiredBy: []
-  timestamp: '2021-06-07 02:10:30-04:00'
+  timestamp: '2021-06-14 21:42:48-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template.cpp
