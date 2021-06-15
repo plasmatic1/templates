@@ -22,7 +22,11 @@ add_executable(templates
         graph/edge_types.hpp
         graph/2sat.hpp
         graph/tarjan_undirected.hpp
-        graph/scc.cpp
+        graph/scc.hpp
+        graph/bfs.hpp
+        graph/bfs_0_1.hpp
+        graph/dijkstra.hpp
+        graph/spfa.hpp
         judge/fhc.cpp
         judge/google.cpp
         judge/topcoder.cpp
@@ -61,5 +65,8 @@ add_executable(templates
 
         tests/graph/2sat.test.cpp
         tests/graph/articulation_points.test.cpp
-        tests/graph/bcc.test.cpp
-        tests/graph/bridges.test.cpp)
+        tests/graph/biconnected_components.test.cpp
+        tests/graph/bridges.test.cpp
+        tests/graph/bfs.test.cpp
+        tests/graph/dijkstra.test.cpp
+        tests/graph/spfa.test.cpp)

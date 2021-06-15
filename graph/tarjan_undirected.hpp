@@ -20,7 +20,7 @@ template <typename GraphType, typename EdgeType, int MODE> struct Tarjan {
         if (MODE & ARTICULATION_POINTS) articulation_points.clear();
         if (MODE & BRIDGES) bridges.clear();
 
-        function<void(int, int)> dfs = [&] (int c, int pi) {
+        function<void(int, int)> tarjan = [&] (int c, int pi) {
             bool artic = false;
             int cc = 0;
 
@@ -31,7 +31,7 @@ template <typename GraphType, typename EdgeType, int MODE> struct Tarjan {
                     if (!ord[to]) {
                         if (MODE & BICONNECTED_COMPONENTS) stk.emplace_back(c, to);
                         if (MODE & ARTICULATION_POINTS) cc++;
-                        dfs(to, toi);
+                        tarjan(to, toi);
                         low[c] = min(low[c], low[to]);
 
                         // we got an articulation point bois :sunglasses:
@@ -65,7 +65,7 @@ template <typename GraphType, typename EdgeType, int MODE> struct Tarjan {
         };
         for (int i = 1; i <= N; i++)
             if (!ord[i])
-                dfs(i, -1);
+                tarjan(i, -1);
     }
 
     void bind(opt_ref<vector<int>> ord0, opt_ref<vector<int>> low0) {
