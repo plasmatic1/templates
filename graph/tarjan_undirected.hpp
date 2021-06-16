@@ -68,8 +68,10 @@ template <typename GraphType, typename EdgeType, int MODE> struct Tarjan {
                 tarjan(i, -1);
     }
 
+#if __cplusplus == 201703L // CPP17 only things
     void bind(opt_ref<vector<int>> ord0, opt_ref<vector<int>> low0) {
         if (ord0) ord.swap(*ord0);
         if (low0) low.swap(*low0);
     }
+#endif
 };
