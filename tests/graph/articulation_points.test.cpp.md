@@ -28,10 +28,11 @@ data:
     \ 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n// Defines\n\
     #define fs first\n#define sn second\n#define pb push_back\n#define eb emplace_back\n\
     #define mpr make_pair\n#define mtp make_tuple\n#define all(x) (x).begin(), (x).end()\n\
-    // Basic type definitions\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
-    \ // for some templates\nusing ll = long long; using ull = unsigned long long;\
-    \ using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long long,\
-    \ long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
+    // Basic type definitions\n#if __cplusplus == 201703L // CPP17 only things\ntemplate\
+    \ <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some templates\n\
+    #endif\nusing ll = long long; using ull = unsigned long long; using ld = long\
+    \ double;\nusing pii = pair<int, int>; using pll = pair<long long, long long>;\n\
+    #ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
     \ // Common file\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\n\
     template <typename T, class comp = less<T>> using os_tree = tree<T, null_type,\
     \ comp, rb_tree_tag, tree_order_statistics_node_update>;\ntemplate <typename K,\
@@ -93,24 +94,24 @@ data:
     \             if ((pi != -1 && artic) || (pi == -1 && cc > 1))\n             \
     \       articulation_points.push_back(c);\n        };\n        for (int i = 1;\
     \ i <= N; i++)\n            if (!ord[i])\n                tarjan(i, -1);\n   \
-    \ }\n\n    void bind(opt_ref<vector<int>> ord0, opt_ref<vector<int>> low0) {\n\
-    \        if (ord0) ord.swap(*ord0);\n        if (low0) low.swap(*low0);\n    }\n\
-    };\n#line 3 \"graph/edge_types.hpp\"\n\nstruct Edge {\n    using EdgeType = int;\n\
-    \    int v(EdgeType e) { return e; }\n    int w(EdgeType e) { return 1; }\n  \
-    \  int i(EdgeType e) { throw domain_error(\"no information on edge indices\");\
-    \ }\n    EdgeType swapNode(EdgeType e, int v) { return v; }\n};\ntemplate <typename\
-    \ T> struct WeightedEdge {\n    using EdgeType = pair<int, T>; using WeightType\
-    \ = T;\n    int v(EdgeType e) { return e.first; }\n    T w(EdgeType e) { return\
-    \ e.second; }\n    int i(EdgeType e) { throw domain_error(\"no information on\
-    \ edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v) { return {v, w(e)};\
-    \ }\n};\nstruct IndexedEdge {\n    using EdgeType = pair<int, int>;\n    int v(EdgeType\
-    \ e) { return e.first; }\n    int w(EdgeType e) { return 1; }\n    int i(EdgeType\
-    \ e) { return e.second; }\n    EdgeType swapNode(EdgeType e, int v) { return {v,\
-    \ i(e)}; }\n};\ntemplate <typename T> struct WeightedIndexedEdge {\n    using\
-    \ EdgeType = tuple<int, T, int>; using WeightType = T;\n    int v(EdgeType e)\
-    \ { return get<0>(e); }\n    T w(EdgeType e) { return get<1>(e); }\n    int i(EdgeType\
-    \ e) { return get<2>(e); }\n    EdgeType swapNode(EdgeType e, int v) { return\
-    \ {v, w(e), i(e)}; }\n};\n#line 6 \"tests/graph/articulation_points.test.cpp\"\
+    \ }\n\n#if __cplusplus == 201703L // CPP17 only things\n    void bind(opt_ref<vector<int>>\
+    \ ord0, opt_ref<vector<int>> low0) {\n        if (ord0) ord.swap(*ord0);\n   \
+    \     if (low0) low.swap(*low0);\n    }\n#endif\n};\n#line 3 \"graph/edge_types.hpp\"\
+    \n\nstruct Edge {\n    using EdgeType = int;\n    int v(EdgeType e) { return e;\
+    \ }\n    int w(EdgeType e) { return 1; }\n    int i(EdgeType e) { throw domain_error(\"\
+    no information on edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v)\
+    \ { return v; }\n};\ntemplate <typename T> struct WeightedEdge {\n    using EdgeType\
+    \ = pair<int, T>; using WeightType = T;\n    int v(EdgeType e) { return e.first;\
+    \ }\n    T w(EdgeType e) { return e.second; }\n    int i(EdgeType e) { throw domain_error(\"\
+    no information on edge indices\"); }\n    EdgeType swapNode(EdgeType e, int v)\
+    \ { return {v, w(e)}; }\n};\nstruct IndexedEdge {\n    using EdgeType = pair<int,\
+    \ int>;\n    int v(EdgeType e) { return e.first; }\n    int w(EdgeType e) { return\
+    \ 1; }\n    int i(EdgeType e) { return e.second; }\n    EdgeType swapNode(EdgeType\
+    \ e, int v) { return {v, i(e)}; }\n};\ntemplate <typename T> struct WeightedIndexedEdge\
+    \ {\n    using EdgeType = tuple<int, T, int>; using WeightType = T;\n    int v(EdgeType\
+    \ e) { return get<0>(e); }\n    T w(EdgeType e) { return get<1>(e); }\n    int\
+    \ i(EdgeType e) { return get<2>(e); }\n    EdgeType swapNode(EdgeType e, int v)\
+    \ { return {v, w(e), i(e)}; }\n};\n#line 6 \"tests/graph/articulation_points.test.cpp\"\
     \n\nconst int MN = 1e5 + 1;\nint N, M;\nvector<pii> g[MN];\n\nint main() {\n \
     \   fast_io();\n    cin >> N >> M;\n    for (int i = 0; i < M; i++) {\n      \
     \  int a, b; cin >> a >> b; a++; b++;\n        g[a].eb(b, i);\n        g[b].eb(a,\
@@ -134,7 +135,7 @@ data:
   isVerificationFile: true
   path: tests/graph/articulation_points.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 22:30:55-04:00'
+  timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/articulation_points.test.cpp

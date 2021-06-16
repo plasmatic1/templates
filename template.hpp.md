@@ -17,6 +17,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: ds/sparse_table.hpp
     title: ds/sparse_table.hpp
+  - icon: ':warning:'
+    path: fraction.cpp
+    title: fraction.cpp
   - icon: ':heavy_check_mark:'
     path: graph/2sat.hpp
     title: graph/2sat.hpp
@@ -41,6 +44,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/tarjan_undirected.hpp
     title: graph/tarjan_undirected.hpp
+  - icon: ':warning:'
+    path: math/mod.cpp
+    title: math/mod.cpp
   - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
@@ -117,8 +123,12 @@ data:
 
     // Basic type definitions
 
+    #if __cplusplus == 201703L // CPP17 only things
+
     template <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some
     templates
+
+    #endif
 
     using ll = long long; using ull = unsigned long long; using ld = long double;
 
@@ -197,8 +207,12 @@ data:
 
     // Basic type definitions
 
+    #if __cplusplus == 201703L // CPP17 only things
+
     template <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some
     templates
+
+    #endif
 
     using ll = long long; using ull = unsigned long long; using ld = long double;
 
@@ -261,6 +275,8 @@ data:
   - ds/sparse_table.hpp
   - ds/dsu.hpp
   - ds/segment_tree.hpp
+  - fraction.cpp
+  - math/mod.cpp
   - tests/test_utils.hpp
   - graph/bfs_0_1.hpp
   - graph/tarjan_undirected.hpp
@@ -270,7 +286,7 @@ data:
   - graph/scc.hpp
   - graph/2sat.hpp
   - graph/edge_types.hpp
-  timestamp: '2021-06-14 21:42:48-04:00'
+  timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/ds/bit.test.cpp
