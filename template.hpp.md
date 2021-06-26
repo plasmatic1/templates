@@ -45,8 +45,23 @@ data:
     path: graph/tarjan_undirected.hpp
     title: graph/tarjan_undirected.hpp
   - icon: ':warning:'
-    path: math/mod.cpp
-    title: math/mod.cpp
+    path: math/catalan.hpp
+    title: math/catalan.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/choose.hpp
+    title: math/choose.hpp
+  - icon: ':warning:'
+    path: math/fast_modinv.hpp
+    title: math/fast_modinv.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/mod.hpp
+    title: math/mod.hpp
+  - icon: ':warning:'
+    path: math/stirling.hpp
+    title: math/stirling.hpp
+  - icon: ':heavy_check_mark:'
+    path: rank_compression.hpp
+    title: rank_compression.hpp
   - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
@@ -93,6 +108,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/spfa.test.cpp
     title: tests/graph/spfa.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/choose.test.cpp
+    title: tests/math/choose.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/modint.test.cpp
+    title: tests/math/modint.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/rank_compression.test.cpp
+    title: tests/rank_compression.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -270,39 +294,47 @@ data:
   isVerificationFile: false
   path: template.hpp
   requiredBy:
-  - ds/segment_tree_lazy.hpp
-  - ds/bit.hpp
-  - ds/sparse_table.hpp
-  - ds/dsu.hpp
-  - ds/segment_tree.hpp
-  - fraction.cpp
-  - math/mod.cpp
-  - tests/test_utils.hpp
-  - graph/bfs_0_1.hpp
   - graph/tarjan_undirected.hpp
-  - graph/dijkstra.hpp
-  - graph/spfa.hpp
-  - graph/bfs.hpp
-  - graph/scc.hpp
-  - graph/2sat.hpp
   - graph/edge_types.hpp
+  - graph/scc.hpp
+  - graph/bfs_0_1.hpp
+  - graph/spfa.hpp
+  - graph/dijkstra.hpp
+  - graph/bfs.hpp
+  - graph/2sat.hpp
+  - ds/sparse_table.hpp
+  - ds/segment_tree.hpp
+  - ds/dsu.hpp
+  - ds/bit.hpp
+  - ds/segment_tree_lazy.hpp
+  - tests/test_utils.hpp
+  - fraction.cpp
+  - rank_compression.hpp
+  - math/choose.hpp
+  - math/stirling.hpp
+  - math/fast_modinv.hpp
+  - math/mod.hpp
+  - math/catalan.hpp
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/2sat.test.cpp
+  - tests/graph/biconnected_components.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/bridges.test.cpp
+  - tests/graph/articulation_points.test.cpp
+  - tests/graph/scc.test.cpp
   - tests/ds/bit.test.cpp
-  - tests/ds/segment_tree_lazy.test.cpp
+  - tests/ds/li_chao_tree.test.cpp
   - tests/ds/segment_tree.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
-  - tests/ds/li_chao_tree.test.cpp
-  - tests/graph/articulation_points.test.cpp
-  - tests/graph/dijkstra.test.cpp
-  - tests/graph/bfs.test.cpp
-  - tests/graph/spfa.test.cpp
-  - tests/graph/biconnected_components.test.cpp
-  - tests/graph/bridges.test.cpp
-  - tests/graph/scc.test.cpp
-  - tests/graph/2sat.test.cpp
+  - tests/rank_compression.test.cpp
+  - tests/math/modint.test.cpp
+  - tests/math/choose.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:

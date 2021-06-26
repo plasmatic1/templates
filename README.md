@@ -11,6 +11,20 @@ Templates under `external/` are not mine and will not include tests.  It is poss
 
 ## Some Things to Add
 
+- Math
+    - Euler Phi Function
+    - Prime factoring and factoring
+    - Extended GCD/EEA
+    - Matrices
+    - Fractions
+    - Tests for
+      - Stirling numbers
+      - Catalan numbers
+      - nPr (does one exist??? :blobpleading:)
+- Bounds checking  
 - Segtree with permanent flag instead of lazy propagation (a bit faster possibly)
 - Iterative segtree
 - Floyd Warshall/Bellman Ford? (I don't think these are really necessary since they're super super simple)
+
+- Geometry
+    - Point class for now :)

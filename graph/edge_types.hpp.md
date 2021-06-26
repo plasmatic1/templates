@@ -94,12 +94,12 @@ data:
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/articulation_points.test.cpp
   - tests/graph/dijkstra.test.cpp
-  - tests/graph/bfs.test.cpp
-  - tests/graph/spfa.test.cpp
   - tests/graph/biconnected_components.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/bfs.test.cpp
   - tests/graph/bridges.test.cpp
+  - tests/graph/articulation_points.test.cpp
   - tests/graph/scc.test.cpp
 documentation_of: graph/edge_types.hpp
 layout: document

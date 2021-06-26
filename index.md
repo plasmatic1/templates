@@ -42,6 +42,9 @@ data:
       path: external/extgcd.cpp
       title: external/extgcd.cpp
     - icon: ':warning:'
+      path: external/fastmod.cpp
+      title: external/fastmod.cpp
+    - icon: ':warning:'
       path: external/fft.cpp
       title: external/fft.cpp
     - icon: ':warning:'
@@ -64,9 +67,9 @@ data:
     - icon: ':warning:'
       path: random.cpp
       title: random.cpp
-    - icon: ':warning:'
-      path: rank_compression.cpp
-      title: rank_compression.cpp
+    - icon: ':heavy_check_mark:'
+      path: rank_compression.hpp
+      title: rank_compression.hpp
     - icon: ':warning:'
       path: template.cpp
       title: template.cpp
@@ -116,29 +119,29 @@ data:
   - name: math
     pages:
     - icon: ':warning:'
-      path: math/choose.cpp
-      title: math/choose.cpp
+      path: math/catalan.hpp
+      title: math/catalan.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/choose.hpp
+      title: math/choose.hpp
     - icon: ':warning:'
       path: math/choose_old.cpp
       title: math/choose_old.cpp
     - icon: ':warning:'
-      path: math/fast_modinv.cpp
-      title: math/fast_modinv.cpp
-    - icon: ':warning:'
-      path: math/fastmod.cpp
-      title: math/fastmod.cpp
+      path: math/fast_modinv.hpp
+      title: math/fast_modinv.hpp
     - icon: ':warning:'
       path: math/matrix.cpp
       title: math/matrix.cpp
-    - icon: ':warning:'
-      path: math/mod.cpp
-      title: math/mod.cpp
+    - icon: ':heavy_check_mark:'
+      path: math/mod.hpp
+      title: math/mod.hpp
     - icon: ':warning:'
       path: math/mod_old.cpp
       title: math/mod_old.cpp
     - icon: ':warning:'
-      path: math/stirling.cpp
-      title: math/stirling.cpp
+      path: math/stirling.hpp
+      title: math/stirling.hpp
   - name: old
     pages:
     - icon: ':warning:'
@@ -186,6 +189,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aplusb.test.cpp
       title: tests/aplusb.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/rank_compression.test.cpp
+      title: tests/rank_compression.test.cpp
   - name: tests/ds
     pages:
     - icon: ':heavy_check_mark:'
@@ -232,5 +238,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/spfa.test.cpp
       title: tests/graph/spfa.test.cpp
+  - name: tests/math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/math/choose.test.cpp
+      title: tests/math/choose.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/modint.test.cpp
+      title: tests/math/modint.test.cpp
 layout: toppage
 ---

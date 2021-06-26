@@ -48,6 +48,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/spfa.test.cpp
     title: tests/graph/spfa.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/choose.test.cpp
+    title: tests/math/choose.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/modint.test.cpp
+    title: tests/math/modint.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/rank_compression.test.cpp
+    title: tests/rank_compression.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -108,20 +117,23 @@ data:
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/2sat.test.cpp
+  - tests/graph/biconnected_components.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/bridges.test.cpp
+  - tests/graph/articulation_points.test.cpp
+  - tests/graph/scc.test.cpp
   - tests/ds/bit.test.cpp
-  - tests/ds/segment_tree_lazy.test.cpp
+  - tests/ds/li_chao_tree.test.cpp
   - tests/ds/segment_tree.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
-  - tests/ds/li_chao_tree.test.cpp
-  - tests/graph/articulation_points.test.cpp
-  - tests/graph/dijkstra.test.cpp
-  - tests/graph/bfs.test.cpp
-  - tests/graph/spfa.test.cpp
-  - tests/graph/biconnected_components.test.cpp
-  - tests/graph/bridges.test.cpp
-  - tests/graph/scc.test.cpp
-  - tests/graph/2sat.test.cpp
+  - tests/rank_compression.test.cpp
+  - tests/math/modint.test.cpp
+  - tests/math/choose.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:
