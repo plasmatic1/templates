@@ -13,5 +13,8 @@
 "tests/graph/bridges.test.cpp": "2021-06-16 10:53:28 -0400",
 "tests/graph/dijkstra.test.cpp": "2021-06-16 10:53:28 -0400",
 "tests/graph/scc.test.cpp": "2021-06-16 10:53:28 -0400",
-"tests/graph/spfa.test.cpp": "2021-06-16 10:53:28 -0400"
+"tests/graph/spfa.test.cpp": "2021-06-16 10:53:28 -0400",
+"tests/math/choose.test.cpp": "2021-06-26 02:30:43 -0400",
+"tests/math/modint.test.cpp": "2021-06-26 02:30:43 -0400",
+"tests/rank_compression.test.cpp": "2021-06-26 02:30:43 -0400"
 }
