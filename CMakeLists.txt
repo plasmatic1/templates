@@ -31,14 +31,14 @@ add_executable(templates
         judge/google.cpp
         judge/topcoder.cpp
         judge/usaco.cpp
-        math/choose.cpp
+        math/choose.hpp
         math/choose_old.cpp
-        math/fast_modinv.cpp
-        math/fastmod.cpp
+        math/fast_modinv.hpp
+        external/fastmod.cpp
         math/matrix.cpp
-        math/mod.cpp
+        math/mod.hpp
         math/mod_old.cpp
-        math/stirling.cpp
+        math/stirling.hpp
         old/template_additons.cpp
         old/templateredux.cpp
         old/test.cpp
@@ -53,7 +53,7 @@ add_executable(templates
         point.cpp
         multiple_cases.cpp
         random.cpp
-        rank_compression.cpp
+        rank_compression.hpp
         template.cpp
 
         tests/ds/bit.test.cpp
@@ -69,4 +69,7 @@ add_executable(templates
         tests/graph/bridges.test.cpp
         tests/graph/bfs.test.cpp
         tests/graph/dijkstra.test.cpp
-        tests/graph/spfa.test.cpp)
+        tests/graph/spfa.test.cpp
+
+        tests/math/modint.test.cpp
+        tests/math/choose.test.cpp)

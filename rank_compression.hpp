@@ -1,3 +1,6 @@
+#include "template.hpp"
+#pragma once
+
 // template is 1-indexed
 template <typename T> struct Ranks {
     vector<T> ranks;
