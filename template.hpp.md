@@ -51,14 +51,32 @@ data:
     path: math/choose.hpp
     title: math/choose.hpp
   - icon: ':warning:'
+    path: math/crt.hpp
+    title: math/crt.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/eea.hpp
+    title: math/eea.hpp
+  - icon: ':warning:'
+    path: math/factor.hpp
+    title: math/factor.hpp
+  - icon: ':warning:'
     path: math/fast_modinv.hpp
     title: math/fast_modinv.hpp
   - icon: ':heavy_check_mark:'
     path: math/mod.hpp
     title: math/mod.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/prime_factor.hpp
+    title: math/prime_factor.hpp
   - icon: ':warning:'
-    path: math/stirling.hpp
-    title: math/stirling.hpp
+    path: math/stirling1.hpp
+    title: math/stirling1.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/stirling2.hpp
+    title: math/stirling2.hpp
+  - icon: ':heavy_check_mark:'
+    path: math/totient.hpp
+    title: math/totient.hpp
   - icon: ':heavy_check_mark:'
     path: rank_compression.hpp
     title: rank_compression.hpp
@@ -112,8 +130,26 @@ data:
     path: tests/math/choose.test.cpp
     title: tests/math/choose.test.cpp
   - icon: ':heavy_check_mark:'
+    path: tests/math/eea.test.cpp
+    title: tests/math/eea.test.cpp
+  - icon: ':heavy_check_mark:'
     path: tests/math/modint.test.cpp
     title: tests/math/modint.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/permute.test.cpp
+    title: tests/math/permute.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/prime_factor1.test.cpp
+    title: tests/math/prime_factor1.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/prime_factor2.test.cpp
+    title: tests/math/prime_factor2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/stirling2.test.cpp
+    title: tests/math/stirling2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/totient.test.cpp
+    title: tests/math/totient.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
@@ -311,10 +347,16 @@ data:
   - fraction.cpp
   - rank_compression.hpp
   - math/choose.hpp
-  - math/stirling.hpp
   - math/fast_modinv.hpp
+  - math/eea.hpp
+  - math/crt.hpp
   - math/mod.hpp
+  - math/factor.hpp
+  - math/stirling2.hpp
+  - math/stirling1.hpp
+  - math/prime_factor.hpp
   - math/catalan.hpp
+  - math/totient.hpp
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
@@ -333,8 +375,14 @@ data:
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/rank_compression.test.cpp
+  - tests/math/permute.test.cpp
+  - tests/math/prime_factor1.test.cpp
+  - tests/math/eea.test.cpp
   - tests/math/modint.test.cpp
   - tests/math/choose.test.cpp
+  - tests/math/prime_factor2.test.cpp
+  - tests/math/stirling2.test.cpp
+  - tests/math/totient.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:

@@ -12,6 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/math/modint.test.cpp
     title: tests/math/modint.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/permute.test.cpp
+    title: tests/math/permute.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/stirling2.test.cpp
+    title: tests/math/stirling2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -153,8 +159,10 @@ data:
   timestamp: '2021-06-26 02:30:43-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/math/permute.test.cpp
   - tests/math/modint.test.cpp
   - tests/math/choose.test.cpp
+  - tests/math/stirling2.test.cpp
 documentation_of: math/mod.hpp
 layout: document
 redirect_from:

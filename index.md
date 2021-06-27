@@ -125,8 +125,14 @@ data:
       path: math/choose.hpp
       title: math/choose.hpp
     - icon: ':warning:'
-      path: math/choose_old.cpp
-      title: math/choose_old.cpp
+      path: math/crt.hpp
+      title: math/crt.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/eea.hpp
+      title: math/eea.hpp
+    - icon: ':warning:'
+      path: math/factor.hpp
+      title: math/factor.hpp
     - icon: ':warning:'
       path: math/fast_modinv.hpp
       title: math/fast_modinv.hpp
@@ -137,11 +143,23 @@ data:
       path: math/mod.hpp
       title: math/mod.hpp
     - icon: ':warning:'
-      path: math/mod_old.cpp
-      title: math/mod_old.cpp
+      path: math/old_choose.cpp
+      title: math/old_choose.cpp
     - icon: ':warning:'
-      path: math/stirling.hpp
-      title: math/stirling.hpp
+      path: math/old_mod.cpp
+      title: math/old_mod.cpp
+    - icon: ':heavy_check_mark:'
+      path: math/prime_factor.hpp
+      title: math/prime_factor.hpp
+    - icon: ':warning:'
+      path: math/stirling1.hpp
+      title: math/stirling1.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/stirling2.hpp
+      title: math/stirling2.hpp
+    - icon: ':heavy_check_mark:'
+      path: math/totient.hpp
+      title: math/totient.hpp
   - name: old
     pages:
     - icon: ':warning:'
@@ -244,7 +262,25 @@ data:
       path: tests/math/choose.test.cpp
       title: tests/math/choose.test.cpp
     - icon: ':heavy_check_mark:'
+      path: tests/math/eea.test.cpp
+      title: tests/math/eea.test.cpp
+    - icon: ':heavy_check_mark:'
       path: tests/math/modint.test.cpp
       title: tests/math/modint.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/permute.test.cpp
+      title: tests/math/permute.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/prime_factor1.test.cpp
+      title: tests/math/prime_factor1.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/prime_factor2.test.cpp
+      title: tests/math/prime_factor2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/stirling2.test.cpp
+      title: tests/math/stirling2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/totient.test.cpp
+      title: tests/math/totient.test.cpp
 layout: toppage
 ---

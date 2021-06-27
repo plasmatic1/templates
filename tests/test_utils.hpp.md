@@ -52,8 +52,26 @@ data:
     path: tests/math/choose.test.cpp
     title: tests/math/choose.test.cpp
   - icon: ':heavy_check_mark:'
+    path: tests/math/eea.test.cpp
+    title: tests/math/eea.test.cpp
+  - icon: ':heavy_check_mark:'
     path: tests/math/modint.test.cpp
     title: tests/math/modint.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/permute.test.cpp
+    title: tests/math/permute.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/prime_factor1.test.cpp
+    title: tests/math/prime_factor1.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/prime_factor2.test.cpp
+    title: tests/math/prime_factor2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/stirling2.test.cpp
+    title: tests/math/stirling2.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/totient.test.cpp
+    title: tests/math/totient.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
@@ -132,8 +150,14 @@ data:
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/rank_compression.test.cpp
+  - tests/math/permute.test.cpp
+  - tests/math/prime_factor1.test.cpp
+  - tests/math/eea.test.cpp
   - tests/math/modint.test.cpp
   - tests/math/choose.test.cpp
+  - tests/math/prime_factor2.test.cpp
+  - tests/math/stirling2.test.cpp
+  - tests/math/totient.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:
