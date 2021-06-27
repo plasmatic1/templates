@@ -12,19 +12,25 @@ Templates under `external/` are not mine and will not include tests.  It is poss
 ## Some Things to Add
 
 - Math
-    - Euler Phi Function
-    - Prime factoring and factoring
+    - CRT
     - Extended GCD/EEA
     - Matrices
     - Fractions
+    - BigInt
+    - Linear Diophantine solver?   
     - Tests for
-      - Stirling numbers
+      - Stirling numbers (1st kind)
       - Catalan numbers
-      - nPr (does one exist??? :blobpleading:)
+      - Chinese Rem. Theorem
+    - Stuff that is t o o h a r d
+      - Multipoint eval
+      - Berlekamp-Massey
+      - Everything else in library-checker
 - Bounds checking  
 - Segtree with permanent flag instead of lazy propagation (a bit faster possibly)
 - Iterative segtree
 - Floyd Warshall/Bellman Ford? (I don't think these are really necessary since they're super super simple)
 
-- Geometry
+
+- ###### Geometry
     - Point class for now :)

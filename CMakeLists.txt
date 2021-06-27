@@ -32,13 +32,13 @@ add_executable(templates
         judge/topcoder.cpp
         judge/usaco.cpp
         math/choose.hpp
-        math/choose_old.cpp
+        math/old_choose.cpp
         math/fast_modinv.hpp
         external/fastmod.cpp
         math/matrix.cpp
         math/mod.hpp
-        math/mod_old.cpp
-        math/stirling.hpp
+        math/old_mod.cpp
+        math/stirling1.hpp
         old/template_additons.cpp
         old/templateredux.cpp
         old/test.cpp
@@ -72,4 +72,9 @@ add_executable(templates
         tests/graph/spfa.test.cpp
 
         tests/math/modint.test.cpp
-        tests/math/choose.test.cpp)
+        tests/math/choose.test.cpp
+        tests/math/stirling2.test.cpp
+        tests/math/prime_factor1.test.cpp
+        tests/math/prime_factor2.test.cpp
+        tests/math/totient.test.cpp
+        tests/math/eea.test.cpp)
