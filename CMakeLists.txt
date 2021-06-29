@@ -32,12 +32,12 @@ add_executable(templates
         judge/topcoder.cpp
         judge/usaco.cpp
         math/choose.hpp
-        math/old_choose.cpp
+        math/_old_choose.cpp
         math/fast_modinv.hpp
         external/fastmod.cpp
         math/matrix.cpp
         math/mod.hpp
-        math/old_mod.cpp
+        math/_old_mod.cpp
         math/stirling1.hpp
         old/template_additons.cpp
         old/templateredux.cpp
@@ -46,8 +46,10 @@ add_executable(templates
         string/hash_utils.cpp
         string/suffix_array.cpp
         string/suffix_automaton.cpp
-        tree/hld.cpp
-        tree/lca.cpp
+        tree/hld.hpp
+        tree/lca_binary_lift.hpp
+        tree/lca_jump.hpp
+        tree/lca_sparse_table.hpp
         tree/lct.cpp
         fraction.cpp
         point.cpp
@@ -77,4 +79,7 @@ add_executable(templates
         tests/math/prime_factor1.test.cpp
         tests/math/prime_factor2.test.cpp
         tests/math/totient.test.cpp
-        tests/math/eea.test.cpp)
+        tests/math/eea.test.cpp
+
+        tests/tree/lca_binary_lift.test.cpp
+        tests/tree/lca_sparse_table.test.cpp)

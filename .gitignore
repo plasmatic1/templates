@@ -1,6 +1,8 @@
-.idea/
 cmake-build-debug/
 .verify-helper/cache
 .verify-helper/markdown
+
+# Temporary testing files
 a.exe
 a.out
+in

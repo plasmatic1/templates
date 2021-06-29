@@ -28,4 +28,3 @@ template <class Comp> struct SparseTable {
         return C.merge(tb[bit][l], tb[bit][r-(1<<bit)+1]);
     }
 };
-

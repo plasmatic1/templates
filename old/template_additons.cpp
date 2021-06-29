@@ -331,7 +331,7 @@ ll qdis(int a, int b) {
 	return lv[a] + lv[b] - 2 * lv[lca(a, b)];
 }
 
-// Sparse Table (RMQ) O(NlogN)/O(1) LCA
+// Sparse Table (RMQ) O(NlogN)/O(1) LCABinaryLift
 int dep[MN], fst[MN], tb[LG][MN * 2];
 vi tour;
 bool cmpDep(const int &a, const int &b) {
