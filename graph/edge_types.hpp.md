@@ -27,6 +27,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/spfa.test.cpp
     title: tests/graph/spfa.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_lca.test.cpp
+    title: tests/tree/hld_lca.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_path_query.test.cpp
+    title: tests/tree/hld_path_query.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_binary_lift.test.cpp
+    title: tests/tree/lca_binary_lift.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_jump.test.cpp
+    title: tests/tree/lca_jump.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_sparse_table.test.cpp
+    title: tests/tree/lca_sparse_table.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -101,6 +116,11 @@ data:
   - tests/graph/bridges.test.cpp
   - tests/graph/articulation_points.test.cpp
   - tests/graph/scc.test.cpp
+  - tests/tree/lca_jump.test.cpp
+  - tests/tree/hld_lca.test.cpp
+  - tests/tree/lca_binary_lift.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/hld_path_query.test.cpp
 documentation_of: graph/edge_types.hpp
 layout: document
 redirect_from:

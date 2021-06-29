@@ -83,6 +83,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
+  - icon: ':heavy_check_mark:'
+    path: tree/lca_binary_lift.hpp
+    title: tree/lca_binary_lift.hpp
+  - icon: ':heavy_check_mark:'
+    path: tree/lca_jump.hpp
+    title: tree/lca_jump.hpp
+  - icon: ':heavy_check_mark:'
+    path: tree/lca_sparse_table.hpp
+    title: tree/lca_sparse_table.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/ds/bit.test.cpp
@@ -153,6 +162,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_lca.test.cpp
+    title: tests/tree/hld_lca.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_path_query.test.cpp
+    title: tests/tree/hld_path_query.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_binary_lift.test.cpp
+    title: tests/tree/lca_binary_lift.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_jump.test.cpp
+    title: tests/tree/lca_jump.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_sparse_table.test.cpp
+    title: tests/tree/lca_sparse_table.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -345,6 +369,9 @@ data:
   - ds/segment_tree_lazy.hpp
   - tests/test_utils.hpp
   - fraction.cpp
+  - tree/lca_jump.hpp
+  - tree/lca_sparse_table.hpp
+  - tree/lca_binary_lift.hpp
   - rank_compression.hpp
   - math/choose.hpp
   - math/fast_modinv.hpp
@@ -374,6 +401,11 @@ data:
   - tests/ds/segment_tree_lazy.test.cpp
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
+  - tests/tree/lca_jump.test.cpp
+  - tests/tree/hld_lca.test.cpp
+  - tests/tree/lca_binary_lift.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/hld_path_query.test.cpp
   - tests/rank_compression.test.cpp
   - tests/math/permute.test.cpp
   - tests/math/prime_factor1.test.cpp

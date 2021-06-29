@@ -155,16 +155,16 @@ data:
     \tfor (int i = LG - 1; i >= 0; i--) {\n\t\tif (tb[i][a] != tb[i][b]) {\n\t\t\t\
     a = tb[i][a];\n\t\t\tb = tb[i][b];\n\t\t}\n\t}\n\treturn tb[0][a];\n}\nll qdis(int\
     \ a, int b) {\n\treturn lv[a] + lv[b] - 2 * lv[lca(a, b)];\n}\n\n// Sparse Table\
-    \ (RMQ) O(NlogN)/O(1) LCA\nint dep[MN], fst[MN], tb[LG][MN * 2];\nvi tour;\nbool\
-    \ cmpDep(const int &a, const int &b) {\n    return dep[a] < dep[b];\n}\nvoid dfsTour(int\
-    \ c, int p) {\n    dep[c] = p == -1 ? 0 : dep[p] + 1;\n    tour.pb(c);\n    for\
-    \ (int to : g[c])\n        if (to != p)\n            dfsTour(to, c);\n    tour.pb(c);\n\
-    }\nvoid initLCA(int rt = 1) {\n    tour.pb(-1);\n    dfsTour(rt, -1);\n    int\
-    \ sz = tour.size() - 1;\n    reprev(i, sz, 0)\n        fst[tour[i]] = i;\n   \
-    \ copy(all(tour), tb[0]);\n    repi(1, LG) {\n        int jmp = 1 << (i - 1),\
-    \ end = sz = jmp;\n        repj(1, sz + 1)\n            tb[i][j] = min(tb[i -\
-    \ 1][j], tb[i - 1][j + jmp], cmpDep);\n    }\n}\nint lca(int a, int b) {\n   \
-    \ a = fst[a]; b = fst[b];\n    if (a > b) swap(a, b);\n    int bit = 31 - __builtin_clz(b\
+    \ (RMQ) O(NlogN)/O(1) LCABinaryLift\nint dep[MN], fst[MN], tb[LG][MN * 2];\nvi\
+    \ tour;\nbool cmpDep(const int &a, const int &b) {\n    return dep[a] < dep[b];\n\
+    }\nvoid dfsTour(int c, int p) {\n    dep[c] = p == -1 ? 0 : dep[p] + 1;\n    tour.pb(c);\n\
+    \    for (int to : g[c])\n        if (to != p)\n            dfsTour(to, c);\n\
+    \    tour.pb(c);\n}\nvoid initLCA(int rt = 1) {\n    tour.pb(-1);\n    dfsTour(rt,\
+    \ -1);\n    int sz = tour.size() - 1;\n    reprev(i, sz, 0)\n        fst[tour[i]]\
+    \ = i;\n    copy(all(tour), tb[0]);\n    repi(1, LG) {\n        int jmp = 1 <<\
+    \ (i - 1), end = sz = jmp;\n        repj(1, sz + 1)\n            tb[i][j] = min(tb[i\
+    \ - 1][j], tb[i - 1][j + jmp], cmpDep);\n    }\n}\nint lca(int a, int b) {\n \
+    \   a = fst[a]; b = fst[b];\n    if (a > b) swap(a, b);\n    int bit = 31 - __builtin_clz(b\
     \ - a + 1);\n    return min(tb[bit][a], tb[bit][b - (1 << bit) + 1], cmpDep);\n\
     }\n\n// Rabin karp but with random base\nusing namespace std::chrono;\nll timeMs()\
     \ { return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\
@@ -336,16 +336,16 @@ data:
     \tfor (int i = LG - 1; i >= 0; i--) {\n\t\tif (tb[i][a] != tb[i][b]) {\n\t\t\t\
     a = tb[i][a];\n\t\t\tb = tb[i][b];\n\t\t}\n\t}\n\treturn tb[0][a];\n}\nll qdis(int\
     \ a, int b) {\n\treturn lv[a] + lv[b] - 2 * lv[lca(a, b)];\n}\n\n// Sparse Table\
-    \ (RMQ) O(NlogN)/O(1) LCA\nint dep[MN], fst[MN], tb[LG][MN * 2];\nvi tour;\nbool\
-    \ cmpDep(const int &a, const int &b) {\n    return dep[a] < dep[b];\n}\nvoid dfsTour(int\
-    \ c, int p) {\n    dep[c] = p == -1 ? 0 : dep[p] + 1;\n    tour.pb(c);\n    for\
-    \ (int to : g[c])\n        if (to != p)\n            dfsTour(to, c);\n    tour.pb(c);\n\
-    }\nvoid initLCA(int rt = 1) {\n    tour.pb(-1);\n    dfsTour(rt, -1);\n    int\
-    \ sz = tour.size() - 1;\n    reprev(i, sz, 0)\n        fst[tour[i]] = i;\n   \
-    \ copy(all(tour), tb[0]);\n    repi(1, LG) {\n        int jmp = 1 << (i - 1),\
-    \ end = sz = jmp;\n        repj(1, sz + 1)\n            tb[i][j] = min(tb[i -\
-    \ 1][j], tb[i - 1][j + jmp], cmpDep);\n    }\n}\nint lca(int a, int b) {\n   \
-    \ a = fst[a]; b = fst[b];\n    if (a > b) swap(a, b);\n    int bit = 31 - __builtin_clz(b\
+    \ (RMQ) O(NlogN)/O(1) LCABinaryLift\nint dep[MN], fst[MN], tb[LG][MN * 2];\nvi\
+    \ tour;\nbool cmpDep(const int &a, const int &b) {\n    return dep[a] < dep[b];\n\
+    }\nvoid dfsTour(int c, int p) {\n    dep[c] = p == -1 ? 0 : dep[p] + 1;\n    tour.pb(c);\n\
+    \    for (int to : g[c])\n        if (to != p)\n            dfsTour(to, c);\n\
+    \    tour.pb(c);\n}\nvoid initLCA(int rt = 1) {\n    tour.pb(-1);\n    dfsTour(rt,\
+    \ -1);\n    int sz = tour.size() - 1;\n    reprev(i, sz, 0)\n        fst[tour[i]]\
+    \ = i;\n    copy(all(tour), tb[0]);\n    repi(1, LG) {\n        int jmp = 1 <<\
+    \ (i - 1), end = sz = jmp;\n        repj(1, sz + 1)\n            tb[i][j] = min(tb[i\
+    \ - 1][j], tb[i - 1][j + jmp], cmpDep);\n    }\n}\nint lca(int a, int b) {\n \
+    \   a = fst[a]; b = fst[b];\n    if (a > b) swap(a, b);\n    int bit = 31 - __builtin_clz(b\
     \ - a + 1);\n    return min(tb[bit][a], tb[bit][b - (1 << bit) + 1], cmpDep);\n\
     }\n\n// Rabin karp but with random base\nusing namespace std::chrono;\nll timeMs()\
     \ { return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\
@@ -374,7 +374,7 @@ data:
   isVerificationFile: false
   path: old/template_additons.cpp
   requiredBy: []
-  timestamp: '2021-06-06 19:00:04-04:00'
+  timestamp: '2021-06-29 16:57:15-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: old/template_additons.cpp

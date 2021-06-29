@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/ds/bit.test.cpp
     title: tests/ds/bit.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_path_query.test.cpp
+    title: tests/tree/hld_path_query.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -71,6 +74,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/ds/bit.test.cpp
+  - tests/tree/hld_path_query.test.cpp
 documentation_of: ds/bit.hpp
 layout: document
 redirect_from:

@@ -50,7 +50,7 @@ data:
     \ (auto j = 1; j <= end; j++)\n                tb[i][j] = C.merge(tb[i-1][j],\
     \ tb[i-1][j+jmp]);\n        }\n    }\n    Data query(int l, int r) {\n       \
     \ int bit = __lg(r-l+1);\n        return C.merge(tb[bit][l], tb[bit][r-(1<<bit)+1]);\n\
-    \    }\n};\n\n"
+    \    }\n};\n"
   code: "#pragma once\n#include \"../template.hpp\"\n\n// Sparse table is 1-indexed\n\
     // Comparator for range MIN query\n// When calling init, st should point to the\
     \ start (0-indexed).  (i.e. if you stored data in A[1], A[2], ..., you should\
@@ -64,13 +64,13 @@ data:
     \ jmp = 1 << (i-1), end = N - (1<<i) + 1;\n            for (auto j = 1; j <= end;\
     \ j++)\n                tb[i][j] = C.merge(tb[i-1][j], tb[i-1][j+jmp]);\n    \
     \    }\n    }\n    Data query(int l, int r) {\n        int bit = __lg(r-l+1);\n\
-    \        return C.merge(tb[bit][l], tb[bit][r-(1<<bit)+1]);\n    }\n};\n\n"
+    \        return C.merge(tb[bit][l], tb[bit][r-(1<<bit)+1]);\n    }\n};\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: ds/sparse_table.hpp
   requiredBy: []
-  timestamp: '2021-06-16 10:53:28-04:00'
+  timestamp: '2021-06-29 16:57:15-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/ds/sparse_table.test.cpp

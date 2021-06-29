@@ -119,6 +119,12 @@ data:
   - name: math
     pages:
     - icon: ':warning:'
+      path: math/_old_choose.cpp
+      title: math/_old_choose.cpp
+    - icon: ':warning:'
+      path: math/_old_mod.cpp
+      title: math/_old_mod.cpp
+    - icon: ':warning:'
       path: math/catalan.hpp
       title: math/catalan.hpp
     - icon: ':heavy_check_mark:'
@@ -142,12 +148,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: math/mod.hpp
       title: math/mod.hpp
-    - icon: ':warning:'
-      path: math/old_choose.cpp
-      title: math/old_choose.cpp
-    - icon: ':warning:'
-      path: math/old_mod.cpp
-      title: math/old_mod.cpp
     - icon: ':heavy_check_mark:'
       path: math/prime_factor.hpp
       title: math/prime_factor.hpp
@@ -192,12 +192,18 @@ data:
       title: tests/test_utils.hpp
   - name: tree
     pages:
-    - icon: ':warning:'
-      path: tree/hld.cpp
-      title: tree/hld.cpp
-    - icon: ':warning:'
-      path: tree/lca.cpp
-      title: tree/lca.cpp
+    - icon: ':heavy_check_mark:'
+      path: tree/hld.hpp
+      title: tree/hld.hpp
+    - icon: ':heavy_check_mark:'
+      path: tree/lca_binary_lift.hpp
+      title: tree/lca_binary_lift.hpp
+    - icon: ':heavy_check_mark:'
+      path: tree/lca_jump.hpp
+      title: tree/lca_jump.hpp
+    - icon: ':heavy_check_mark:'
+      path: tree/lca_sparse_table.hpp
+      title: tree/lca_sparse_table.hpp
     - icon: ':warning:'
       path: tree/lct.cpp
       title: tree/lct.cpp
@@ -282,5 +288,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/math/totient.test.cpp
       title: tests/math/totient.test.cpp
+  - name: tests/tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/tree/hld_lca.test.cpp
+      title: tests/tree/hld_lca.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/tree/hld_path_query.test.cpp
+      title: tests/tree/hld_path_query.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/tree/lca_binary_lift.test.cpp
+      title: tests/tree/lca_binary_lift.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/tree/lca_jump.test.cpp
+      title: tests/tree/lca_jump.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/tree/lca_sparse_table.test.cpp
+      title: tests/tree/lca_sparse_table.test.cpp
 layout: toppage
 ---

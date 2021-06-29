@@ -75,6 +75,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_lca.test.cpp
+    title: tests/tree/hld_lca.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/hld_path_query.test.cpp
+    title: tests/tree/hld_path_query.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_binary_lift.test.cpp
+    title: tests/tree/lca_binary_lift.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_jump.test.cpp
+    title: tests/tree/lca_jump.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/tree/lca_sparse_table.test.cpp
+    title: tests/tree/lca_sparse_table.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -149,6 +164,11 @@ data:
   - tests/ds/segment_tree_lazy.test.cpp
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
+  - tests/tree/lca_jump.test.cpp
+  - tests/tree/hld_lca.test.cpp
+  - tests/tree/lca_binary_lift.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/hld_path_query.test.cpp
   - tests/rank_compression.test.cpp
   - tests/math/permute.test.cpp
   - tests/math/prime_factor1.test.cpp

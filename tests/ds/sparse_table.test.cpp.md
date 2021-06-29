@@ -69,7 +69,7 @@ data:
     \ jmp = 1 << (i-1), end = N - (1<<i) + 1;\n            for (auto j = 1; j <= end;\
     \ j++)\n                tb[i][j] = C.merge(tb[i-1][j], tb[i-1][j+jmp]);\n    \
     \    }\n    }\n    Data query(int l, int r) {\n        int bit = __lg(r-l+1);\n\
-    \        return C.merge(tb[bit][l], tb[bit][r-(1<<bit)+1]);\n    }\n};\n\n#line\
+    \        return C.merge(tb[bit][l], tb[bit][r-(1<<bit)+1]);\n    }\n};\n#line\
     \ 5 \"tests/ds/sparse_table.test.cpp\"\n\nint main() {\n    fast_io();\n    int\
     \ N = readi(), Q = readi();\n    auto v = readv<int>(N);\n    SparseTable<Comp>\
     \ st; st.init(v.begin(), v.end());\n    while (Q--) {\n        int l = readi()+1,\
@@ -88,7 +88,7 @@ data:
   isVerificationFile: true
   path: tests/ds/sparse_table.test.cpp
   requiredBy: []
-  timestamp: '2021-06-16 10:53:28-04:00'
+  timestamp: '2021-06-29 16:57:15-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/ds/sparse_table.test.cpp
