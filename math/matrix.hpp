@@ -70,9 +70,9 @@ template <typename T> struct Matrix {
 
     // Reduced row echelon form
     T rref() {
-        assert(N() <= M());
+        int nvar = min(N(), M());
         T det = 1;
-        for (int i = 0; i < N(); i++) {
+        for (int i = 0; i < nvar; i++) {
             int target = -1;
             for (int j = i; j < N(); j++) {
                 if (m[j][i] != 0) {

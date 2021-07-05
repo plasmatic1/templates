@@ -53,8 +53,9 @@ add_executable(templates
         tree/lct.cpp
         fraction.cpp
         point.cpp
+        timing.hpp
         multiple_cases.cpp
-        random.cpp
+        random.hpp
         rank_compression.hpp
         template.cpp
 

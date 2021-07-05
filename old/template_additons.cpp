@@ -79,7 +79,7 @@ using namespace std::chrono;
 ll timeMs() { return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count(); }
 
 // random stuff
-mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());
+mt19937 __mt(chrono::steady_clock::now().time_since_epoch().count());
 
 #define mtup make_tuple
 
@@ -370,7 +370,7 @@ using namespace std::chrono;
 ll timeMs() { return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count(); }
  
 const int MH = 10001;
-mt19937 mt(timeMs());
+mt19937 __mt(timeMs());
 vi primes;
 bool isprime[MH];
  
@@ -395,7 +395,7 @@ void initPr() {
 }
  
 void getPr() {
-    repi(0, PC) BASE[i] = primes[dis(mt)];
+    repi(0, PC) BASE[i] = primes[dis(__mt)];
 }
  
 const int MN = 1e6 + 1;

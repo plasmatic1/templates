@@ -3,7 +3,6 @@ cmake-build-debug/
 .verify-helper/markdown
 
 # Temporary testing files
-test.cpp
 a.exe
 a.out
 in

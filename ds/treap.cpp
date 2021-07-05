@@ -1,6 +1,8 @@
+#pragma once
+#include "../template.hpp"
 
-mt19937 mt(04072020);
-uniform_int_distribution<int> dis(INT_MIN, INT_MAX);
+mt19937 _mt_treap(04072020);
+uniform_int_distribution<int> _dis_treap(INT_MIN, INT_MAX);
 
 struct Node {
     Node *l, *r;
@@ -8,7 +10,7 @@ struct Node {
 
     int sz;
     ll val, sum;
-    Node(ll v0) : l(nullptr), r(nullptr), pri(dis(mt)), sz(1), val(v0), sum(v0) {}
+    Node(ll v0) : l(nullptr), r(nullptr), pri(_dis_treap(_mt_treap)), sz(1), val(v0), sum(v0) {}
 };
 
 int sz(Node *n) { return n ? n->sz : 0; }

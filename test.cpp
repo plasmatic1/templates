@@ -1,4 +1,3 @@
-
 #include "math/matrix.hpp"
 #include "math/mod.hpp"
 #include "tests/test_utils.hpp"
