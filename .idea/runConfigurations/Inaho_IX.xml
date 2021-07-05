@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Inaho IX" type="name.admitriev.jhelper.configuration.TaskConfigurationType" className="InahoIX" cppPath="tasks/InahoIX.cpp" inputType="STANDARD" outputType="STANDARD" testType="SINGLE">
+    <tests>
+      <test input="2 5&#10;1 1&#10;" output="5&#10;" active="true" />
+      <test input="6 90000&#10;4 2 29 5 1 10&#10;" output="408918679&#10;" active="true" />
+    </tests>
+    <method v="2" />
+  </configuration>
+</component>

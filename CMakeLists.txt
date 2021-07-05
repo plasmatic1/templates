@@ -35,7 +35,7 @@ add_executable(templates
         math/_old_choose.cpp
         math/fast_modinv.hpp
         external/fastmod.cpp
-        math/matrix.cpp
+        math/matrix.hpp
         math/mod.hpp
         math/_old_mod.cpp
         math/stirling1.hpp
@@ -82,4 +82,4 @@ add_executable(templates
         tests/math/eea.test.cpp
 
         tests/tree/lca_binary_lift.test.cpp
-        tests/tree/lca_sparse_table.test.cpp)
+        tests/tree/lca_sparse_table.test.cpp test.cpp)

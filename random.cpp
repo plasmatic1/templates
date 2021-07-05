@@ -1,3 +1,6 @@
-using ll = long long;
+#pragma once
+#include "template.hpp"
 
-const ll RANDOM = chrono::high_resolution_clock::now().time_since_epoch().count();
+mt19937 mt(26022021);
+int randint(int a, int b) { return uniform_int_distribution<int>(a, b)(mt); }
+ll randll(ll a, ll b) { return uniform_int_distribution<ll>(a, b)(mt); }

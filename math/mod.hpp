@@ -1,5 +1,6 @@
 #pragma once
 #include "../template.hpp"
+#include "eea.hpp"
 
 // based on Tourist modInt orz
 template <typename MD> struct _ModInt {
@@ -38,7 +39,10 @@ template <typename MD> struct _ModInt {
         }
         return res;
     }
-    static _ModInt inv(_ModInt x) { return pow(x, mod() - 2); }
+    static _ModInt inv(const _ModInt &x) {
+        T inv, _; extgcd(x.value, mod(), inv, _);
+        return _ModInt(inv);
+    }
 
     // Arithmetic Operators w/ _ModInt
     // Assignment operators here
@@ -50,10 +54,10 @@ template <typename MD> struct _ModInt {
     _ModInt operator++(int) { _ModInt res(*this); *this += 1; return res; }
     _ModInt& operator--() { return *this -= 1; }
     _ModInt operator--(int) { _ModInt res(*this); *this -= 1; return res; }
-    _ModInt& operator*=(const _ModInt &o) { value = (mul_t)value * o.value % mod(); return *this; } // make sure cast to mul_t!!!
+    _ModInt& operator*=(const _ModInt &o) { value = (mul_t)value * o.value % mod(); if (value < 0) value += mod(); return *this; } // make sure cast to mul_t!!!
     template <typename U> _ModInt& operator*=(const U &o) { return *this *= _ModInt(o); }
     _ModInt& operator/=(const _ModInt &o) { return *this *= inv(o.value); }
-    template <typename U> _ModInt& operator/=(const U &o) { return this /= _ModInt(o); }
+    template <typename U> _ModInt& operator/=(const U &o) { return *this /= _ModInt(o); }
     _ModInt operator-() const { return _ModInt(value); }
     // Other Operators
     T& operator()() { return value; }

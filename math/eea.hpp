@@ -1,5 +1,5 @@
-#include "../template.hpp"
 #pragma once
+#include "../template.hpp"
 
 /*
  * ax + by = gcd(a, b)
