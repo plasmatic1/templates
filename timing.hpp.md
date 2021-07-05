@@ -7,7 +7,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: cpp
+  _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
@@ -94,14 +94,15 @@ data:
 
     const ll INF = 0x3f3f3f3f, LLINF = 0x3f3f3f3f3f3f3f3f;
 
-    #line 3 "random.cpp"
+    #line 3 "timing.hpp"
 
 
-    mt19937 mt(26022021);
+    clock_t _cur_time;
 
-    int randint(int a, int b) { return uniform_int_distribution<int>(a, b)(mt); }
+    void beginTiming() { _cur_time = clock(); }
 
-    ll randll(ll a, ll b) { return uniform_int_distribution<ll>(a, b)(mt); }
+    void endTiming() { cout << fixed << setprecision(5) << "-- Operation took " <<
+    (clock()-_cur_time)/(long double)(CLOCKS_PER_SEC) << " seconds." << endl; }
 
     '
   code: '#pragma once
@@ -109,25 +110,26 @@ data:
     #include "template.hpp"
 
 
-    mt19937 mt(26022021);
+    clock_t _cur_time;
 
-    int randint(int a, int b) { return uniform_int_distribution<int>(a, b)(mt); }
+    void beginTiming() { _cur_time = clock(); }
 
-    ll randll(ll a, ll b) { return uniform_int_distribution<ll>(a, b)(mt); }
+    void endTiming() { cout << fixed << setprecision(5) << "-- Operation took " <<
+    (clock()-_cur_time)/(long double)(CLOCKS_PER_SEC) << " seconds." << endl; }
 
     '
   dependsOn:
   - template.hpp
   isVerificationFile: false
-  path: random.cpp
+  path: timing.hpp
   requiredBy: []
-  timestamp: '2021-07-05 01:37:57-04:00'
+  timestamp: '2021-07-05 01:46:58-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: random.cpp
+documentation_of: timing.hpp
 layout: document
 redirect_from:
-- /library/random.cpp
-- /library/random.cpp.html
-title: random.cpp
+- /library/timing.hpp
+- /library/timing.hpp.html
+title: timing.hpp
 ---

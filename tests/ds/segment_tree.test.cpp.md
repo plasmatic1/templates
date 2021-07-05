@@ -5,6 +5,12 @@ data:
     path: ds/segment_tree.hpp
     title: ds/segment_tree.hpp
   - icon: ':question:'
+    path: math/eea.hpp
+    title: math/eea.hpp
+  - icon: ':question:'
+    path: math/mod.hpp
+    title: math/mod.hpp
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
   - icon: ':question:'
@@ -73,42 +79,103 @@ data:
     \        }\n        MID;\n        return seg[i] = C.merge(_update(q, v, lhs, l,\
     \ mid), _update(q, v, rhs, mid + 1, r));\n    }\n    Data query(int ql, int qr)\
     \ { return _query(ql, qr, 1, 1, N); }\n    void update(int q, Update v) { _update(q,\
-    \ v, 1, 1, N); }\n};\n#line 5 \"tests/ds/segment_tree.test.cpp\"\n\n// A(x) =\
-    \ ax+b, B(x) = cx+d\n// B(A(x)) = c(ax+b)+d = acx + bc + d\nconst ll MOD = 998244353;\n\
-    struct CompComp {\n    using Data = pll;\n    using Update = pll;\n    const Data\
-    \ vdef = {1, 0};\n    Data merge(Data l, Data r) {\n        auto [a, b] = l;\n\
-    \        auto [c, d] = r;\n        return {a * c % MOD, (b * c + d) % MOD};\n\
-    \    }\n    void applyUpdate(Data &l, Update &r) { l = r; }\n};\n\nint main()\
-    \ {\n    fast_io();\n    int N = readi(), Q = readi();\n    SegmentTree<CompComp>\
+    \ v, 1, 1, N); }\n};\n#line 3 \"math/eea.hpp\"\n\n/*\n * ax + by = gcd(a, b)\n\
+    \ *\n * we know\n * bx' + (a%b)y' = gcd(a, b)\n *\n * bx' + (a-b*(a//b))y' = gcd(a,\
+    \ b)\n * bx' + ay' - b*(a//b)y' = gcd(a, b)\n * ay' + b(x' - (a//b)y') = gcd(a,\
+    \ b)\n */\ntemplate <typename T> T extgcd(T a, T b, T &x, T &y) {\n    if (b ==\
+    \ 0) {\n        x = 1;\n        y = 0;\n        return a;\n    }\n    T x0, y0,\
+    \ res = extgcd(b, a%b, x0, y0);\n    x = y0;\n    y = x0 - (a / b) * y0;\n   \
+    \ return res;\n}\n#line 4 \"math/mod.hpp\"\n\n// based on Tourist modInt orz\n\
+    template <typename MD> struct _ModInt {\n    using T = typename decay<decltype(MD::value)>::type;\n\
+    \    static_assert(sizeof(T) >= 4, \"size of T must be at least 32 bits\");\n\
+    \    static_assert(sizeof(T) <= 8, \"size of T must be at most 64 bits\");\n \
+    \   static_assert(is_integral<T>::value, \"T must be an integral type\");\n#ifdef\
+    \ __SIZEOF_INT128__\n    using mul_t = typename conditional<sizeof(T) <= 4, int64_t,\
+    \ __int128>::type;\n#else\n    using mul_t = int64_t;\n    static_assert(sizeof(T)\
+    \ <= 4, \"int128 not available, cannot use 64-bit size of T\");\n#endif\n\n  \
+    \  constexpr static T mod() { return MD::value; }\n\n    template <typename U>\
+    \ static T normalize(const U& x) {\n        T res = x;\n        res %= mod();\n\
+    \        if (res < 0) res += mod();\n        return res;\n    }\n\n    T value;\n\
+    \    constexpr _ModInt() : value() {}\n    template <typename U> _ModInt(const\
+    \ U& x) { value = normalize(x); }\n    const T& operator()() const { return value;\
+    \ }\n    template <typename U> operator U() const { return static_cast<U>(value);\
+    \ }\n\n    // FastPow\n    template <typename U> static _ModInt pow(_ModInt x,\
+    \ U y) {\n        _ModInt res(1);\n        for (; y; y /= 2) {\n            if\
+    \ (y & 1) res *= x;\n            x *= x;\n        }\n        return res;\n   \
+    \ }\n    static _ModInt inv(const _ModInt &x) {\n        T inv, _; extgcd(x.value,\
+    \ mod(), inv, _);\n        return _ModInt(inv);\n    }\n\n    // Arithmetic Operators\
+    \ w/ _ModInt\n    // Assignment operators here\n    _ModInt& operator+=(const\
+    \ _ModInt &o) { if ((value += o.value) >= mod()) value -= mod(); return *this;\
+    \ }\n    template <typename U> _ModInt& operator+=(const U &o) { return *this\
+    \ += _ModInt(o); }\n    _ModInt& operator-=(const _ModInt &o) { if ((value -=\
+    \ o.value) < 0) value += mod(); return *this; }\n    template <typename U> _ModInt&\
+    \ operator-=(const U &o) { return *this += _ModInt(o); }\n    _ModInt& operator++()\
+    \ { return *this += 1; }\n    _ModInt operator++(int) { _ModInt res(*this); *this\
+    \ += 1; return res; }\n    _ModInt& operator--() { return *this -= 1; }\n    _ModInt\
+    \ operator--(int) { _ModInt res(*this); *this -= 1; return res; }\n    _ModInt&\
+    \ operator*=(const _ModInt &o) { value = (mul_t)value * o.value % mod(); if (value\
+    \ < 0) value += mod(); return *this; } // make sure cast to mul_t!!!\n    template\
+    \ <typename U> _ModInt& operator*=(const U &o) { return *this *= _ModInt(o); }\n\
+    \    _ModInt& operator/=(const _ModInt &o) { return *this *= inv(o.value); }\n\
+    \    template <typename U> _ModInt& operator/=(const U &o) { return *this /= _ModInt(o);\
+    \ }\n    _ModInt operator-() const { return _ModInt(value); }\n    // Other Operators\n\
+    \    T& operator()() { return value; }\n    // Definitions of some operators\n\
+    };\n// Binary operators\n#define OP_CMP(op) template <typename T> bool operator\
+    \ op(const _ModInt<T> &lhs, const _ModInt<T> &rhs) { return lhs.value op rhs.value;\
+    \ } \\\n    template <typename T, typename U> bool operator op(const _ModInt<T>\
+    \ &lhs, U rhs) { return lhs op _ModInt<T>(rhs); } \\\n    template <typename T,\
+    \ typename U> bool operator op(U lhs, const _ModInt<T> &rhs) { return _ModInt<T>(lhs)\
+    \ op rhs; }\n#define OP_ARI(op) template <typename T> _ModInt<T> operator op(const\
+    \ _ModInt<T> &lhs, const _ModInt<T> &rhs) { return _ModInt<T>(lhs) op##= rhs;\
+    \ } \\\n    template <typename T, typename U> _ModInt<T> operator op(U lhs, const\
+    \ _ModInt<T> &rhs) { return _ModInt<T>(lhs) op##= rhs; } \\\n    template <typename\
+    \ T, typename U> _ModInt<T> operator op(const _ModInt<T> &lhs, U rhs) { return\
+    \ _ModInt<T>(lhs) op##= rhs; }\nOP_CMP(==) OP_CMP(!=) OP_CMP(<) OP_CMP(>) OP_CMP(<=)\
+    \ OP_CMP(>=)\nOP_ARI(+) OP_ARI(-) OP_ARI(*) OP_ARI(/)\n#undef OP_CMP\n#undef OP_ARI\n\
+    template <typename T> istream& operator>>(istream& in, _ModInt<T> &o) { return\
+    \ in >> o(); }\ntemplate <typename T> ostream& operator<<(ostream& out, _ModInt<T>\
+    \ &o) { return out << o(); }\n\n// Definitions\ntemplate <typename T, T mod> using\
+    \ ModInt = _ModInt<integral_constant<T, mod>>;\ntemplate <typename T> struct VarMod\
+    \ {\n    static T value;\n    static void read(istream& in) { in >> value; }\n\
+    \    static void set(T v0) { value = v0; }\n};\ntemplate <typename T> using VarModInt\
+    \ = _ModInt<VarMod<T>>;\n#line 6 \"tests/ds/segment_tree.test.cpp\"\n\n// A(x)\
+    \ = ax+b, B(x) = cx+d\n// B(A(x)) = c(ax+b)+d = acx + bc + d\nusing MI = ModInt<int,\
+    \ 998244353>;\nusing pm = pair<MI, MI>;\nstruct CompComp {\n    using Data = pm;\n\
+    \    using Update = pm;\n    const Data vdef = {1, 0};\n    Data merge(Data l,\
+    \ Data r) {\n        auto [a, b] = l;\n        auto [c, d] = r;\n        return\
+    \ {a * c, b * c + d};\n    }\n    void applyUpdate(Data &l, Update &r) { l = r;\
+    \ }\n};\n\nint main() {\n    fast_io();\n    int N = readi(), Q = readi();\n \
+    \   SegmentTree<CompComp> seg; seg.init(N);\n    for (auto [i, v] : enumerate(readv<pll>(N),\
+    \ 1))\n        seg.update(i, v);\n    while (Q--) {\n        if (readi() == 0)\
+    \ {\n            int p = readi()+1, b = readi(), c = readi();\n            seg.update(p,\
+    \ {b, c});\n        }\n        else {\n            int l = readi()+1, r = readi();\
+    \ ll x = readl();\n            auto [a, b] = seg.query(l, r);\n            print(a\
+    \ * x + b);\n        }\n    }\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
+    \n#include \"../../template.hpp\"\n#include \"../test_utils.hpp\"\n#include \"\
+    ../../ds/segment_tree.hpp\"\n#include \"../../math/mod.hpp\"\n\n// A(x) = ax+b,\
+    \ B(x) = cx+d\n// B(A(x)) = c(ax+b)+d = acx + bc + d\nusing MI = ModInt<int, 998244353>;\n\
+    using pm = pair<MI, MI>;\nstruct CompComp {\n    using Data = pm;\n    using Update\
+    \ = pm;\n    const Data vdef = {1, 0};\n    Data merge(Data l, Data r) {\n   \
+    \     auto [a, b] = l;\n        auto [c, d] = r;\n        return {a * c, b * c\
+    \ + d};\n    }\n    void applyUpdate(Data &l, Update &r) { l = r; }\n};\n\nint\
+    \ main() {\n    fast_io();\n    int N = readi(), Q = readi();\n    SegmentTree<CompComp>\
     \ seg; seg.init(N);\n    for (auto [i, v] : enumerate(readv<pll>(N), 1))\n   \
     \     seg.update(i, v);\n    while (Q--) {\n        if (readi() == 0) {\n    \
     \        int p = readi()+1, b = readi(), c = readi();\n            seg.update(p,\
     \ {b, c});\n        }\n        else {\n            int l = readi()+1, r = readi();\
-    \ ll x = readl();\n            auto [a, b] = seg.query(l, r);\n            print((a\
-    \ * x + b) % MOD);\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_set_range_composite\"\
-    \n#include \"../../template.hpp\"\n#include \"../test_utils.hpp\"\n#include \"\
-    ../../ds/segment_tree.hpp\"\n\n// A(x) = ax+b, B(x) = cx+d\n// B(A(x)) = c(ax+b)+d\
-    \ = acx + bc + d\nconst ll MOD = 998244353;\nstruct CompComp {\n    using Data\
-    \ = pll;\n    using Update = pll;\n    const Data vdef = {1, 0};\n    Data merge(Data\
-    \ l, Data r) {\n        auto [a, b] = l;\n        auto [c, d] = r;\n        return\
-    \ {a * c % MOD, (b * c + d) % MOD};\n    }\n    void applyUpdate(Data &l, Update\
-    \ &r) { l = r; }\n};\n\nint main() {\n    fast_io();\n    int N = readi(), Q =\
-    \ readi();\n    SegmentTree<CompComp> seg; seg.init(N);\n    for (auto [i, v]\
-    \ : enumerate(readv<pll>(N), 1))\n        seg.update(i, v);\n    while (Q--) {\n\
-    \        if (readi() == 0) {\n            int p = readi()+1, b = readi(), c =\
-    \ readi();\n            seg.update(p, {b, c});\n        }\n        else {\n  \
-    \          int l = readi()+1, r = readi(); ll x = readl();\n            auto [a,\
-    \ b] = seg.query(l, r);\n            print((a * x + b) % MOD);\n        }\n  \
-    \  }\n}\n"
+    \ ll x = readl();\n            auto [a, b] = seg.query(l, r);\n            print(a\
+    \ * x + b);\n        }\n    }\n}\n"
   dependsOn:
   - template.hpp
   - tests/test_utils.hpp
   - ds/segment_tree.hpp
+  - math/mod.hpp
+  - math/eea.hpp
   isVerificationFile: true
   path: tests/ds/segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2021-06-16 10:53:28-04:00'
+  timestamp: '2021-07-05 01:58:54-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/ds/segment_tree.test.cpp

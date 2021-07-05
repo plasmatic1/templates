@@ -18,6 +18,9 @@ data:
     path: ds/sparse_table.hpp
     title: ds/sparse_table.hpp
   - icon: ':warning:'
+    path: ds/treap.cpp
+    title: ds/treap.cpp
+  - icon: ':warning:'
     path: fraction.cpp
     title: fraction.cpp
   - icon: ':heavy_check_mark:'
@@ -81,17 +84,17 @@ data:
     path: math/totient.hpp
     title: math/totient.hpp
   - icon: ':warning:'
-    path: random.cpp
-    title: random.cpp
+    path: random.hpp
+    title: random.hpp
   - icon: ':heavy_check_mark:'
     path: rank_compression.hpp
     title: rank_compression.hpp
-  - icon: ':warning:'
-    path: test.cpp
-    title: test.cpp
   - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
+  - icon: ':warning:'
+    path: timing.hpp
+    title: timing.hpp
   - icon: ':heavy_check_mark:'
     path: tree/lca_binary_lift.hpp
     title: tree/lca_binary_lift.hpp
@@ -378,6 +381,7 @@ data:
   isVerificationFile: false
   path: template.hpp
   requiredBy:
+  - random.hpp
   - graph/scc.hpp
   - graph/2sat.hpp
   - graph/dijkstra.hpp
@@ -386,6 +390,7 @@ data:
   - graph/tarjan_undirected.hpp
   - graph/bfs_0_1.hpp
   - graph/bfs.hpp
+  - ds/treap.cpp
   - ds/segment_tree_lazy.hpp
   - ds/dsu.hpp
   - ds/bit.hpp
@@ -393,9 +398,8 @@ data:
   - ds/segment_tree.hpp
   - tests/test_utils.hpp
   - fraction.cpp
+  - timing.hpp
   - rank_compression.hpp
-  - test.cpp
-  - random.cpp
   - math/fast_modinv.hpp
   - math/prime_factor.hpp
   - math/stirling2.hpp

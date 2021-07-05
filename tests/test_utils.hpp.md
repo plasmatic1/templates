@@ -4,10 +4,7 @@ data:
   - icon: ':question:'
     path: template.hpp
     title: template.hpp
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: test.cpp
-    title: test.cpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/ds/bit.test.cpp
@@ -164,8 +161,7 @@ data:
   - template.hpp
   isVerificationFile: false
   path: tests/test_utils.hpp
-  requiredBy:
-  - test.cpp
+  requiredBy: []
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:

@@ -11,10 +11,13 @@ data:
   - icon: ':question:'
     path: math/mod.hpp
     title: math/mod.hpp
-  - icon: ':warning:'
-    path: test.cpp
-    title: test.cpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/segment_tree.test.cpp
+    title: tests/ds/segment_tree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/ds/segment_tree_lazy.test.cpp
+    title: tests/ds/segment_tree_lazy.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/math/choose.test.cpp
     title: tests/math/choose.test.cpp
@@ -91,12 +94,13 @@ data:
   isVerificationFile: false
   path: math/eea.hpp
   requiredBy:
-  - test.cpp
   - math/mod.hpp
   - math/crt.hpp
   timestamp: '2021-07-05 01:37:57-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - tests/ds/segment_tree.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
   - tests/math/matrix_mul.test.cpp
   - tests/math/matrix_determinant.test.cpp
   - tests/math/choose.test.cpp

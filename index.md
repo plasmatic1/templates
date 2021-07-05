@@ -65,8 +65,8 @@ data:
       path: point.cpp
       title: point.cpp
     - icon: ':warning:'
-      path: random.cpp
-      title: random.cpp
+      path: random.hpp
+      title: random.hpp
     - icon: ':heavy_check_mark:'
       path: rank_compression.hpp
       title: rank_compression.hpp
@@ -77,8 +77,8 @@ data:
       path: template.hpp
       title: template.hpp
     - icon: ':warning:'
-      path: test.cpp
-      title: test.cpp
+      path: timing.hpp
+      title: timing.hpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'

@@ -151,19 +151,19 @@ data:
     \                m[i][j] *= o;\n        return *this;\n    }\n\n    Matrix& operator-()\
     \ {\n        for (int i = 0; i < N(); i++) for (int j = 0; j < M(); j++)\n   \
     \             m[i][j] = -m[i][j];\n    }\n\n    // Reduced row echelon form\n\
-    \    T rref() {\n        assert(N() <= M());\n        T det = 1;\n        for\
-    \ (int i = 0; i < N(); i++) {\n            int target = -1;\n            for (int\
-    \ j = i; j < N(); j++) {\n                if (m[j][i] != 0) {\n              \
-    \      target = j;\n                    break;\n                }\n          \
-    \  }\n            if (target == -1) continue;\n            if (i != target) {\n\
-    \                m[i].swap(m[target]);\n                det *= -1;\n         \
-    \   }\n\n            T co = 1 / m[i][i];\n            det *= m[i][i];\n      \
-    \      for (int j = 0; j < M(); j++)\n                m[i][j] *= co;\n       \
-    \     for (int j = 0; j < N(); j++)\n                if (j != i) {\n         \
-    \           T jco = m[j][i];\n                    for (int k = 0; k < M(); k++)\n\
-    \                        m[j][k] -= jco * m[i][k];\n                }\n      \
-    \  }\n        for (int i = 0; i < N(); i++)\n            if (m[i][i] == 0)\n \
-    \               return T(0);\n\n        return det;\n    }\n    static pair<Matrix,\
+    \    T rref() {\n        int nvar = min(N(), M());\n        T det = 1;\n     \
+    \   for (int i = 0; i < nvar; i++) {\n            int target = -1;\n         \
+    \   for (int j = i; j < N(); j++) {\n                if (m[j][i] != 0) {\n   \
+    \                 target = j;\n                    break;\n                }\n\
+    \            }\n            if (target == -1) continue;\n            if (i !=\
+    \ target) {\n                m[i].swap(m[target]);\n                det *= -1;\n\
+    \            }\n\n            T co = 1 / m[i][i];\n            det *= m[i][i];\n\
+    \            for (int j = 0; j < M(); j++)\n                m[i][j] *= co;\n \
+    \           for (int j = 0; j < N(); j++)\n                if (j != i) {\n   \
+    \                 T jco = m[j][i];\n                    for (int k = 0; k < M();\
+    \ k++)\n                        m[j][k] -= jco * m[i][k];\n                }\n\
+    \        }\n        for (int i = 0; i < N(); i++)\n            if (m[i][i] ==\
+    \ 0)\n                return T(0);\n\n        return det;\n    }\n    static pair<Matrix,\
     \ T> rref(Matrix m) { T det = m.rref(); return {m, det}; }\n\n    // Augmenting\n\
     \    void augment(const Matrix &o) {\n        assert(N() == o.N());\n        for\
     \ (int i = 0; i < N(); i++)\n            m[i].insert(m[i].end(), o[i].begin(),\
@@ -218,7 +218,7 @@ data:
   isVerificationFile: true
   path: tests/math/matrix_inverse.test.cpp
   requiredBy: []
-  timestamp: '2021-07-05 01:37:57-04:00'
+  timestamp: '2021-07-05 01:46:58-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/math/matrix_inverse.test.cpp

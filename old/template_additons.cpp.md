@@ -61,7 +61,7 @@ data:
     \ \"unroll-loops\"\n#pragma GCC target \"sse,sse2,sse3,sse4,abm,avx,mmx,popcnt\"\
     \n\n// random short things\nusing namespace std::chrono;\nll timeMs() { return\
     \ duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\
-    \ }\n\n// random stuff\nmt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \ }\n\n// random stuff\nmt19937 __mt(chrono::steady_clock::now().time_since_epoch().count());\n\
     \n#define mtup make_tuple\n\n#define O3 __attribute__((optimize(\"-O3\")))\n#define\
     \ finline __attribute__((always_inline))\n\n// order statistic idea\n#include\
     \ <ext/pb_ds/assoc_container.hpp> // Common file \n#include <ext/pb_ds/tree_policy.hpp>\n\
@@ -168,14 +168,14 @@ data:
     \ - a + 1);\n    return min(tb[bit][a], tb[bit][b - (1 << bit) + 1], cmpDep);\n\
     }\n\n// Rabin karp but with random base\nusing namespace std::chrono;\nll timeMs()\
     \ { return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\
-    \ }\n \nconst int MH = 10001;\nmt19937 mt(timeMs());\nvi primes;\nbool isprime[MH];\n\
+    \ }\n \nconst int MH = 10001;\nmt19937 __mt(timeMs());\nvi primes;\nbool isprime[MH];\n\
     \ \nvoid init() {\n    memset(isprime, true, sizeof isprime);\n    repi(2, MH)\
     \ {\n        if (isprime[i]) {\n            for (int j = i + i; j < MH; j += i)\n\
     \                isprime[j] = false;\n            if (i > 100)\n             \
     \   primes.pb(i);\n        }\n    }\n}\nconst int PC = 2;\nll MOD[PC] = {1000000007,\
     \ 1000000009}, BASE[PC] = {};\n \nuniform_int_distribution<int> dis;\nvoid initPr()\
     \ {\n    init();\n    dis = uniform_int_distribution<int>(0, primes.size() - 1);\n\
-    }\n \nvoid getPr() {\n    repi(0, PC) BASE[i] = primes[dis(mt)];\n}\n \nconst\
+    }\n \nvoid getPr() {\n    repi(0, PC) BASE[i] = primes[dis(__mt)];\n}\n \nconst\
     \ int MN = 1e6 + 1;\nusing HashType = ll;\nstruct Hash {\n    vec<ll> pow[PC],\
     \ hsh[PC];\n    void initVec(int len) {\n        for (int i = 0; i < PC; i++)\
     \ {\n            pow[i].resize(len);\n            hsh[i].resize(len);\n      \
@@ -242,7 +242,7 @@ data:
     \ \"unroll-loops\"\n#pragma GCC target \"sse,sse2,sse3,sse4,abm,avx,mmx,popcnt\"\
     \n\n// random short things\nusing namespace std::chrono;\nll timeMs() { return\
     \ duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\
-    \ }\n\n// random stuff\nmt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \ }\n\n// random stuff\nmt19937 __mt(chrono::steady_clock::now().time_since_epoch().count());\n\
     \n#define mtup make_tuple\n\n#define O3 __attribute__((optimize(\"-O3\")))\n#define\
     \ finline __attribute__((always_inline))\n\n// order statistic idea\n#include\
     \ <ext/pb_ds/assoc_container.hpp> // Common file \n#include <ext/pb_ds/tree_policy.hpp>\n\
@@ -349,14 +349,14 @@ data:
     \ - a + 1);\n    return min(tb[bit][a], tb[bit][b - (1 << bit) + 1], cmpDep);\n\
     }\n\n// Rabin karp but with random base\nusing namespace std::chrono;\nll timeMs()\
     \ { return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\
-    \ }\n \nconst int MH = 10001;\nmt19937 mt(timeMs());\nvi primes;\nbool isprime[MH];\n\
+    \ }\n \nconst int MH = 10001;\nmt19937 __mt(timeMs());\nvi primes;\nbool isprime[MH];\n\
     \ \nvoid init() {\n    memset(isprime, true, sizeof isprime);\n    repi(2, MH)\
     \ {\n        if (isprime[i]) {\n            for (int j = i + i; j < MH; j += i)\n\
     \                isprime[j] = false;\n            if (i > 100)\n             \
     \   primes.pb(i);\n        }\n    }\n}\nconst int PC = 2;\nll MOD[PC] = {1000000007,\
     \ 1000000009}, BASE[PC] = {};\n \nuniform_int_distribution<int> dis;\nvoid initPr()\
     \ {\n    init();\n    dis = uniform_int_distribution<int>(0, primes.size() - 1);\n\
-    }\n \nvoid getPr() {\n    repi(0, PC) BASE[i] = primes[dis(mt)];\n}\n \nconst\
+    }\n \nvoid getPr() {\n    repi(0, PC) BASE[i] = primes[dis(__mt)];\n}\n \nconst\
     \ int MN = 1e6 + 1;\nusing HashType = ll;\nstruct Hash {\n    vec<ll> pow[PC],\
     \ hsh[PC];\n    void initVec(int len) {\n        for (int i = 0; i < PC; i++)\
     \ {\n            pow[i].resize(len);\n            hsh[i].resize(len);\n      \
@@ -374,7 +374,7 @@ data:
   isVerificationFile: false
   path: old/template_additons.cpp
   requiredBy: []
-  timestamp: '2021-06-29 16:57:15-04:00'
+  timestamp: '2021-07-05 01:46:58-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: old/template_additons.cpp
