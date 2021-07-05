@@ -2,22 +2,24 @@
 #include "../../template.hpp"
 #include "../test_utils.hpp"
 #include "../../ds/segment_tree_lazy.hpp"
+#include "../../math/mod.hpp"
 
 // A = (ax+b), B = (cx+d)
 // c(ax+b)+d = acx + bc + d
-const ll MOD = 998244353;
+using MI = ModInt<int, 998244353>;
+using pm = pair<MI, MI>;
 struct AffineComp {
-    using Data = ll;
-    using Lazy = pll;
+    using Data = MI;
+    using Lazy = pm;
     const Data vdef = 0;
     const Lazy ldef = {1, 0};
-    Data merge(Data l, Data r) const { return (l + r) % MOD; }
+    Data merge(Data l, Data r) const { return l + r; }
     Lazy mergeLazy(Lazy to, Lazy v) const {
         auto [a, b] = to;
         auto [c, d] = v;
-        return {a * c % MOD, (b * c + d) % MOD};
+        return {a * c, b * c + d};
     }
-    void applyLazy(Data &to, Lazy &v, int l, int r) { to = (v.first * to + (r - l + 1) * v.second) % MOD; }
+    void applyLazy(Data &to, Lazy &v, int l, int r) { to = v.first * to + (r - l + 1) * v.second; }
 };
 
 int main() {

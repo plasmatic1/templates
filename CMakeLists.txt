@@ -83,4 +83,4 @@ add_executable(templates
         tests/math/eea.test.cpp
 
         tests/tree/lca_binary_lift.test.cpp
-        tests/tree/lca_sparse_table.test.cpp test.cpp)
+        tests/tree/lca_sparse_table.test.cpp)

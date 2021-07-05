@@ -2,18 +2,20 @@
 #include "../../template.hpp"
 #include "../test_utils.hpp"
 #include "../../ds/segment_tree.hpp"
+#include "../../math/mod.hpp"
 
 // A(x) = ax+b, B(x) = cx+d
 // B(A(x)) = c(ax+b)+d = acx + bc + d
-const ll MOD = 998244353;
+using MI = ModInt<int, 998244353>;
+using pm = pair<MI, MI>;
 struct CompComp {
-    using Data = pll;
-    using Update = pll;
+    using Data = pm;
+    using Update = pm;
     const Data vdef = {1, 0};
     Data merge(Data l, Data r) {
         auto [a, b] = l;
         auto [c, d] = r;
-        return {a * c % MOD, (b * c + d) % MOD};
+        return {a * c, b * c + d};
     }
     void applyUpdate(Data &l, Update &r) { l = r; }
 };
@@ -32,7 +34,7 @@ int main() {
         else {
             int l = readi()+1, r = readi(); ll x = readl();
             auto [a, b] = seg.query(l, r);
-            print((a * x + b) % MOD);
+            print(a * x + b);
         }
     }
 }
