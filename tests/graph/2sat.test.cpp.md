@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/2sat.hpp
     title: graph/2sat.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedRequiredBy: []

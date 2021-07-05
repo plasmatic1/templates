@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy:
@@ -49,13 +49,13 @@ data:
   path: math/choose.hpp
   requiredBy:
   - math/stirling2.hpp
-  - math/stirling1.hpp
   - math/catalan.hpp
+  - math/stirling1.hpp
   timestamp: '2021-06-26 02:30:43-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/math/permute.test.cpp
   - tests/math/choose.test.cpp
+  - tests/math/permute.test.cpp
   - tests/math/stirling2.test.cpp
 documentation_of: math/choose.hpp
 layout: document

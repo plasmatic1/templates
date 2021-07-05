@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
@@ -41,8 +41,8 @@ data:
   timestamp: '2021-06-27 02:07:30-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/math/prime_factor1.test.cpp
   - tests/math/prime_factor2.test.cpp
+  - tests/math/prime_factor1.test.cpp
 documentation_of: math/prime_factor.hpp
 layout: document
 redirect_from:

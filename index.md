@@ -73,9 +73,12 @@ data:
     - icon: ':warning:'
       path: template.cpp
       title: template.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template.hpp
       title: template.hpp
+    - icon: ':warning:'
+      path: test.cpp
+      title: test.cpp
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -133,7 +136,7 @@ data:
     - icon: ':warning:'
       path: math/crt.hpp
       title: math/crt.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: math/eea.hpp
       title: math/eea.hpp
     - icon: ':warning:'
@@ -142,10 +145,10 @@ data:
     - icon: ':warning:'
       path: math/fast_modinv.hpp
       title: math/fast_modinv.hpp
-    - icon: ':warning:'
-      path: math/matrix.cpp
-      title: math/matrix.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
+      path: math/matrix.hpp
+      title: math/matrix.hpp
+    - icon: ':question:'
       path: math/mod.hpp
       title: math/mod.hpp
     - icon: ':heavy_check_mark:'
@@ -187,7 +190,7 @@ data:
       title: string/suffix_automaton.cpp
   - name: tests
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: tests/test_utils.hpp
       title: tests/test_utils.hpp
   - name: tree
@@ -267,9 +270,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/math/choose.test.cpp
       title: tests/math/choose.test.cpp
+    - icon: ':x:'
+      path: tests/math/choose_non_prime_mod.test.cpp
+      title: tests/math/choose_non_prime_mod.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/math/eea.test.cpp
       title: tests/math/eea.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/matrix_determinant.test.cpp
+      title: tests/math/matrix_determinant.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/matrix_inverse.test.cpp
+      title: tests/math/matrix_inverse.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/math/matrix_mul.test.cpp
+      title: tests/math/matrix_mul.test.cpp
+    - icon: ':x:'
+      path: tests/math/matrix_solve_linear.test.cpp
+      title: tests/math/matrix_solve_linear.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/math/modint.test.cpp
       title: tests/math/modint.test.cpp

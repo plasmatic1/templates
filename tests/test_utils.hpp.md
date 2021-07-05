@@ -1,10 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: test.cpp
+    title: test.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/ds/bit.test.cpp
@@ -51,9 +54,24 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/math/choose.test.cpp
     title: tests/math/choose.test.cpp
+  - icon: ':x:'
+    path: tests/math/choose_non_prime_mod.test.cpp
+    title: tests/math/choose_non_prime_mod.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/math/eea.test.cpp
     title: tests/math/eea.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/matrix_determinant.test.cpp
+    title: tests/math/matrix_determinant.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/matrix_inverse.test.cpp
+    title: tests/math/matrix_inverse.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/math/matrix_mul.test.cpp
+    title: tests/math/matrix_mul.test.cpp
+  - icon: ':x:'
+    path: tests/math/matrix_solve_linear.test.cpp
+    title: tests/math/matrix_solve_linear.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/math/modint.test.cpp
     title: tests/math/modint.test.cpp
@@ -90,9 +108,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/tree/lca_sparse_table.test.cpp
     title: tests/tree/lca_sparse_table.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -146,38 +164,44 @@ data:
   - template.hpp
   isVerificationFile: false
   path: tests/test_utils.hpp
-  requiredBy: []
+  requiredBy:
+  - test.cpp
   timestamp: '2021-06-16 10:53:28-04:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/graph/dijkstra.test.cpp
-  - tests/graph/2sat.test.cpp
-  - tests/graph/biconnected_components.test.cpp
-  - tests/graph/spfa.test.cpp
-  - tests/graph/bfs.test.cpp
-  - tests/graph/bridges.test.cpp
-  - tests/graph/articulation_points.test.cpp
   - tests/graph/scc.test.cpp
-  - tests/ds/bit.test.cpp
+  - tests/graph/biconnected_components.test.cpp
+  - tests/graph/bridges.test.cpp
+  - tests/graph/spfa.test.cpp
+  - tests/graph/2sat.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/articulation_points.test.cpp
   - tests/ds/li_chao_tree.test.cpp
   - tests/ds/segment_tree.test.cpp
-  - tests/ds/segment_tree_lazy.test.cpp
+  - tests/ds/bit.test.cpp
   - tests/ds/sparse_table.test.cpp
   - tests/ds/dsu.test.cpp
-  - tests/tree/lca_jump.test.cpp
-  - tests/tree/hld_lca.test.cpp
-  - tests/tree/lca_binary_lift.test.cpp
-  - tests/tree/lca_sparse_table.test.cpp
-  - tests/tree/hld_path_query.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
   - tests/rank_compression.test.cpp
-  - tests/math/permute.test.cpp
-  - tests/math/prime_factor1.test.cpp
-  - tests/math/eea.test.cpp
-  - tests/math/modint.test.cpp
+  - tests/math/totient.test.cpp
+  - tests/math/matrix_mul.test.cpp
+  - tests/math/matrix_determinant.test.cpp
   - tests/math/choose.test.cpp
   - tests/math/prime_factor2.test.cpp
+  - tests/math/modint.test.cpp
+  - tests/math/eea.test.cpp
+  - tests/math/permute.test.cpp
   - tests/math/stirling2.test.cpp
-  - tests/math/totient.test.cpp
+  - tests/math/prime_factor1.test.cpp
+  - tests/math/matrix_solve_linear.test.cpp
+  - tests/math/matrix_inverse.test.cpp
+  - tests/math/choose_non_prime_mod.test.cpp
+  - tests/tree/hld_lca.test.cpp
+  - tests/tree/lca_jump.test.cpp
+  - tests/tree/hld_path_query.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/lca_binary_lift.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:

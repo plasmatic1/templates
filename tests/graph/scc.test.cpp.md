@@ -7,10 +7,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/scc.hpp
     title: graph/scc.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedRequiredBy: []

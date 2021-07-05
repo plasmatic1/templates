@@ -12,23 +12,24 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E
+    PROBLEM: https://judge.yosupo.jp/problem/binomial_coefficient
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E
-  bundledCode: "#line 1 \"tests/math/eea.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E\"\
-    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
-    // Defines\n#define fs first\n#define sn second\n#define pb push_back\n#define\
-    \ eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define all(x)\
-    \ (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus == 201703L\
-    \ // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
-    \ // for some templates\n#endif\nusing ll = long long; using ull = unsigned long\
-    \ long; using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long\
-    \ long, long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
+    - https://judge.yosupo.jp/problem/binomial_coefficient
+  bundledCode: "#line 1 \"tests/math/choose_non_prime_mod.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/binomial_coefficient\"\n#line 2 \"template.hpp\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n\n// Defines\n#define fs first\n\
+    #define sn second\n#define pb push_back\n#define eb emplace_back\n#define mpr\
+    \ make_pair\n#define mtp make_tuple\n#define all(x) (x).begin(), (x).end()\n//\
+    \ Basic type definitions\n#if __cplusplus == 201703L // CPP17 only things\ntemplate\
+    \ <typename T> using opt_ref = optional<reference_wrapper<T>>; // for some templates\n\
+    #endif\nusing ll = long long; using ull = unsigned long long; using ld = long\
+    \ double;\nusing pii = pair<int, int>; using pll = pair<long long, long long>;\n\
+    #ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
     \ // Common file\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\n\
     template <typename T, class comp = less<T>> using os_tree = tree<T, null_type,\
     \ comp, rb_tree_tag, tree_order_statistics_node_update>;\ntemplate <typename K,\
@@ -61,27 +62,25 @@ data:
     \ b)\n */\ntemplate <typename T> T extgcd(T a, T b, T &x, T &y) {\n    if (b ==\
     \ 0) {\n        x = 1;\n        y = 0;\n        return a;\n    }\n    T x0, y0,\
     \ res = extgcd(b, a%b, x0, y0);\n    x = y0;\n    y = x0 - (a / b) * y0;\n   \
-    \ return res;\n}\n#line 5 \"tests/math/eea.test.cpp\"\n\nint main() {\n    fast_io();\n\
-    \    int a, b, x, y; cin >> a >> b;\n    extgcd(a, b, x, y);\n    print(x, y);\n\
-    }\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E\"\
-    \n#include \"../../template.hpp\"\n#include \"../test_utils.hpp\"\n#include \"\
-    ../../math/eea.hpp\"\n\nint main() {\n    fast_io();\n    int a, b, x, y; cin\
-    \ >> a >> b;\n    extgcd(a, b, x, y);\n    print(x, y);\n}\n"
+    \ return res;\n}\n#line 5 \"tests/math/choose_non_prime_mod.test.cpp\"\n\nint\
+    \ main() {\n    fast_io();\n\n    int T, m;\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/binomial_coefficient\"\n\
+    #include \"../../template.hpp\"\n#include \"../test_utils.hpp\"\n#include \"../../math/eea.hpp\"\
+    \n\nint main() {\n    fast_io();\n\n    int T, m;\n}\n"
   dependsOn:
   - template.hpp
   - tests/test_utils.hpp
   - math/eea.hpp
   isVerificationFile: true
-  path: tests/math/eea.test.cpp
+  path: tests/math/choose_non_prime_mod.test.cpp
   requiredBy: []
   timestamp: '2021-07-05 01:37:57-04:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: tests/math/eea.test.cpp
+documentation_of: tests/math/choose_non_prime_mod.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/math/eea.test.cpp
-- /verify/tests/math/eea.test.cpp.html
-title: tests/math/eea.test.cpp
+- /verify/tests/math/choose_non_prime_mod.test.cpp
+- /verify/tests/math/choose_non_prime_mod.test.cpp.html
+title: tests/math/choose_non_prime_mod.test.cpp
 ---

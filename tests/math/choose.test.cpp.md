@@ -4,13 +4,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/choose.hpp
     title: math/choose.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: math/eea.hpp
+    title: math/eea.hpp
+  - icon: ':question:'
     path: math/mod.hpp
     title: math/mod.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
@@ -41,11 +44,12 @@ data:
   - template.hpp
   - tests/test_utils.hpp
   - math/mod.hpp
+  - math/eea.hpp
   - math/choose.hpp
   isVerificationFile: true
   path: tests/math/choose.test.cpp
   requiredBy: []
-  timestamp: '2021-06-26 02:30:43-04:00'
+  timestamp: '2021-07-05 01:37:57-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/math/choose.test.cpp

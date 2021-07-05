@@ -4,16 +4,19 @@ data:
   - icon: ':heavy_check_mark:'
     path: math/choose.hpp
     title: math/choose.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: math/eea.hpp
+    title: math/eea.hpp
+  - icon: ':question:'
     path: math/mod.hpp
     title: math/mod.hpp
   - icon: ':heavy_check_mark:'
     path: math/stirling2.hpp
     title: math/stirling2.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
@@ -46,12 +49,13 @@ data:
   - template.hpp
   - tests/test_utils.hpp
   - math/mod.hpp
+  - math/eea.hpp
   - math/choose.hpp
   - math/stirling2.hpp
   isVerificationFile: true
   path: tests/math/stirling2.test.cpp
   requiredBy: []
-  timestamp: '2021-06-27 02:07:30-04:00'
+  timestamp: '2021-07-05 01:37:57-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/math/stirling2.test.cpp
