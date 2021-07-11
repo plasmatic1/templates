@@ -42,10 +42,10 @@ add_executable(templates
         old/template_additons.cpp
         old/templateredux.cpp
         old/test.cpp
-        string/hash.cpp
-        string/hash_utils.cpp
-        string/suffix_array.cpp
-        string/suffix_automaton.cpp
+        string/_old_hash.cpp
+        string/hash_utils.hpp
+        string/suffix_array.hpp
+        string/suffix_automaton.hpp
         tree/hld.hpp
         tree/lca_binary_lift.hpp
         tree/lca_jump.hpp

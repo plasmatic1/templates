@@ -49,7 +49,7 @@ template <typename MD> struct _ModInt {
     _ModInt& operator+=(const _ModInt &o) { if ((value += o.value) >= mod()) value -= mod(); return *this; }
     template <typename U> _ModInt& operator+=(const U &o) { return *this += _ModInt(o); }
     _ModInt& operator-=(const _ModInt &o) { if ((value -= o.value) < 0) value += mod(); return *this; }
-    template <typename U> _ModInt& operator-=(const U &o) { return *this += _ModInt(o); }
+    template <typename U> _ModInt& operator-=(const U &o) { return *this -= _ModInt(o); }
     _ModInt& operator++() { return *this += 1; }
     _ModInt operator++(int) { _ModInt res(*this); *this += 1; return res; }
     _ModInt& operator--() { return *this -= 1; }

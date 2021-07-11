@@ -13,7 +13,7 @@ ll comb(ll lo, ll hi) { return (hi << 32) | lo; }
 ll glo(ll x) { return x & ((1LL << 32) - 1); }
 ll ghi(ll x) { return x >> 32; }
 ll append1(ll hsh, int val, int i) { return madd(mmul(hsh, BASE[i], MODS[i]), val, MODS[i]); }
-ll append(ll hsh, int val) { return comb(append1(glo(hsh), val, 0), append1(ghi(hsh), val, 1)); } 
+ll append(ll hsh, int val) { return comb(append1(glo(hsh), val, 0), append1(ghi(hsh), val, 1)); }
 vector<ll> pows[2];
 void init_pow(int N) {
     for (auto i = 0; i < 2; i++) {

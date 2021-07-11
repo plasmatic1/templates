@@ -1,5 +1,7 @@
-const int MN = 5001;
-struct SAM {
+#pragma once
+#include "../template.hpp"
+
+template <int MN> struct SAM {
     struct state {
         int len, link;
         map<char, int> to;
@@ -32,5 +34,4 @@ struct SAM {
         last = cur;
     }
 };
-
 
