@@ -8,17 +8,17 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"string/hash_utils.cpp\"\n// Hashing stuff\nconst ll MODS[2]\
-    \ = {1000000007, 1000000009}, BASE[2] = {131, 191};\nll madd(ll a, ll b, ll mod)\
-    \ { return (a + b) % mod; }\nll msub(ll a, ll b, ll mod) { return (a - b + mod)\
-    \ % mod; }\nll mmul(ll a, ll b, ll mod) { return (a * b) % mod; }\nll fpow(ll\
-    \ x, ll y, ll mod) {\n    if (!y) return 1LL;\n    return mmul(fpow(mmul(x, x,\
-    \ mod), y >> 1, mod), (y & 1) ? x : 1LL, mod);\n}\nll mdiv(ll x, ll y, ll mod)\
+  bundledCode: "#line 1 \"string/_old_hash_utils.cpp\"\n// Hashing stuff\nconst ll\
+    \ MODS[2] = {1000000007, 1000000009}, BASE[2] = {131, 191};\nll madd(ll a, ll\
+    \ b, ll mod) { return (a + b) % mod; }\nll msub(ll a, ll b, ll mod) { return (a\
+    \ - b + mod) % mod; }\nll mmul(ll a, ll b, ll mod) { return (a * b) % mod; }\n\
+    ll fpow(ll x, ll y, ll mod) {\n    if (!y) return 1LL;\n    return mmul(fpow(mmul(x,\
+    \ x, mod), y >> 1, mod), (y & 1) ? x : 1LL, mod);\n}\nll mdiv(ll x, ll y, ll mod)\
     \ { return mmul(x, fpow(y, mod - 2, mod), mod); }\n\nll comb(ll lo, ll hi) { return\
     \ (hi << 32) | lo; }\nll glo(ll x) { return x & ((1LL << 32) - 1); }\nll ghi(ll\
     \ x) { return x >> 32; }\nll append1(ll hsh, int val, int i) { return madd(mmul(hsh,\
     \ BASE[i], MODS[i]), val, MODS[i]); }\nll append(ll hsh, int val) { return comb(append1(glo(hsh),\
-    \ val, 0), append1(ghi(hsh), val, 1)); } \nvector<ll> pows[2];\nvoid init_pow(int\
+    \ val, 0), append1(ghi(hsh), val, 1)); }\nvector<ll> pows[2];\nvoid init_pow(int\
     \ N) {\n    for (auto i = 0; i < 2; i++) {\n        pows[i].resize(N + 1);\n \
     \       pows[i][0] = 1LL;\n        for (auto j = 1; j <= N; j++)\n           \
     \ pows[i][j] = mmul(pows[i][j - 1], BASE[i], MODS[i]);\n    }\n}\nll ghsh1(ll\
@@ -39,7 +39,7 @@ data:
     \ return x & ((1LL << 32) - 1); }\nll ghi(ll x) { return x >> 32; }\nll append1(ll\
     \ hsh, int val, int i) { return madd(mmul(hsh, BASE[i], MODS[i]), val, MODS[i]);\
     \ }\nll append(ll hsh, int val) { return comb(append1(glo(hsh), val, 0), append1(ghi(hsh),\
-    \ val, 1)); } \nvector<ll> pows[2];\nvoid init_pow(int N) {\n    for (auto i =\
+    \ val, 1)); }\nvector<ll> pows[2];\nvoid init_pow(int N) {\n    for (auto i =\
     \ 0; i < 2; i++) {\n        pows[i].resize(N + 1);\n        pows[i][0] = 1LL;\n\
     \        for (auto j = 1; j <= N; j++)\n            pows[i][j] = mmul(pows[i][j\
     \ - 1], BASE[i], MODS[i]);\n    }\n}\nll ghsh1(ll hr, ll hl, int sz, int i) {\n\
@@ -51,15 +51,15 @@ data:
     \ glo(hsh2), sz, 0), concat1(ghi(hsh), ghi(hsh2), sz, 1)); }\n"
   dependsOn: []
   isVerificationFile: false
-  path: string/hash_utils.cpp
+  path: string/_old_hash_utils.cpp
   requiredBy: []
-  timestamp: '2021-06-06 19:00:04-04:00'
+  timestamp: '2021-07-11 00:49:35-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: string/hash_utils.cpp
+documentation_of: string/_old_hash_utils.cpp
 layout: document
 redirect_from:
-- /library/string/hash_utils.cpp
-- /library/string/hash_utils.cpp.html
-title: string/hash_utils.cpp
+- /library/string/_old_hash_utils.cpp
+- /library/string/_old_hash_utils.cpp.html
+title: string/_old_hash_utils.cpp
 ---

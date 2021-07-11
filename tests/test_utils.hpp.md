@@ -91,6 +91,18 @@ data:
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
   - icon: ':heavy_check_mark:'
+    path: tests/string/hash_utils.test.cpp
+    title: tests/string/hash_utils.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/suffix_array.test.cpp
+    title: tests/string/suffix_array.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/suffix_array_lcp.test.cpp
+    title: tests/string/suffix_array_lcp.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/suffix_automaton.test.cpp
+    title: tests/string/suffix_automaton.test.cpp
+  - icon: ':heavy_check_mark:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
   - icon: ':heavy_check_mark:'
@@ -198,6 +210,10 @@ data:
   - tests/tree/hld_path_query.test.cpp
   - tests/tree/lca_sparse_table.test.cpp
   - tests/tree/lca_binary_lift.test.cpp
+  - tests/string/hash_utils.test.cpp
+  - tests/string/suffix_array_lcp.test.cpp
+  - tests/string/suffix_automaton.test.cpp
+  - tests/string/suffix_array.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
 redirect_from:

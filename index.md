@@ -27,20 +27,11 @@ data:
   - name: external
     pages:
     - icon: ':warning:'
-      path: external/E_fft.cpp
-      title: external/E_fft.cpp
-    - icon: ':warning:'
       path: external/E_reverse_it.cpp
       title: external/E_reverse_it.cpp
     - icon: ':warning:'
-      path: external/E_suffix_automaton.cpp
-      title: external/E_suffix_automaton.cpp
-    - icon: ':warning:'
       path: external/UNFINISHED_ntt_big_mod.cpp
       title: external/UNFINISHED_ntt_big_mod.cpp
-    - icon: ':warning:'
-      path: external/extgcd.cpp
-      title: external/extgcd.cpp
     - icon: ':warning:'
       path: external/fastmod.cpp
       title: external/fastmod.cpp
@@ -50,9 +41,6 @@ data:
     - icon: ':warning:'
       path: external/flow.cpp
       title: external/flow.cpp
-    - icon: ':warning:'
-      path: external/mint.cpp
-      title: external/mint.cpp
   - name: .
     pages:
     - icon: ':warning:'
@@ -177,17 +165,20 @@ data:
   - name: string
     pages:
     - icon: ':warning:'
-      path: string/hash.cpp
-      title: string/hash.cpp
+      path: string/_old_hash.cpp
+      title: string/_old_hash.cpp
     - icon: ':warning:'
-      path: string/hash_utils.cpp
-      title: string/hash_utils.cpp
-    - icon: ':warning:'
-      path: string/suffix_array.cpp
-      title: string/suffix_array.cpp
-    - icon: ':warning:'
-      path: string/suffix_automaton.cpp
-      title: string/suffix_automaton.cpp
+      path: string/_old_hash_utils.cpp
+      title: string/_old_hash_utils.cpp
+    - icon: ':heavy_check_mark:'
+      path: string/hash_utils.hpp
+      title: string/hash_utils.hpp
+    - icon: ':heavy_check_mark:'
+      path: string/suffix_array.hpp
+      title: string/suffix_array.hpp
+    - icon: ':heavy_check_mark:'
+      path: string/suffix_automaton.hpp
+      title: string/suffix_automaton.hpp
   - name: tests
     pages:
     - icon: ':question:'
@@ -306,6 +297,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/math/totient.test.cpp
       title: tests/math/totient.test.cpp
+  - name: tests/string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/string/hash_utils.test.cpp
+      title: tests/string/hash_utils.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/string/suffix_array.test.cpp
+      title: tests/string/suffix_array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/string/suffix_array_lcp.test.cpp
+      title: tests/string/suffix_array_lcp.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/string/suffix_automaton.test.cpp
+      title: tests/string/suffix_automaton.test.cpp
   - name: tests/tree
     pages:
     - icon: ':heavy_check_mark:'

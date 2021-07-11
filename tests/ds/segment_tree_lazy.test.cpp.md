@@ -123,7 +123,7 @@ data:
     \ >= mod()) value -= mod(); return *this; }\n    template <typename U> _ModInt&\
     \ operator+=(const U &o) { return *this += _ModInt(o); }\n    _ModInt& operator-=(const\
     \ _ModInt &o) { if ((value -= o.value) < 0) value += mod(); return *this; }\n\
-    \    template <typename U> _ModInt& operator-=(const U &o) { return *this += _ModInt(o);\
+    \    template <typename U> _ModInt& operator-=(const U &o) { return *this -= _ModInt(o);\
     \ }\n    _ModInt& operator++() { return *this += 1; }\n    _ModInt operator++(int)\
     \ { _ModInt res(*this); *this += 1; return res; }\n    _ModInt& operator--() {\
     \ return *this -= 1; }\n    _ModInt operator--(int) { _ModInt res(*this); *this\
@@ -193,7 +193,7 @@ data:
   isVerificationFile: true
   path: tests/ds/segment_tree_lazy.test.cpp
   requiredBy: []
-  timestamp: '2021-07-05 01:58:54-04:00'
+  timestamp: '2021-07-11 00:49:35-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/ds/segment_tree_lazy.test.cpp

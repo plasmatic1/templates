@@ -46,15 +46,15 @@ data:
     \        return res;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: string/hash.cpp
+  path: string/_old_hash.cpp
   requiredBy: []
-  timestamp: '2021-06-06 19:00:04-04:00'
+  timestamp: '2021-07-11 00:49:35-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: string/hash.cpp
+documentation_of: string/_old_hash.cpp
 layout: document
 redirect_from:
-- /library/string/hash.cpp
-- /library/string/hash.cpp.html
-title: string/hash.cpp
+- /library/string/_old_hash.cpp
+- /library/string/_old_hash.cpp.html
+title: string/_old_hash.cpp
 ---

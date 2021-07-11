@@ -89,6 +89,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: rank_compression.hpp
     title: rank_compression.hpp
+  - icon: ':heavy_check_mark:'
+    path: string/hash_utils.hpp
+    title: string/hash_utils.hpp
+  - icon: ':heavy_check_mark:'
+    path: string/suffix_array.hpp
+    title: string/suffix_array.hpp
+  - icon: ':heavy_check_mark:'
+    path: string/suffix_automaton.hpp
+    title: string/suffix_automaton.hpp
   - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
@@ -189,6 +198,18 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/hash_utils.test.cpp
+    title: tests/string/hash_utils.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/suffix_array.test.cpp
+    title: tests/string/suffix_array.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/suffix_array_lcp.test.cpp
+    title: tests/string/suffix_array_lcp.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/suffix_automaton.test.cpp
+    title: tests/string/suffix_automaton.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
@@ -415,6 +436,9 @@ data:
   - tree/lca_binary_lift.hpp
   - tree/lca_sparse_table.hpp
   - tree/lca_jump.hpp
+  - string/suffix_automaton.hpp
+  - string/hash_utils.hpp
+  - string/suffix_array.hpp
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
@@ -451,6 +475,10 @@ data:
   - tests/tree/hld_path_query.test.cpp
   - tests/tree/lca_sparse_table.test.cpp
   - tests/tree/lca_binary_lift.test.cpp
+  - tests/string/hash_utils.test.cpp
+  - tests/string/suffix_array_lcp.test.cpp
+  - tests/string/suffix_automaton.test.cpp
+  - tests/string/suffix_array.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:
