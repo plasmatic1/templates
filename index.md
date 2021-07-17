@@ -173,12 +173,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/hash_utils.hpp
       title: string/hash_utils.hpp
+    - icon: ':warning:'
+      path: string/kmp.hpp
+      title: string/kmp.hpp
+    - icon: ':heavy_check_mark:'
+      path: string/manachers.hpp
+      title: string/manachers.hpp
     - icon: ':heavy_check_mark:'
       path: string/suffix_array.hpp
       title: string/suffix_array.hpp
     - icon: ':heavy_check_mark:'
       path: string/suffix_automaton.hpp
       title: string/suffix_automaton.hpp
+    - icon: ':heavy_check_mark:'
+      path: string/z_algorithm.hpp
+      title: string/z_algorithm.hpp
   - name: tests
     pages:
     - icon: ':question:'
@@ -303,6 +312,9 @@ data:
       path: tests/string/hash_utils.test.cpp
       title: tests/string/hash_utils.test.cpp
     - icon: ':heavy_check_mark:'
+      path: tests/string/manachers.test.cpp
+      title: tests/string/manachers.test.cpp
+    - icon: ':heavy_check_mark:'
       path: tests/string/suffix_array.test.cpp
       title: tests/string/suffix_array.test.cpp
     - icon: ':heavy_check_mark:'
@@ -311,6 +323,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/string/suffix_automaton.test.cpp
       title: tests/string/suffix_automaton.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: tests/string/z_algorithm.test.cpp
+      title: tests/string/z_algorithm.test.cpp
   - name: tests/tree
     pages:
     - icon: ':heavy_check_mark:'

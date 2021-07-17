@@ -92,12 +92,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: string/hash_utils.hpp
     title: string/hash_utils.hpp
+  - icon: ':warning:'
+    path: string/kmp.hpp
+    title: string/kmp.hpp
+  - icon: ':heavy_check_mark:'
+    path: string/manachers.hpp
+    title: string/manachers.hpp
   - icon: ':heavy_check_mark:'
     path: string/suffix_array.hpp
     title: string/suffix_array.hpp
   - icon: ':heavy_check_mark:'
     path: string/suffix_automaton.hpp
     title: string/suffix_automaton.hpp
+  - icon: ':heavy_check_mark:'
+    path: string/z_algorithm.hpp
+    title: string/z_algorithm.hpp
   - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
@@ -202,6 +211,9 @@ data:
     path: tests/string/hash_utils.test.cpp
     title: tests/string/hash_utils.test.cpp
   - icon: ':heavy_check_mark:'
+    path: tests/string/manachers.test.cpp
+    title: tests/string/manachers.test.cpp
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_array.test.cpp
     title: tests/string/suffix_array.test.cpp
   - icon: ':heavy_check_mark:'
@@ -210,6 +222,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/string/suffix_automaton.test.cpp
     title: tests/string/suffix_automaton.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/z_algorithm.test.cpp
+    title: tests/string/z_algorithm.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
@@ -436,8 +451,11 @@ data:
   - tree/lca_binary_lift.hpp
   - tree/lca_sparse_table.hpp
   - tree/lca_jump.hpp
+  - string/manachers.hpp
   - string/suffix_automaton.hpp
   - string/hash_utils.hpp
+  - string/kmp.hpp
+  - string/z_algorithm.hpp
   - string/suffix_array.hpp
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_SOME_WA
@@ -478,6 +496,8 @@ data:
   - tests/string/hash_utils.test.cpp
   - tests/string/suffix_array_lcp.test.cpp
   - tests/string/suffix_automaton.test.cpp
+  - tests/string/z_algorithm.test.cpp
+  - tests/string/manachers.test.cpp
   - tests/string/suffix_array.test.cpp
 documentation_of: template.hpp
 layout: document

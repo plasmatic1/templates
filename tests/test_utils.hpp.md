@@ -94,6 +94,9 @@ data:
     path: tests/string/hash_utils.test.cpp
     title: tests/string/hash_utils.test.cpp
   - icon: ':heavy_check_mark:'
+    path: tests/string/manachers.test.cpp
+    title: tests/string/manachers.test.cpp
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_array.test.cpp
     title: tests/string/suffix_array.test.cpp
   - icon: ':heavy_check_mark:'
@@ -102,6 +105,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/string/suffix_automaton.test.cpp
     title: tests/string/suffix_automaton.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: tests/string/z_algorithm.test.cpp
+    title: tests/string/z_algorithm.test.cpp
   - icon: ':heavy_check_mark:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
@@ -213,6 +219,8 @@ data:
   - tests/string/hash_utils.test.cpp
   - tests/string/suffix_array_lcp.test.cpp
   - tests/string/suffix_automaton.test.cpp
+  - tests/string/z_algorithm.test.cpp
+  - tests/string/manachers.test.cpp
   - tests/string/suffix_array.test.cpp
 documentation_of: tests/test_utils.hpp
 layout: document
