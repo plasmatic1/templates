@@ -189,16 +189,16 @@ data:
   timestamp: '2021-07-11 00:49:35-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/ds/segment_tree.test.cpp
-  - tests/ds/segment_tree_lazy.test.cpp
   - tests/math/matrix_mul.test.cpp
+  - tests/math/stirling2.test.cpp
   - tests/math/matrix_determinant.test.cpp
-  - tests/math/choose.test.cpp
+  - tests/math/matrix_inverse.test.cpp
   - tests/math/modint.test.cpp
   - tests/math/permute.test.cpp
-  - tests/math/stirling2.test.cpp
   - tests/math/matrix_solve_linear.test.cpp
-  - tests/math/matrix_inverse.test.cpp
+  - tests/math/choose.test.cpp
+  - tests/ds/segment_tree.test.cpp
+  - tests/ds/segment_tree_lazy.test.cpp
 documentation_of: math/mod.hpp
 layout: document
 redirect_from:

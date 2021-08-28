@@ -44,6 +44,9 @@ data:
   - name: .
     pages:
     - icon: ':warning:'
+      path: fhc.cpp
+      title: fhc.cpp
+    - icon: ':warning:'
       path: fraction.cpp
       title: fraction.cpp
     - icon: ':warning:'

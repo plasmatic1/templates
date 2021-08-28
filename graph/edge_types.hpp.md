@@ -109,18 +109,18 @@ data:
   timestamp: '2021-06-16 10:53:28-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/scc.test.cpp
+  - tests/tree/hld_lca.test.cpp
+  - tests/tree/lca_jump.test.cpp
+  - tests/tree/lca_binary_lift.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/hld_path_query.test.cpp
   - tests/graph/biconnected_components.test.cpp
   - tests/graph/bridges.test.cpp
   - tests/graph/spfa.test.cpp
-  - tests/graph/dijkstra.test.cpp
-  - tests/graph/bfs.test.cpp
   - tests/graph/articulation_points.test.cpp
-  - tests/tree/hld_lca.test.cpp
-  - tests/tree/lca_jump.test.cpp
-  - tests/tree/hld_path_query.test.cpp
-  - tests/tree/lca_sparse_table.test.cpp
-  - tests/tree/lca_binary_lift.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/scc.test.cpp
 documentation_of: graph/edge_types.hpp
 layout: document
 redirect_from:

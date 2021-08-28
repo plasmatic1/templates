@@ -199,8 +199,8 @@ data:
   verifiedWith:
   - tests/math/matrix_mul.test.cpp
   - tests/math/matrix_determinant.test.cpp
-  - tests/math/matrix_solve_linear.test.cpp
   - tests/math/matrix_inverse.test.cpp
+  - tests/math/matrix_solve_linear.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:

@@ -48,15 +48,15 @@ data:
   isVerificationFile: false
   path: math/choose.hpp
   requiredBy:
+  - math/stirling1.hpp
   - math/stirling2.hpp
   - math/catalan.hpp
-  - math/stirling1.hpp
   timestamp: '2021-06-26 02:30:43-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/math/choose.test.cpp
-  - tests/math/permute.test.cpp
   - tests/math/stirling2.test.cpp
+  - tests/math/permute.test.cpp
+  - tests/math/choose.test.cpp
 documentation_of: math/choose.hpp
 layout: document
 redirect_from:
