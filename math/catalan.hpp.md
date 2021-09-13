@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/choose.hpp
     title: math/choose.hpp
   - icon: ':question:'
@@ -32,7 +32,7 @@ data:
   isVerificationFile: false
   path: math/catalan.hpp
   requiredBy: []
-  timestamp: '2021-06-26 02:30:43-04:00'
+  timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/catalan.hpp

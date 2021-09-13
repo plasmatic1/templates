@@ -11,22 +11,22 @@ data:
   - icon: ':warning:'
     path: math/stirling1.hpp
     title: math/stirling1.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: math/stirling2.hpp
     title: math/stirling2.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/math/choose.test.cpp
     title: tests/math/choose.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/math/permute.test.cpp
     title: tests/math/permute.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/math/stirling2.test.cpp
     title: tests/math/stirling2.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -51,12 +51,12 @@ data:
   - math/stirling1.hpp
   - math/stirling2.hpp
   - math/catalan.hpp
-  timestamp: '2021-06-26 02:30:43-04:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/math/stirling2.test.cpp
-  - tests/math/permute.test.cpp
   - tests/math/choose.test.cpp
+  - tests/math/permute.test.cpp
+  - tests/math/stirling2.test.cpp
 documentation_of: math/choose.hpp
 layout: document
 redirect_from:

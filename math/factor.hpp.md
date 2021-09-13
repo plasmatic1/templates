@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: math/factor.hpp
   requiredBy: []
-  timestamp: '2021-06-27 02:07:30-04:00'
+  timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/factor.hpp

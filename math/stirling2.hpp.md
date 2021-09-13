@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/choose.hpp
     title: math/choose.hpp
   - icon: ':question:'
@@ -9,12 +9,12 @@ data:
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/math/stirling2.test.cpp
     title: tests/math/stirling2.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -42,8 +42,8 @@ data:
   isVerificationFile: false
   path: math/stirling2.hpp
   requiredBy: []
-  timestamp: '2021-06-27 02:07:30-04:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/math/stirling2.test.cpp
 documentation_of: math/stirling2.hpp

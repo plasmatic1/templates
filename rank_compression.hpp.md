@@ -6,12 +6,12 @@ data:
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -33,8 +33,8 @@ data:
   isVerificationFile: false
   path: rank_compression.hpp
   requiredBy: []
-  timestamp: '2021-06-26 02:30:43-04:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/rank_compression.test.cpp
 documentation_of: rank_compression.hpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/choose.hpp
     title: math/choose.hpp
   - icon: ':question:'
@@ -49,7 +49,7 @@ data:
   isVerificationFile: true
   path: tests/math/choose.test.cpp
   requiredBy: []
-  timestamp: '2021-07-11 00:49:35-04:00'
+  timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/math/choose.test.cpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/edge_types.hpp
     title: graph/edge_types.hpp
   - icon: ':question:'
@@ -10,25 +10,25 @@ data:
   - icon: ':question:'
     path: tests/test_utils.hpp
     title: tests/test_utils.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tree/lca_jump.hpp
     title: tree/lca_jump.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
     links:
     - https://judge.yosupo.jp/problem/lca
   bundledCode: "#line 1 \"tests/tree/lca_jump.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
-    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
-    // Defines\n#define fs first\n#define sn second\n#define pb push_back\n#define\
-    \ eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define all(x)\
-    \ (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus == 201703L\
-    \ // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
+    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG 1\nusing namespace\
+    \ std;\n\n// Defines\n#define fs first\n#define sn second\n#define pb push_back\n\
+    #define eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define\
+    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus ==\
+    \ 201703L // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
     \ // for some templates\n#endif\nusing ll = long long; using ull = unsigned long\
     \ long; using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long\
     \ long, long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
@@ -124,8 +124,8 @@ data:
   isVerificationFile: true
   path: tests/tree/lca_jump.test.cpp
   requiredBy: []
-  timestamp: '2021-06-29 16:57:15-04:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/tree/lca_jump.test.cpp
 layout: document

@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: ds/bit.hpp
       title: ds/bit.hpp
     - icon: ':heavy_check_mark:'
@@ -58,7 +58,7 @@ data:
     - icon: ':warning:'
       path: random.hpp
       title: random.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: rank_compression.hpp
       title: rank_compression.hpp
     - icon: ':warning:'
@@ -84,7 +84,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.hpp
       title: graph/dijkstra.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/edge_types.hpp
       title: graph/edge_types.hpp
     - icon: ':heavy_check_mark:'
@@ -121,7 +121,7 @@ data:
     - icon: ':warning:'
       path: math/catalan.hpp
       title: math/catalan.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: math/choose.hpp
       title: math/choose.hpp
     - icon: ':warning:'
@@ -142,16 +142,16 @@ data:
     - icon: ':question:'
       path: math/mod.hpp
       title: math/mod.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: math/prime_factor.hpp
       title: math/prime_factor.hpp
     - icon: ':warning:'
       path: math/stirling1.hpp
       title: math/stirling1.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: math/stirling2.hpp
       title: math/stirling2.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: math/totient.hpp
       title: math/totient.hpp
   - name: old
@@ -173,22 +173,22 @@ data:
     - icon: ':warning:'
       path: string/_old_hash_utils.cpp
       title: string/_old_hash_utils.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: string/hash_utils.hpp
       title: string/hash_utils.hpp
     - icon: ':warning:'
       path: string/kmp.hpp
       title: string/kmp.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: string/manachers.hpp
       title: string/manachers.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: string/suffix_array.hpp
       title: string/suffix_array.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: string/suffix_automaton.hpp
       title: string/suffix_automaton.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: string/z_algorithm.hpp
       title: string/z_algorithm.hpp
   - name: tests
@@ -198,16 +198,16 @@ data:
       title: tests/test_utils.hpp
   - name: tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tree/hld.hpp
       title: tree/hld.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tree/lca_binary_lift.hpp
       title: tree/lca_binary_lift.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tree/lca_jump.hpp
       title: tree/lca_jump.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tree/lca_sparse_table.hpp
       title: tree/lca_sparse_table.hpp
     - icon: ':warning:'
@@ -219,7 +219,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/aplusb.test.cpp
       title: tests/aplusb.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/rank_compression.test.cpp
       title: tests/rank_compression.test.cpp
   - name: tests/ds
@@ -291,59 +291,59 @@ data:
     - icon: ':x:'
       path: tests/math/matrix_solve_linear.test.cpp
       title: tests/math/matrix_solve_linear.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/math/modint.test.cpp
       title: tests/math/modint.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/math/permute.test.cpp
       title: tests/math/permute.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/math/prime_factor1.test.cpp
       title: tests/math/prime_factor1.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/math/prime_factor2.test.cpp
       title: tests/math/prime_factor2.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/math/stirling2.test.cpp
       title: tests/math/stirling2.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/math/totient.test.cpp
       title: tests/math/totient.test.cpp
   - name: tests/string
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string/hash_utils.test.cpp
       title: tests/string/hash_utils.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string/manachers.test.cpp
       title: tests/string/manachers.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string/suffix_array.test.cpp
       title: tests/string/suffix_array.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string/suffix_array_lcp.test.cpp
       title: tests/string/suffix_array_lcp.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string/suffix_automaton.test.cpp
       title: tests/string/suffix_automaton.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string/z_algorithm.test.cpp
       title: tests/string/z_algorithm.test.cpp
   - name: tests/tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/tree/hld_lca.test.cpp
       title: tests/tree/hld_lca.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/tree/hld_path_query.test.cpp
       title: tests/tree/hld_path_query.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/tree/lca_binary_lift.test.cpp
       title: tests/tree/lca_binary_lift.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/tree/lca_jump.test.cpp
       title: tests/tree/lca_jump.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/tree/lca_sparse_table.test.cpp
       title: tests/tree/lca_sparse_table.test.cpp
 layout: toppage

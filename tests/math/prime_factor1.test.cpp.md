@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: math/prime_factor.hpp
     title: math/prime_factor.hpp
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A
@@ -41,8 +41,8 @@ data:
   isVerificationFile: true
   path: tests/math/prime_factor1.test.cpp
   requiredBy: []
-  timestamp: '2021-06-27 02:07:30-04:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/math/prime_factor1.test.cpp
 layout: document

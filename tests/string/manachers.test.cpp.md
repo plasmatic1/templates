@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: string/manachers.hpp
     title: string/manachers.hpp
   - icon: ':question:'
@@ -12,20 +12,20 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/enumerate_palindromes
     links:
     - https://judge.yosupo.jp/problem/enumerate_palindromes
   bundledCode: "#line 1 \"tests/string/manachers.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_palindromes\"\
-    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
-    // Defines\n#define fs first\n#define sn second\n#define pb push_back\n#define\
-    \ eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define all(x)\
-    \ (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus == 201703L\
-    \ // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
+    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG 1\nusing namespace\
+    \ std;\n\n// Defines\n#define fs first\n#define sn second\n#define pb push_back\n\
+    #define eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define\
+    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus ==\
+    \ 201703L // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
     \ // for some templates\n#endif\nusing ll = long long; using ull = unsigned long\
     \ long; using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long\
     \ long, long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
@@ -91,8 +91,8 @@ data:
   isVerificationFile: true
   path: tests/string/manachers.test.cpp
   requiredBy: []
-  timestamp: '2021-07-17 02:13:51-04:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/string/manachers.test.cpp
 layout: document

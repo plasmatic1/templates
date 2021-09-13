@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/tree/hld_path_query.test.cpp
     title: tests/tree/hld_path_query.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"tree/hld.hpp\"\ntemplate <typename GraphType, typename EdgeType>\
@@ -66,7 +66,7 @@ data:
   path: tree/hld.hpp
   requiredBy: []
   timestamp: '2021-06-29 16:57:15-04:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/tree/hld_lca.test.cpp
   - tests/tree/hld_path_query.test.cpp

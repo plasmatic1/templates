@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: rank_compression.hpp
     title: rank_compression.hpp
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/associative_array
@@ -46,8 +46,8 @@ data:
   isVerificationFile: true
   path: tests/rank_compression.test.cpp
   requiredBy: []
-  timestamp: '2021-06-26 02:30:43-04:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/rank_compression.test.cpp
 layout: document

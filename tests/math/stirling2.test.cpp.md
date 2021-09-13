@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: math/choose.hpp
     title: math/choose.hpp
   - icon: ':question:'
@@ -10,7 +10,7 @@ data:
   - icon: ':question:'
     path: math/mod.hpp
     title: math/mod.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: math/stirling2.hpp
     title: math/stirling2.hpp
   - icon: ':question:'
@@ -21,9 +21,9 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_G
@@ -55,8 +55,8 @@ data:
   isVerificationFile: true
   path: tests/math/stirling2.test.cpp
   requiredBy: []
-  timestamp: '2021-07-11 00:49:35-04:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/math/stirling2.test.cpp
 layout: document

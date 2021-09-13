@@ -21,11 +21,11 @@ data:
     links:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"tests/ds/dsu.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\
-    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
-    // Defines\n#define fs first\n#define sn second\n#define pb push_back\n#define\
-    \ eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define all(x)\
-    \ (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus == 201703L\
-    \ // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
+    \n#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG 1\nusing namespace\
+    \ std;\n\n// Defines\n#define fs first\n#define sn second\n#define pb push_back\n\
+    #define eb emplace_back\n#define mpr make_pair\n#define mtp make_tuple\n#define\
+    \ all(x) (x).begin(), (x).end()\n// Basic type definitions\n#if __cplusplus ==\
+    \ 201703L // CPP17 only things\ntemplate <typename T> using opt_ref = optional<reference_wrapper<T>>;\
     \ // for some templates\n#endif\nusing ll = long long; using ull = unsigned long\
     \ long; using ld = long double;\nusing pii = pair<int, int>; using pll = pair<long\
     \ long, long long>;\n#ifdef __GNUG__\n// PBDS order statistic tree\n#include <ext/pb_ds/assoc_container.hpp>\
@@ -79,7 +79,7 @@ data:
   isVerificationFile: true
   path: tests/ds/dsu.test.cpp
   requiredBy: []
-  timestamp: '2021-06-16 10:53:28-04:00'
+  timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/ds/dsu.test.cpp

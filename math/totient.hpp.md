@@ -6,12 +6,12 @@ data:
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/math/totient.test.cpp
     title: tests/math/totient.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -31,8 +31,8 @@ data:
   isVerificationFile: false
   path: math/totient.hpp
   requiredBy: []
-  timestamp: '2021-06-27 02:07:30-04:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-09-12 23:20:08-04:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/math/totient.test.cpp
 documentation_of: math/totient.hpp

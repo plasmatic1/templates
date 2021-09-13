@@ -33,7 +33,7 @@ data:
   isVerificationFile: false
   path: math/crt.hpp
   requiredBy: []
-  timestamp: '2021-07-05 01:37:57-04:00'
+  timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math/crt.hpp
