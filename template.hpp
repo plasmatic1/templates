@@ -1,5 +1,6 @@
 #pragma once
 #include <bits/stdc++.h>
+#define DEBUG 1
 using namespace std;
 
 // Defines
