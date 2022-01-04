@@ -6,15 +6,15 @@ data:
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_array.test.cpp
     title: tests/string/suffix_array.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_array_lcp.test.cpp
     title: tests/string/suffix_array_lcp.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG\
@@ -115,10 +115,10 @@ data:
   path: string/suffix_array.hpp
   requiredBy: []
   timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/string/suffix_array.test.cpp
   - tests/string/suffix_array_lcp.test.cpp
+  - tests/string/suffix_array.test.cpp
 documentation_of: string/suffix_array.hpp
 layout: document
 redirect_from:

@@ -128,9 +128,9 @@ data:
   timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/graph/articulation_points.test.cpp
   - tests/graph/bridges.test.cpp
   - tests/graph/biconnected_components.test.cpp
-  - tests/graph/articulation_points.test.cpp
 documentation_of: graph/tarjan_undirected.hpp
 layout: document
 redirect_from:

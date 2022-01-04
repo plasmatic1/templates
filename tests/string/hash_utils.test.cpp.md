@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/hash_utils.hpp
     title: string/hash_utils.hpp
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/zalgorithm
@@ -65,8 +65,8 @@ data:
     \ It> ll hget(It hs, int l, int r) {\n    __int128 res = (hs[r] - __int128(hs[l\
     \ - 1]) * _hash_pows[r - l + 1]) % MOD;\n    if (res < 0) res += MOD;\n    return\
     \ res;\n}\nll happend(ll hsh, int val) { return (__int128(hsh) * BASE + val) %\
-    \ MOD; }\nll hconcat(ll hshLeft, ll hshRight, int szLeft) { return (__int128(hshLeft)\
-    \ * _hash_pows[szLeft] + hshRight) % MOD; }\n#line 5 \"tests/string/hash_utils.test.cpp\"\
+    \ MOD; }\nll hconcat(ll hshLeft, ll hshRight, int szRight) { return (__int128(hshLeft)\
+    \ * _hash_pows[szRight] + hshRight) % MOD; }\n#line 5 \"tests/string/hash_utils.test.cpp\"\
     \n\nconst int MN = 5e5 + 1;\nint N;\nstring s;\nll hs[MN];\n\nint main() {\n \
     \   fast_io();\n    init_hash<RAND_BASE>(MN);\n\n    cin >> s; N = s.length();\n\
     \n    for (int i = 1; i <= N; i++)\n        hs[i] = happend(hs[i-1], s[i-1]);\n\
@@ -94,8 +94,8 @@ data:
   isVerificationFile: true
   path: tests/string/hash_utils.test.cpp
   requiredBy: []
-  timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-01-04 15:14:59-05:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/string/hash_utils.test.cpp
 layout: document

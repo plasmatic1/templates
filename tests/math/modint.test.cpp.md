@@ -15,9 +15,9 @@ data:
     title: tests/test_utils.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A
@@ -134,7 +134,7 @@ data:
   path: tests/math/modint.test.cpp
   requiredBy: []
   timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/math/modint.test.cpp
 layout: document

@@ -39,13 +39,13 @@ data:
   - icon: ':x:'
     path: tests/math/matrix_solve_linear.test.cpp
     title: tests/math/matrix_solve_linear.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/modint.test.cpp
     title: tests/math/modint.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/permute.test.cpp
     title: tests/math/permute.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/stirling2.test.cpp
     title: tests/math/stirling2.test.cpp
   _isVerificationFailed: true
@@ -95,23 +95,23 @@ data:
   isVerificationFile: false
   path: math/eea.hpp
   requiredBy:
-  - math/mod.hpp
   - math/crt.hpp
+  - math/mod.hpp
   timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/math/matrix_inverse.test.cpp
-  - tests/math/matrix_solve_linear.test.cpp
-  - tests/math/choose.test.cpp
-  - tests/math/eea.test.cpp
-  - tests/math/choose_non_prime_mod.test.cpp
-  - tests/math/permute.test.cpp
-  - tests/math/matrix_mul.test.cpp
-  - tests/math/stirling2.test.cpp
-  - tests/math/modint.test.cpp
-  - tests/math/matrix_determinant.test.cpp
   - tests/ds/segment_tree_lazy.test.cpp
   - tests/ds/segment_tree.test.cpp
+  - tests/math/eea.test.cpp
+  - tests/math/modint.test.cpp
+  - tests/math/matrix_mul.test.cpp
+  - tests/math/matrix_solve_linear.test.cpp
+  - tests/math/matrix_inverse.test.cpp
+  - tests/math/choose_non_prime_mod.test.cpp
+  - tests/math/choose.test.cpp
+  - tests/math/matrix_determinant.test.cpp
+  - tests/math/permute.test.cpp
+  - tests/math/stirling2.test.cpp
 documentation_of: math/eea.hpp
 layout: document
 redirect_from:

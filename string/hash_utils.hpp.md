@@ -6,12 +6,12 @@ data:
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/hash_utils.test.cpp
     title: tests/string/hash_utils.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG\
@@ -48,8 +48,8 @@ data:
     \ {\n    __int128 res = (hs[r] - __int128(hs[l - 1]) * _hash_pows[r - l + 1])\
     \ % MOD;\n    if (res < 0) res += MOD;\n    return res;\n}\nll happend(ll hsh,\
     \ int val) { return (__int128(hsh) * BASE + val) % MOD; }\nll hconcat(ll hshLeft,\
-    \ ll hshRight, int szLeft) { return (__int128(hshLeft) * _hash_pows[szLeft] +\
-    \ hshRight) % MOD; }\n"
+    \ ll hshRight, int szRight) { return (__int128(hshLeft) * _hash_pows[szRight]\
+    \ + hshRight) % MOD; }\n"
   code: "#pragma once\n#include \"../template.hpp\"\n\n// Hashing stuff\nconst int\
     \ FIXED_BASE = 0, RAND_BASE = 1 << 0;\nconst ll MOD = 999999999999999989;\nll\
     \ BASE = 131;\n\nvector<ll> _hash_pows;\ntemplate <int MODE> void init_hash(int\
@@ -60,15 +60,15 @@ data:
     \ It> ll hget(It hs, int l, int r) {\n    __int128 res = (hs[r] - __int128(hs[l\
     \ - 1]) * _hash_pows[r - l + 1]) % MOD;\n    if (res < 0) res += MOD;\n    return\
     \ res;\n}\nll happend(ll hsh, int val) { return (__int128(hsh) * BASE + val) %\
-    \ MOD; }\nll hconcat(ll hshLeft, ll hshRight, int szLeft) { return (__int128(hshLeft)\
-    \ * _hash_pows[szLeft] + hshRight) % MOD; }\n"
+    \ MOD; }\nll hconcat(ll hshLeft, ll hshRight, int szRight) { return (__int128(hshLeft)\
+    \ * _hash_pows[szRight] + hshRight) % MOD; }\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: string/hash_utils.hpp
   requiredBy: []
-  timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-01-04 15:14:59-05:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/hash_utils.test.cpp
 documentation_of: string/hash_utils.hpp

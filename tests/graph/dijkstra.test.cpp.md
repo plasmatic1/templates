@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.hpp
     title: graph/dijkstra.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/edge_types.hpp
     title: graph/edge_types.hpp
   - icon: ':question:'

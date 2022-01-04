@@ -27,24 +27,24 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/spfa.test.cpp
     title: tests/graph/spfa.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/hld_path_query.test.cpp
     title: tests/tree/hld_path_query.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_binary_lift.test.cpp
     title: tests/tree/lca_binary_lift.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_jump.test.cpp
     title: tests/tree/lca_jump.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_sparse_table.test.cpp
     title: tests/tree/lca_sparse_table.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG\
@@ -108,20 +108,20 @@ data:
   path: graph/edge_types.hpp
   requiredBy: []
   timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/scc.test.cpp
+  - tests/graph/articulation_points.test.cpp
   - tests/graph/bridges.test.cpp
   - tests/graph/biconnected_components.test.cpp
-  - tests/graph/dijkstra.test.cpp
-  - tests/graph/bfs.test.cpp
-  - tests/graph/articulation_points.test.cpp
   - tests/graph/spfa.test.cpp
-  - tests/graph/scc.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/tree/hld_path_query.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/lca_jump.test.cpp
   - tests/tree/hld_lca.test.cpp
   - tests/tree/lca_binary_lift.test.cpp
-  - tests/tree/lca_jump.test.cpp
-  - tests/tree/lca_sparse_table.test.cpp
-  - tests/tree/hld_path_query.test.cpp
 documentation_of: graph/edge_types.hpp
 layout: document
 redirect_from:

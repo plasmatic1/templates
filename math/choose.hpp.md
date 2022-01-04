@@ -11,28 +11,28 @@ data:
   - icon: ':warning:'
     path: math/stirling1.hpp
     title: math/stirling1.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/stirling2.hpp
     title: math/stirling2.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/math/choose.test.cpp
     title: tests/math/choose.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/permute.test.cpp
     title: tests/math/permute.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/stirling2.test.cpp
     title: tests/math/stirling2.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
+    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 312, in update\n    raise BundleErrorAt(path, i + 1, \"#pragma once found\
     \ in a non-first line\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ math/choose.hpp: line 2: #pragma once found in a non-first line\n"
@@ -48,11 +48,11 @@ data:
   isVerificationFile: false
   path: math/choose.hpp
   requiredBy:
+  - math/catalan.hpp
   - math/stirling1.hpp
   - math/stirling2.hpp
-  - math/catalan.hpp
   timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/math/choose.test.cpp
   - tests/math/permute.test.cpp

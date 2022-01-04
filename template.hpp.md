@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: ds/bit.hpp
     title: ds/bit.hpp
   - icon: ':heavy_check_mark:'
@@ -35,7 +35,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.hpp
     title: graph/dijkstra.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/edge_types.hpp
     title: graph/edge_types.hpp
   - icon: ':heavy_check_mark:'
@@ -50,7 +50,7 @@ data:
   - icon: ':warning:'
     path: math/catalan.hpp
     title: math/catalan.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: math/choose.hpp
     title: math/choose.hpp
   - icon: ':warning:'
@@ -71,40 +71,40 @@ data:
   - icon: ':question:'
     path: math/mod.hpp
     title: math/mod.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/prime_factor.hpp
     title: math/prime_factor.hpp
   - icon: ':warning:'
     path: math/stirling1.hpp
     title: math/stirling1.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/stirling2.hpp
     title: math/stirling2.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: math/totient.hpp
     title: math/totient.hpp
   - icon: ':warning:'
     path: random.hpp
     title: random.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: rank_compression.hpp
     title: rank_compression.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/hash_utils.hpp
     title: string/hash_utils.hpp
   - icon: ':warning:'
     path: string/kmp.hpp
     title: string/kmp.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/manachers.hpp
     title: string/manachers.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/suffix_array.hpp
     title: string/suffix_array.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/suffix_automaton.hpp
     title: string/suffix_automaton.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: string/z_algorithm.hpp
     title: string/z_algorithm.hpp
   - icon: ':question:'
@@ -113,13 +113,13 @@ data:
   - icon: ':warning:'
     path: timing.hpp
     title: timing.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/lca_binary_lift.hpp
     title: tree/lca_binary_lift.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/lca_jump.hpp
     title: tree/lca_jump.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/lca_sparse_table.hpp
     title: tree/lca_sparse_table.hpp
   _extendedVerifiedWith:
@@ -186,58 +186,58 @@ data:
   - icon: ':x:'
     path: tests/math/matrix_solve_linear.test.cpp
     title: tests/math/matrix_solve_linear.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/modint.test.cpp
     title: tests/math/modint.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/permute.test.cpp
     title: tests/math/permute.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/prime_factor1.test.cpp
     title: tests/math/prime_factor1.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/prime_factor2.test.cpp
     title: tests/math/prime_factor2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/stirling2.test.cpp
     title: tests/math/stirling2.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/math/totient.test.cpp
     title: tests/math/totient.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/rank_compression.test.cpp
     title: tests/rank_compression.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/hash_utils.test.cpp
     title: tests/string/hash_utils.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/manachers.test.cpp
     title: tests/string/manachers.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_array.test.cpp
     title: tests/string/suffix_array.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_array_lcp.test.cpp
     title: tests/string/suffix_array_lcp.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/suffix_automaton.test.cpp
     title: tests/string/suffix_automaton.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/z_algorithm.test.cpp
     title: tests/string/z_algorithm.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/hld_lca.test.cpp
     title: tests/tree/hld_lca.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/hld_path_query.test.cpp
     title: tests/tree/hld_path_query.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_binary_lift.test.cpp
     title: tests/tree/lca_binary_lift.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_jump.test.cpp
     title: tests/tree/lca_jump.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_sparse_table.test.cpp
     title: tests/tree/lca_sparse_table.test.cpp
   _isVerificationFailed: true
@@ -421,88 +421,88 @@ data:
   isVerificationFile: false
   path: template.hpp
   requiredBy:
-  - string/hash_utils.hpp
-  - string/suffix_array.hpp
-  - string/manachers.hpp
-  - string/suffix_automaton.hpp
-  - string/kmp.hpp
-  - string/z_algorithm.hpp
   - rank_compression.hpp
-  - timing.hpp
-  - tests/test_utils.hpp
-  - random.hpp
-  - graph/spfa.hpp
-  - graph/bfs_0_1.hpp
-  - graph/bfs.hpp
-  - graph/tarjan_undirected.hpp
-  - graph/edge_types.hpp
-  - graph/2sat.hpp
-  - graph/dijkstra.hpp
-  - graph/scc.hpp
   - fraction.cpp
-  - tree/lca_jump.hpp
-  - tree/lca_sparse_table.hpp
-  - tree/lca_binary_lift.hpp
+  - graph/tarjan_undirected.hpp
+  - graph/bfs_0_1.hpp
+  - graph/2sat.hpp
+  - graph/bfs.hpp
+  - graph/dijkstra.hpp
+  - graph/edge_types.hpp
+  - graph/spfa.hpp
+  - graph/scc.hpp
+  - ds/segment_tree.hpp
+  - ds/bit.hpp
+  - ds/segment_tree_lazy.hpp
+  - ds/sparse_table.hpp
+  - ds/dsu.hpp
+  - ds/treap.cpp
+  - string/suffix_automaton.hpp
+  - string/manachers.hpp
+  - string/z_algorithm.hpp
+  - string/suffix_array.hpp
+  - string/hash_utils.hpp
+  - string/kmp.hpp
+  - math/factor.hpp
+  - math/eea.hpp
+  - math/catalan.hpp
+  - math/matrix.hpp
+  - math/choose.hpp
+  - math/crt.hpp
+  - math/mod.hpp
   - math/stirling1.hpp
   - math/fast_modinv.hpp
   - math/totient.hpp
-  - math/mod.hpp
-  - math/eea.hpp
-  - math/crt.hpp
-  - math/choose.hpp
-  - math/matrix.hpp
   - math/prime_factor.hpp
   - math/stirling2.hpp
-  - math/factor.hpp
-  - math/catalan.hpp
-  - ds/segment_tree_lazy.hpp
-  - ds/bit.hpp
-  - ds/dsu.hpp
-  - ds/segment_tree.hpp
-  - ds/treap.cpp
-  - ds/sparse_table.hpp
+  - tree/lca_jump.hpp
+  - tree/lca_binary_lift.hpp
+  - tree/lca_sparse_table.hpp
+  - timing.hpp
+  - tests/test_utils.hpp
+  - random.hpp
   timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/string/hash_utils.test.cpp
-  - tests/string/manachers.test.cpp
-  - tests/string/z_algorithm.test.cpp
-  - tests/string/suffix_array.test.cpp
-  - tests/string/suffix_array_lcp.test.cpp
-  - tests/string/suffix_automaton.test.cpp
-  - tests/rank_compression.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/scc.test.cpp
+  - tests/graph/articulation_points.test.cpp
   - tests/graph/bridges.test.cpp
   - tests/graph/biconnected_components.test.cpp
-  - tests/graph/dijkstra.test.cpp
   - tests/graph/2sat.test.cpp
-  - tests/graph/bfs.test.cpp
-  - tests/graph/articulation_points.test.cpp
   - tests/graph/spfa.test.cpp
-  - tests/graph/scc.test.cpp
-  - tests/tree/hld_lca.test.cpp
-  - tests/tree/lca_binary_lift.test.cpp
-  - tests/tree/lca_jump.test.cpp
-  - tests/tree/lca_sparse_table.test.cpp
-  - tests/tree/hld_path_query.test.cpp
-  - tests/math/matrix_inverse.test.cpp
-  - tests/math/matrix_solve_linear.test.cpp
-  - tests/math/prime_factor2.test.cpp
-  - tests/math/choose.test.cpp
-  - tests/math/eea.test.cpp
-  - tests/math/totient.test.cpp
-  - tests/math/choose_non_prime_mod.test.cpp
-  - tests/math/permute.test.cpp
-  - tests/math/matrix_mul.test.cpp
-  - tests/math/stirling2.test.cpp
-  - tests/math/prime_factor1.test.cpp
-  - tests/math/modint.test.cpp
-  - tests/math/matrix_determinant.test.cpp
-  - tests/ds/sparse_table.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/ds/bit.test.cpp
   - tests/ds/dsu.test.cpp
   - tests/ds/segment_tree_lazy.test.cpp
+  - tests/ds/sparse_table.test.cpp
   - tests/ds/segment_tree.test.cpp
   - tests/ds/li_chao_tree.test.cpp
-  - tests/ds/bit.test.cpp
+  - tests/string/suffix_array_lcp.test.cpp
+  - tests/string/z_algorithm.test.cpp
+  - tests/string/hash_utils.test.cpp
+  - tests/string/manachers.test.cpp
+  - tests/string/suffix_automaton.test.cpp
+  - tests/string/suffix_array.test.cpp
+  - tests/rank_compression.test.cpp
+  - tests/math/eea.test.cpp
+  - tests/math/totient.test.cpp
+  - tests/math/modint.test.cpp
+  - tests/math/prime_factor1.test.cpp
+  - tests/math/matrix_mul.test.cpp
+  - tests/math/prime_factor2.test.cpp
+  - tests/math/matrix_solve_linear.test.cpp
+  - tests/math/matrix_inverse.test.cpp
+  - tests/math/choose_non_prime_mod.test.cpp
+  - tests/math/choose.test.cpp
+  - tests/math/matrix_determinant.test.cpp
+  - tests/math/permute.test.cpp
+  - tests/math/stirling2.test.cpp
+  - tests/tree/hld_path_query.test.cpp
+  - tests/tree/lca_sparse_table.test.cpp
+  - tests/tree/lca_jump.test.cpp
+  - tests/tree/hld_lca.test.cpp
+  - tests/tree/lca_binary_lift.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:

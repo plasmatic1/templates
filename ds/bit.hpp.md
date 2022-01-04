@@ -9,12 +9,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/ds/bit.test.cpp
     title: tests/ds/bit.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/hld_path_query.test.cpp
     title: tests/tree/hld_path_query.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\n#define DEBUG\
@@ -72,10 +72,10 @@ data:
   path: ds/bit.hpp
   requiredBy: []
   timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/tree/hld_path_query.test.cpp
   - tests/ds/bit.test.cpp
+  - tests/tree/hld_path_query.test.cpp
 documentation_of: ds/bit.hpp
 layout: document
 redirect_from:

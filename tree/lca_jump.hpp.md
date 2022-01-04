@@ -6,12 +6,12 @@ data:
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/tree/lca_jump.test.cpp
     title: tests/tree/lca_jump.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://codeforces.com/blog/entry/74847
@@ -87,7 +87,7 @@ data:
   path: tree/lca_jump.hpp
   requiredBy: []
   timestamp: '2021-09-12 23:20:08-04:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/tree/lca_jump.test.cpp
 documentation_of: tree/lca_jump.hpp
