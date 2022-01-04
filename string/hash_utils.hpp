@@ -24,4 +24,4 @@ template <typename It> ll hget(It hs, int l, int r) {
     return res;
 }
 ll happend(ll hsh, int val) { return (__int128(hsh) * BASE + val) % MOD; }
-ll hconcat(ll hshLeft, ll hshRight, int szLeft) { return (__int128(hshLeft) * _hash_pows[szLeft] + hshRight) % MOD; }
+ll hconcat(ll hshLeft, ll hshRight, int szRight) { return (__int128(hshLeft) * _hash_pows[szRight] + hshRight) % MOD; }
