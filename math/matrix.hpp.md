@@ -198,10 +198,10 @@ data:
   timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/math/matrix_mul.test.cpp
   - tests/math/matrix_solve_linear.test.cpp
-  - tests/math/matrix_inverse.test.cpp
   - tests/math/matrix_determinant.test.cpp
+  - tests/math/matrix_mul.test.cpp
+  - tests/math/matrix_inverse.test.cpp
 documentation_of: math/matrix.hpp
 layout: document
 redirect_from:

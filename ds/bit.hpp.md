@@ -74,8 +74,8 @@ data:
   timestamp: '2021-09-12 23:20:08-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/ds/bit.test.cpp
   - tests/tree/hld_path_query.test.cpp
+  - tests/ds/bit.test.cpp
 documentation_of: ds/bit.hpp
 layout: document
 redirect_from:

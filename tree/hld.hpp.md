@@ -68,8 +68,8 @@ data:
   timestamp: '2021-06-29 16:57:15-04:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/tree/hld_path_query.test.cpp
   - tests/tree/hld_lca.test.cpp
+  - tests/tree/hld_path_query.test.cpp
 documentation_of: tree/hld.hpp
 layout: document
 redirect_from:
