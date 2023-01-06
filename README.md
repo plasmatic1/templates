@@ -1,7 +1,7 @@
 # Templates
 
 [![Actions Status](https://github.com/plasmatic1/templates/workflows/verify/badge.svg)](https://github.com/plasmatic1/templates/actions)
-[![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://plasmatic1.github.io/templates/)
+[![Documentation](https://img.shields.io/static/v1?label=&message=GitHub+Pages&color=gray&logo=github)](https://plasmatic1.github.io/templates/)
 
 Restructuring of my Data Structure/Algorithm Templates, rewritten with [verification-helper](https://github.com/online-judge-tools/verification-helper) to test for correctness.
 
