@@ -16,7 +16,7 @@ template <typename T> using opt_ref = optional<reference_wrapper<T>>; // for som
 #endif
 using ll = long long; using ull = unsigned long long; using ld = long double;
 using pii = pair<int, int>; using pll = pair<long long, long long>;
-#ifdef __GNUG__
+#if defined(__GNUG__) && !defined(__clang__) // GCC specific
 // PBDS order statistic tree
 #include <ext/pb_ds/assoc_container.hpp> // Common file
 #include <ext/pb_ds/tree_policy.hpp>
